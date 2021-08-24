@@ -31,7 +31,10 @@ public class PlayerAnimator : MonoBehaviour
     {
         animator.SetBool(anim, false);
     }
-
+    public void SetTrigger(string anim)
+    {
+        animator.SetTrigger(anim);
+    }
 
 
 
