@@ -5,7 +5,7 @@ using UnityEngine;
 public class Animal : MonoBehaviour
 {
     public double Health;
-    
+    public double Attack; 
     
     //this will be used for damage
     public virtual void OnCollisionEnter(Collision collision)
@@ -17,5 +17,13 @@ public class Animal : MonoBehaviour
     public virtual void MoveToPlayer()
     {
 
+    }
+    public virtual void DealDamage(double damage)
+    {
+        Health -= damage;
+    }
+    public virtual void Die()
+    {
+        Destroy(this.gameObject);
     }
 }
