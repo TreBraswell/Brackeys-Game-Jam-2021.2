@@ -23,7 +23,7 @@ public class PlayerCamera : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
        // LockAndUnluckCursor();
 
@@ -56,7 +56,7 @@ public class PlayerCamera : MonoBehaviour
     {
         current_Mouse_look = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
      
-        look_Angles.y += current_Mouse_look.y * sensitivity*Time.deltaTime;
+        look_Angles.y += current_Mouse_look.y * sensitivity;
 
 
 

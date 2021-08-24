@@ -2,21 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimator :MonoBehaviour
+public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField]
+    
     private Animator animator;
 
 
+    //Animation priority - attack over jump
+    private string[] animationPrioritiy = new string[] { "Walk", "Jump", "Attack" };
 
-    public void SetBool(string anim,bool active)
+
+    private void Start()
     {
-        animator.SetBool(anim, active);
+        animator = GetComponent<Animator>();
     }
 
-    public void SetFloat(string param, float value)
+    public void SetFloat(string anim, float value)
     {
-        animator.SetFloat(param, value);
+        animator.SetFloat(anim, value);
     }
-    
+
+    public void SetBool(string anim, bool value)
+    {
+        animator.SetBool(anim, value);
+    }
+
+    public void OnAnimationDone(string anim)
+    {
+        animator.SetBool(anim, false);
+    }
+
+
+
+
+
 }
