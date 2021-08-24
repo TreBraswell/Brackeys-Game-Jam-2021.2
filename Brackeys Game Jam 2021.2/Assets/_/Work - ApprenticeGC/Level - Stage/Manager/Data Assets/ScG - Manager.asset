@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1893448595, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: ScG - Manager
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"","summary":null,"pan":{"x":304.0,"y":-1247.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"bc1e95f0-0fa7-4f2b-93ec-9e1f56608653","$version":"A","$type":"Bolt.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"d07be9db-9d82-4522-b6d7-e5bfb5a5fa54","$version":"A","$type":"Bolt.Update"},{"argumentCount":0,"coroutine":false,"defaultValues":{"target":null,"name":{"$content":"Env
+      - Setup Done","$type":"System.String"}},"position":{"x":-386.0,"y":-728.0},"guid":"563ab53b-b697-4cc2-9bb7-b50a373b8014","$version":"A","$type":"Bolt.CustomEvent","$id":"13"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"managerPlayer","$type":"System.String"},"object":null},"position":{"x":-177.0,"y":-577.0},"guid":"1c2ffc5b-5fcb-4ce6-90ff-459a437cabea","$version":"A","$type":"Bolt.GetVariable","$id":"15"},{"argumentCount":0,"defaultValues":{"name":{"$content":"Create
+      Player","$type":"System.String"},"target":null},"position":{"x":49.0,"y":-746.0},"guid":"6e5cf37e-91a5-4204-8afa-b62feb18ce9d","$version":"A","$type":"Bolt.TriggerCustomEvent","$id":"17"},{"argumentCount":1,"coroutine":false,"defaultValues":{"target":null,"name":{"$content":"CS
+      - Start CutScene","$type":"System.String"}},"position":{"x":-375.0,"y":-1288.0},"guid":"ffa9154a-a458-4c08-b5a0-2dd8c4af6ecb","$version":"A","$type":"Bolt.CustomEvent","$id":"19"},{"argumentCount":1,"defaultValues":{"name":{"$content":"Start
+      CutScene","$type":"System.String"},"target":null},"position":{"x":113.0,"y":-1283.0},"guid":"0719bbf3-585c-4dd4-819a-5fdfb7aa3d10","$version":"A","$type":"Bolt.TriggerCustomEvent","$id":"21"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"managerCutScene","$type":"System.String"},"object":null},"position":{"x":-150.0,"y":-1079.0},"guid":"ad456921-5b42-4f39-af97-7b8107e2d37d","$version":"A","$type":"Bolt.GetVariable","$id":"23"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"17"},"destinationKey":"enter","guid":"e936e5c7-ce58-4d03-afbd-1b03166d6a3f","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"19"},"sourceKey":"trigger","destinationUnit":{"$ref":"21"},"destinationKey":"enter","guid":"24e05985-1bc0-42f4-9fd0-be569459fed4","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"value","destinationUnit":{"$ref":"17"},"destinationKey":"target","guid":"271d7041-2e38-4023-9b86-fde824fcf49d","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"23"},"sourceKey":"value","destinationUnit":{"$ref":"21"},"destinationKey":"target","guid":"9770969d-538d-4468-968d-6ffd1b0e0f4b","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"19"},"sourceKey":"argument_0","destinationUnit":{"$ref":"21"},"destinationKey":"argument_0","guid":"601ac767-77a4-46ae-827d-25adf183aec7","$type":"Bolt.ValueConnection"},{"position":{"xMin":-420.0,"yMin":-836.0,"xMax":747.0,"yMax":-342.0},"label":"Group","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"bf625e1a-d704-4d2d-97e3-1b90ae21450d","$version":"A","$type":"Ludiq.GraphGroup"},{"position":{"xMin":-426.0,"yMin":-1344.0,"xMax":716.0,"yMax":-917.0},"label":"Group","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"0d9fc181-a220-4974-b306-771780d08409","$version":"A","$type":"Ludiq.GraphGroup"}],"$version":"A"}}'
+    _objectReferences: []
