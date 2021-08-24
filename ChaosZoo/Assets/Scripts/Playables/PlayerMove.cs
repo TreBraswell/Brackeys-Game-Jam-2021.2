@@ -156,6 +156,7 @@ public class PlayerMove : MonoBehaviour
            
             Attack();
         }
+        //Stand
         if (Input.GetKeyDown(KeyCode.O))
         {
             ToggleStand();
