@@ -1,17 +1,23 @@
 fileFormatVersion: 2
-guid: 4d38ecfcab82f7d45b26c59b069b9043
+guid: c07bf70b7c8187f4fb42769664ff8dcd
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -398731681139676593
-    second: metarig|Girafe_Walk
+      74: 8577398997768850365
+    second: Armature|Lion_Attack
   - first:
-      74: 6351778210790737974
-    second: metarig|Giraffe_Attack
+      74: -2571331865445247358
+    second: Armature|Lion_Idle
   - first:
-      74: 1773625794361875922
-    second: metarig|Giraffe_Idle
+      74: -5902067217634523592
+    second: Armature|Lion_Jump
+  - first:
+      74: 79830684306915037
+    second: Armature|Lion_Run
+  - first:
+      74: 4182037730853794252
+    second: Armature|Lion_Walk
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -43,7 +49,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.1
+    globalScale: 2
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -94,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.011
+    globalScale: 2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
