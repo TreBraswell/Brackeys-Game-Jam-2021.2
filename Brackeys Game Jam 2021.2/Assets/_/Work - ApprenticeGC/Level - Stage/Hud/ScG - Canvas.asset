@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1893448595, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: ScG - Canvas
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":403.0,"y":-814.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"10e1d870-d074-4ff3-84ed-50bb5f4b9a12","$version":"A","$type":"Bolt.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"7bf4a5e3-091e-4041-a3cc-2597faa242aa","$version":"A","$type":"Bolt.Update"},{"argumentCount":1,"coroutine":false,"defaultValues":{"target":null,"name":{"$content":"UI
+      - Update Time","$type":"System.String"}},"position":{"x":-229.0,"y":-720.0},"guid":"9c9e34e6-5c3e-46d0-8418-39721d03e76d","$version":"A","$type":"Bolt.CustomEvent","$id":"13"},{"argumentCount":1,"defaultValues":{"name":{"$content":"UI
+      - Update Time","$type":"System.String"},"target":null},"position":{"x":179.0,"y":-710.0},"guid":"da68a46c-8d94-4d02-bffd-c02267591db5","$version":"A","$type":"Bolt.TriggerCustomEvent","$id":"15"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"viewMain","$type":"System.String"},"object":null},"position":{"x":-70.0,"y":-531.0},"guid":"5a7c70f4-d6fc-4434-8b46-b66f25eb7796","$version":"A","$type":"Bolt.GetVariable","$id":"17"},{"argumentCount":1,"coroutine":false,"defaultValues":{"target":null,"name":{"$content":"UI
+      - Update Completeness","$type":"System.String"}},"position":{"x":-252.0,"y":-1328.0},"guid":"6baf0689-1c76-415e-bc78-3e71dd0b7ef4","$version":"A","$type":"Bolt.CustomEvent","$id":"19"},{"argumentCount":1,"defaultValues":{"name":{"$content":"UI
+      - Update Completeness","$type":"System.String"},"target":null},"position":{"x":121.0,"y":-1307.0},"guid":"2148872e-f0df-4c57-8e30-39c6bd5c50ef","$version":"A","$type":"Bolt.TriggerCustomEvent","$id":"21"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"viewMain","$type":"System.String"},"object":null},"position":{"x":-113.0,"y":-1129.0},"guid":"ffb196cc-0cd8-4651-9203-b8ccc9db63b0","$version":"A","$type":"Bolt.GetVariable","$id":"23"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"15"},"destinationKey":"enter","guid":"19a4d3f7-2216-4cce-b0ec-1dad163b7bf4","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"19"},"sourceKey":"trigger","destinationUnit":{"$ref":"21"},"destinationKey":"enter","guid":"b1aab3fe-2e7d-4d88-a5c9-f0ded127561c","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"argument_0","destinationUnit":{"$ref":"15"},"destinationKey":"argument_0","guid":"cacd8e1f-3466-4375-8de7-8a2774cc0246","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"value","destinationUnit":{"$ref":"15"},"destinationKey":"target","guid":"98086b42-7c39-4abe-aac9-6172117b2d03","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"19"},"sourceKey":"argument_0","destinationUnit":{"$ref":"21"},"destinationKey":"argument_0","guid":"58111308-0855-4976-9672-84357d395ff3","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"23"},"sourceKey":"value","destinationUnit":{"$ref":"21"},"destinationKey":"target","guid":"34ffa0c2-2721-4157-a3dd-6d9e2ca522cc","$type":"Bolt.ValueConnection"},{"position":{"xMin":-317.0,"yMin":-806.0,"xMax":766.0,"yMax":-284.0},"label":"Group","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"d768d0ed-bc02-4202-8592-3227c43620ed","$version":"A","$type":"Ludiq.GraphGroup"},{"position":{"xMin":-325.0,"yMin":-1401.0,"xMax":812.0,"yMax":-872.0},"label":"Group","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"654870f9-27af-4def-b3a8-bd7c11be7ea2","$version":"A","$type":"Ludiq.GraphGroup"}],"$version":"A"}}'
+    _objectReferences: []
