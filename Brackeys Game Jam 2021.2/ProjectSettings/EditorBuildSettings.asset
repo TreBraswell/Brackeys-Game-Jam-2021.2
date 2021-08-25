@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/_/Final/Scenes/Stage - Environment.unity
     guid: 82fda28593dbb16449c72f86c10735d6
   - enabled: 1
+    path: Assets/_/Work - Ronaldo/Scenes/level 1(1).unity
+    guid: 09309ebeefb95e4499562ad1364e62b0
+  - enabled: 1
     path: Assets/_/Final/Scenes/Final - Entry.unity
     guid: e5dc508b153c3ac42a98e30ab10d634b
   m_configObjects: {}

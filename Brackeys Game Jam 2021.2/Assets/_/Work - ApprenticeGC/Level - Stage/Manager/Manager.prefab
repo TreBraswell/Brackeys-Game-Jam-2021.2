@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 6499124083950150784}
   - component: {fileID: 5711793507853083828}
   - component: {fileID: 8952385949647275223}
+  - component: {fileID: 3410953466638729411}
   m_Layer: 0
   m_Name: Manager - Player
   m_TagString: Untagged
@@ -275,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"virtualCameraPrefab","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"playerPrefab","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"virtualCameraPrefab","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"playerPrefab","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"initialPosition","value":{"x":33.0,"y":8.0,"z":33.0,"$type":"UnityEngine.Vector3"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 5836476824628703715, guid: 9ece7805f2226eb40bcef2cc0a2da04c, type: 3}
     - {fileID: 2781334567971569236, guid: 0495ab3ccb4b7b743bf300ff0971115f, type: 3}
@@ -295,6 +296,22 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: 579ab8d125dcf604388d65f7c7750d54, type: 2}
+--- !u!114 &3410953466638729411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8364902159942926694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1999370065, guid: dcd2196c4e9166f499793f2007fcda35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 5c4f23fefc7670d41b5da77abeb6458a, type: 2}
 --- !u!1001 &3447889816477723626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -362,21 +379,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4039666236446807820, guid: b88f21663339a864180a1fe4c3758d54,
-        type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"collection":{"$content":[{"name":"ownerGO","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4039666236446807820, guid: b88f21663339a864180a1fe4c3758d54,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4039666236446807820, guid: b88f21663339a864180a1fe4c3758d54,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[0]
-      value: 
-      objectReference: {fileID: 2157953238265584280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88f21663339a864180a1fe4c3758d54, type: 3}
 --- !u!1 &2787356664748952789 stripped
