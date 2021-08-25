@@ -1,67 +1,70 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerCamera : MonoBehaviour
+namespace BGJ20212.Game.Naron
 {
-    [SerializeField]
-    private Transform player, lookRoot;
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-
-    public float sensitivity = 300f;
-    public bool invert;
-
-
-    private Vector2 current_Mouse_look, look_Angles;
-
-
-    // Update is called once per frame
-    void Start()
+    public class PlayerCamera : MonoBehaviour
     {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+        [SerializeField] private Transform player, lookRoot;
 
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-       // LockAndUnluckCursor();
+        public float sensitivity = 300f;
+        public bool invert;
 
-        if (Cursor.lockState == CursorLockMode.Locked)
+
+        private Vector2 current_Mouse_look, look_Angles;
+
+
+        // Update is called once per frame
+        void Start()
         {
-            //LookAround();
+            Cursor.lockState = CursorLockMode.Locked;
         }
-    }
 
 
-
-
-    //Cursor visible/hidden
-    void LockAndUnluckCursor()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Update is called once per frame
+        void FixedUpdate()
         {
+            // LockAndUnluckCursor();
+
             if (Cursor.lockState == CursorLockMode.Locked)
             {
-                Cursor.lockState = CursorLockMode.None;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                //LookAround();
             }
         }
 
-    }//Cursor lock
-    void LookAround()
-    {
-        current_Mouse_look = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
-     
-        look_Angles.y += current_Mouse_look.y * sensitivity;
 
 
 
-        player.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f);
+        //Cursor visible/hidden
+        void LockAndUnluckCursor()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (Cursor.lockState == CursorLockMode.Locked)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                }
+                else
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+                }
+            }
 
-    }//loo
+        } //Cursor lock
+
+        void LookAround()
+        {
+            current_Mouse_look = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
+
+            look_Angles.y += current_Mouse_look.y * sensitivity;
+
+
+
+            player.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f);
+
+        } //loo
+    }
 }
