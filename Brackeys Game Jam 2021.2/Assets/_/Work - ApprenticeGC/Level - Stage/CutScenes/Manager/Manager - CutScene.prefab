@@ -46,10 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"ownerGO","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"cutScenes","value":{"$content":[{"$content":1,"$type":"UnityEngine.Object"}],"$type":"Ludiq.AotList"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"ownerGO","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"cutScenes","value":{"$content":[null],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"$version":"A"},{"name":"playedCutScenes","value":{"$type":"Ludiq.AotDictionary"},"$version":"A"},{"name":"cutSceneData","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 0}
-    - {fileID: 1275835094567567563, guid: 647c4fffd45ea5c47aa848268c7ac728, type: 3}
+    - {fileID: 11400000, guid: 734a82ca1d25355469db35c5c5001618, type: 2}
 --- !u!114 &4945401051366271002
 MonoBehaviour:
   m_ObjectHideFlags: 0
