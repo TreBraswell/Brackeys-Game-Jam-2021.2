@@ -1,69 +1,67 @@
-namespace BGJ20212.Game.Naron
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerCamera : MonoBehaviour
 {
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
+    [SerializeField]
+    private Transform player, lookRoot;
 
-    public class PlayerCamera : MonoBehaviour
+
+    public float sensitivity = 300f;
+    public bool invert;
+
+
+    private Vector2 current_Mouse_look, look_Angles;
+
+
+    // Update is called once per frame
+    void Start()
     {
-        [SerializeField]
-        private Transform player, lookRoot;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
 
-        public float sensitivity = 300f;
-        public bool invert;
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+       // LockAndUnluckCursor();
 
-
-        private Vector2 current_Mouse_look, look_Angles;
-
-
-        // Update is called once per frame
-        void Start()
+        if (Cursor.lockState == CursorLockMode.Locked)
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //LookAround();
         }
+    }
 
 
-        // Update is called once per frame
-        void FixedUpdate()
+
+
+    //Cursor visible/hidden
+    void LockAndUnluckCursor()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-           // LockAndUnluckCursor();
-
             if (Cursor.lockState == CursorLockMode.Locked)
             {
-                //LookAround();
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         }
 
-
-
-        //Cursor visible/hidden
-        void LockAndUnluckCursor()
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (Cursor.lockState == CursorLockMode.Locked)
-                {
-                    Cursor.lockState = CursorLockMode.None;
-                }
-                else
-                {
-                    Cursor.lockState = CursorLockMode.Locked;
-                    Cursor.visible = false;
-                }
-            }
-
-        }//Cursor lock
-        void LookAround()
-        {
-            current_Mouse_look = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
-
-            look_Angles.y += current_Mouse_look.y * sensitivity;
+    }//Cursor lock
+    void LookAround()
+    {
+        current_Mouse_look = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
+     
+        look_Angles.y += current_Mouse_look.y * sensitivity;
 
 
 
-            player.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f);
+        player.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f);
 
-        }//loo
-    }
+    }//loo
 }
