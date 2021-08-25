@@ -1,18 +1,25 @@
 fileFormatVersion: 2
-guid: 2a7602a1318d6b0408e68f1375be7b42
+guid: a659f22f1561f8b49bf15dc1e6c86dd5
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 4339375211054990821
-    second: Armature|Armature|Armature|Attack.001|Armature|Attack.001
+      74: -2222576514663883908
+    second: Golem_Attack.002
   - first:
-      74: 4557046361417866877
-    second: Armature|Armature|Armature|Attack|Armature|Attack
+      74: 4209620311580094164
+    second: Golem_Run.001
+  externalObjects:
   - first:
-      74: -4918831451018810558
-    second: Armature|Armature|Armature|Move|Armature|Move
-  externalObjects: {}
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material 1
+    second: {fileID: 2100000, guid: f2e9bb0a5c3caae43b05999bb4e04636, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 849a0bd127f50374283d25bf35de38bb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -43,7 +50,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 7
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -82,7 +89,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -94,7 +101,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 7
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

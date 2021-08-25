@@ -17,3 +17,4 @@ namespace BGJ20212.Game.ApprenticeGC.Stage
         }
     }
 }
+
