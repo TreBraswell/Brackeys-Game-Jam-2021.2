@@ -1,0 +1,58 @@
+﻿{
+    "inkVersion": 20,
+    "root": [
+        [
+            "^Dialogue 001",
+            "\n",
+            [
+                "done",
+                {
+                    "#f": 5,
+                    "#n": "g-0"
+                }
+            ],
+            null
+        ],
+        "done",
+        {
+            "conversation": [
+                "^I want freedom ",
+                {
+                    "#": "monkey"
+                },
+                "\n",
+                "^I can not live here anymore ",
+                {
+                    "#": "monkey"
+                },
+                "\n",
+                "^I know how you feel, but we are just zoo animal ",
+                {
+                    "#": "falcon"
+                },
+                "\n",
+                "^Being feed everyday is our fate ",
+                {
+                    "#": "falcon"
+                },
+                "\n",
+                "^I have no desire to get out of here ",
+                {
+                    "#": "falcon"
+                },
+                "\n",
+                "^And I can not tolerate anyone to break the order ",
+                {
+                    "#": "falcon"
+                },
+                "\n",
+                "end",
+                {
+                    "#f": 1
+                }
+            ],
+            "#f": 1
+        }
+    ],
+    "listDefs": {}
+}

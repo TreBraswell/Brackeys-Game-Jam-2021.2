@@ -15,14 +15,14 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Hit Initiator - CutScene
+  - Hit Receiver - CutScene
+  - Hit Initiator - Creature
+  - Hit Receiver - Creature
+  - Hit Initiator - SceneObject
+  - Hit Receiver - SceneObject
+  - Hit Initiator - Projectile
+  - Hit Receiver - Projectile
   - 
   - 
   - 

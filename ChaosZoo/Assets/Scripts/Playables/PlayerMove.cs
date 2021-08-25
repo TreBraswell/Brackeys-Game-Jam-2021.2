@@ -25,12 +25,14 @@ public class PlayerMove : MonoBehaviour
 
     private bool isGrounded;
     private bool isJumping;
+    
     private bool isAttacking;
     private bool canAttack;
 
     private bool isStanding;
     private bool isSpriting;
 
+    private bool hasExtra;
 
 
     //For raycast, can be deleted later
@@ -141,6 +143,9 @@ public class PlayerMove : MonoBehaviour
         }
     }
     #endregion
+
+
+    #region Input
     private void CheckInput()
     {
         if (Input.GetButtonDown(Axis.JUMP))
@@ -162,7 +167,15 @@ public class PlayerMove : MonoBehaviour
             ToggleStand();
         }
 
+        //Extra
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+
+        }
+
     }
+
+    #endregion
     private void GroundCheck()
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight / 2f + 0.1f, groundLayer);
@@ -181,8 +194,10 @@ public class PlayerMove : MonoBehaviour
             //Animation
             animator.SetBool("Jump", true);
 
-            Invoke("Jump", 0.3f);
+
             //Add delay
+            Invoke("Jump", 0.3f);
+         
          
            
 
@@ -200,6 +215,8 @@ public class PlayerMove : MonoBehaviour
             isJumping = true;
         
     }
+
+    //Attack/attackRefresh
     #region attack
     private void Attack()
     {
@@ -224,10 +241,23 @@ public class PlayerMove : MonoBehaviour
 
 
 
-
+    #region stand/sit
     void ToggleStand()
     {
         isStanding = !isStanding;
         animator.SetBool("Stand", isStanding);
+    }
+
+    #endregion
+
+
+
+    //Extra
+    private void ExtraAnimation()
+    {
+        if(!isStanding && rb.velocity.sqrMagnitude <0.1f && !isJumping && !)
+        {
+
+        }
     }
 }

@@ -27,6 +27,7 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool(anim, value);
     }
 
+
     public void OnAnimationDone(string anim)
     {
         animator.SetBool(anim, false);

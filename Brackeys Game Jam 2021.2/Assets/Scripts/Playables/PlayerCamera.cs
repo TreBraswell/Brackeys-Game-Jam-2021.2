@@ -35,6 +35,7 @@ public class PlayerCamera : MonoBehaviour
 
 
 
+
     //Cursor visible/hidden
     void LockAndUnluckCursor()
     {
