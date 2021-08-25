@@ -24,6 +24,7 @@ public class PlayerAnimator : MonoBehaviour
 
     public void SetBool(string anim, bool value)
     {
+        //Good
         animator.SetBool(anim, value);
     }
 
