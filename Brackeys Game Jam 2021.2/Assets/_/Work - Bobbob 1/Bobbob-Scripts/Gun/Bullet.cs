@@ -1,15 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Bullet : MonoBehaviour
+namespace BGJ20212.Game.Bobbob
 {
-    public virtual void OnCollisionEnter(Collision collision)
-    {  if(this && this.gameObject)
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class Bullet : MonoBehaviour
+    {
+        public virtual void OnCollisionEnter(Collision collision)
         {
-            Destroy(this.gameObject);
+            if (this && this.gameObject)
+            {
+                Destroy(this.gameObject);
+            }
+
+            Debug.Log("test");
         }
-        
-        Debug.Log("test");
     }
 }

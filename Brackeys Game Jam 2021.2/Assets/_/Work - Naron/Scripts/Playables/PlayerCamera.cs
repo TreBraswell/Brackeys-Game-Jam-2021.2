@@ -6,8 +6,7 @@ namespace BGJ20212.Game.Naron
 
     public class PlayerCamera : MonoBehaviour
     {
-        [SerializeField]
-        private Transform player, lookRoot;
+        [SerializeField] private Transform player, lookRoot;
 
 
         public float sensitivity = 300f;
@@ -27,13 +26,14 @@ namespace BGJ20212.Game.Naron
         // Update is called once per frame
         void FixedUpdate()
         {
-           // LockAndUnluckCursor();
+            // LockAndUnluckCursor();
 
             if (Cursor.lockState == CursorLockMode.Locked)
             {
                 //LookAround();
             }
         }
+
 
 
 
@@ -53,7 +53,8 @@ namespace BGJ20212.Game.Naron
                 }
             }
 
-        }//Cursor lock
+        } //Cursor lock
+
         void LookAround()
         {
             current_Mouse_look = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
@@ -64,6 +65,6 @@ namespace BGJ20212.Game.Naron
 
             player.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f);
 
-        }//loo
+        } //loo
     }
 }

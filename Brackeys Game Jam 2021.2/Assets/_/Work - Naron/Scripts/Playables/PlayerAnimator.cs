@@ -11,7 +11,7 @@ namespace BGJ20212.Game.Naron
 
 
         //Animation priority - attack over jump
-        private string[] animationPrioritiy = new string[] { "Walk", "Jump", "Attack" };
+        private string[] animationPrioritiy = new string[] {"Walk", "Jump", "Attack"};
 
 
         private void Start()
@@ -26,16 +26,19 @@ namespace BGJ20212.Game.Naron
 
         public void SetBool(string anim, bool value)
         {
+            //Good
             animator.SetBool(anim, value);
         }
+
 
         public void OnAnimationDone(string anim)
         {
             animator.SetBool(anim, false);
         }
+
         public void SetTrigger(string anim)
         {
             animator.SetTrigger(anim);
         }
-    }
+   }
 }

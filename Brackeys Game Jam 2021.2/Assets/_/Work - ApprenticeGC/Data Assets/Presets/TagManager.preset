@@ -86,27 +86,27 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[12]
-    value: 
+    value: Hit Initiator - Creature
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[13]
-    value: 
+    value: Hit Receiver - Creature
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[14]
-    value: 
+    value: Hit Initiator - SceneObject
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[15]
-    value: 
+    value: Hit Receiver - SceneObject
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[16]
-    value: 
+    value: Hit Initiator - Projectile
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[17]
-    value: 
+    value: Hit Receiver - Projectile
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[18]

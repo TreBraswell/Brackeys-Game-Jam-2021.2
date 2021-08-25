@@ -31,6 +31,7 @@ namespace BGJ20212.Game.Naron
 
 
 
+
         //For raycast, can be deleted later
         [SerializeField] private float playerHeight;
 
@@ -165,6 +166,7 @@ namespace BGJ20212.Game.Naron
                 Attack();
             }
 
+            //Stand
             if (Input.GetKeyDown(KeyCode.O))
             {
                 ToggleStand();
@@ -217,7 +219,7 @@ namespace BGJ20212.Game.Naron
         private void Attack()
         {
             print("here");
-            if (isGrounded && canAttack && !isStanding)
+            if ( canAttack && !isStanding)
             {
                 animator.SetTrigger("Attack");
                 isAttacking = true;

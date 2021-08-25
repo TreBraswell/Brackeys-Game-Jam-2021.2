@@ -6,7 +6,9 @@ namespace BGJ20212.Game.ApprenticeGC.Dialogue.EditorPart
     using System.Linq;
     using System.Reflection;
     using Bolt;
+    using Ludiq;
     using UnityEditor;
+    using UnityEditor.VersionControl;
     using UnityEngine;
     using UnityEngine.Playables;
     using UnityEngine.Timeline;
@@ -59,6 +61,10 @@ namespace BGJ20212.Game.ApprenticeGC.Dialogue.EditorPart
             //
             var baseAssetPath = Path.Combine("_", "Work - ApprenticeGC", "Level - Stage", "CutScenes");
 
+            var managerAssetPath = Path.Combine("Assets", baseAssetPath, "Manager");
+            var managerPrefabPath = Path.Combine(managerAssetPath, "Manager - CutScene.prefab");
+            var managerPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(managerPrefabPath);
+
             var dataAssetPath = Path.Combine("Assets", baseAssetPath, "Data Assets");
 
             var flowMachineAssetPath = Path.Combine(dataAssetPath, "ScG - CutScene.asset");
@@ -69,6 +75,8 @@ namespace BGJ20212.Game.ApprenticeGC.Dialogue.EditorPart
 
             var cutScenes = GetCutScenes(jsonDataDirectory);
             var cutSceneGOs = new List<GameObject>();
+
+            var prefabPathList = new List<string>();
             cutScenes.ToList().ForEach(cutScene =>
             {
                 var stickyRoot = cutScene?.Root[0].AnythingArray[0];
@@ -89,10 +97,37 @@ namespace BGJ20212.Game.ApprenticeGC.Dialogue.EditorPart
                 cutSceneGOs.Add(cutSceneGO);
 
                 var prefabAssetPath = Path.Combine(generatedCutSceneBasePath, $"{cutSceneName}.prefab");
+                prefabPathList.Add(prefabAssetPath);
                 PrefabUtility.SaveAsPrefabAsset(cutSceneGO, prefabAssetPath);
             });
 
             AssetDatabase.Refresh();
+
+            var cutScenePrefabs =
+                prefabPathList.Select(prefabPath =>
+                    {
+                        var cutScenePrefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
+
+                        return cutScenePrefab;
+                    })
+                    .ToList();
+
+            var cutSceneData = ScriptableObject.CreateInstance<Template.CutSceneData>();
+            cutSceneData.cutScenePrefabs = cutScenePrefabs;
+            var cutSceneDataPath = Path.Combine(relativeCutSceneBasePath, "Cut Scene Data.asset");
+            AssetDatabase.CreateAsset(cutSceneData, cutSceneDataPath);
+            AssetDatabase.Refresh();
+
+            var managerVariablesComp = managerPrefab.GetComponent<Variables>();
+            if (managerVariablesComp != null)
+            {
+                // managerVariablesComp.declarations.Set("cutScenes", cutScenePrefabs);
+                managerVariablesComp.declarations.Set("cutSceneData", cutSceneData);
+            }
+
+            // PrefabUtility.ApplyObjectOverride(managerPrefab, managerPrefabPath, InteractionMode.AutomatedAction);
+
+            // PrefabUtility.SetPropertyModifications(managerPrefab, new PropertyModification[] {});
 
             return cutSceneGOs;
         }
@@ -116,7 +151,7 @@ namespace BGJ20212.Game.ApprenticeGC.Dialogue.EditorPart
             var variablesComp = cutSceneGO.AddComponent<Variables>();
             var fmComp = cutSceneGO.AddComponent<FlowMachine>();
 
-            // variablesComp.declarations.Set("title", cutScene.Title);
+            variablesComp.declarations.Set("cutSceneName", cutSceneName);
             //
             // variablesComp.declarations.Set("currentWaveIndex", 0);
 
@@ -171,6 +206,8 @@ namespace BGJ20212.Game.ApprenticeGC.Dialogue.EditorPart
 
             var variablesComp = waveGO.AddComponent<Variables>();
             var fmComp = waveGO.AddComponent<FlowMachine>();
+
+            variablesComp.declarations.Set("ownerGO", cutSceneGO);
 
             fmComp.nest.SwitchToMacro(flowMachineAsset);
 
