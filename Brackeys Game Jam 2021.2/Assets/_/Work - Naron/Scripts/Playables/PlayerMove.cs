@@ -107,6 +107,7 @@ namespace BGJ20212.Game.Naron
 
             //Max speed
             float speedPercent = rb.velocity.sqrMagnitude / run_Speed / run_Speed;
+            
             animator.SetFloat("moveSpeed", speedPercent);
 
 
