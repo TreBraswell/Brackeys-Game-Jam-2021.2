@@ -648,9 +648,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5840693854023204153}
   - component: {fileID: 6234364384354386591}
-  - component: {fileID: 3425959821495475560}
   m_Layer: 0
-  m_Name: Golem Ice
+  m_Name: Golem Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,19 +691,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &3425959821495475560
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6504746738537752451}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 30.8, y: 24.4, z: 12.51}
-  m_Center: {x: 0, y: 12.6, z: 0}
 --- !u!1 &6816719160996797297
 GameObject:
   m_ObjectHideFlags: 0
