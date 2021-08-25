@@ -1,38 +1,17 @@
 fileFormatVersion: 2
-guid: e677d437a4aca744aa88537540fdb714
+guid: 2a7602a1318d6b0408e68f1375be7b42
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 2274594048136436940
-    second: Gorilla_Attack
+      74: 4339375211054990821
+    second: Armature|Armature|Armature|Attack.001|Armature|Attack.001
   - first:
-      74: -539133451983669568
-    second: Gorilla_Idle
+      74: 4557046361417866877
+    second: Armature|Armature|Armature|Attack|Armature|Attack
   - first:
-      74: 4568570717958566209
-    second: Gorilla_Run
-  - first:
-      74: 8198705412469196197
-    second: Gorilla_Walk
-  - first:
-      74: 1079665108409675491
-    second: Jump
-  - first:
-      74: -8731104193234675897
-    second: Gorilla_Scare
-  - first:
-      74: 4724887770959480615
-    second: Gorilla_Sit
-  - first:
-      74: -4032558703003846388
-    second: Gorilla_Stand
-  - first:
-      74: 9083654474561383684
-    second: Gorilla_Throw
-  - first:
-      74: 5416408218182723571
-    second: Gorilla_Jump
+      74: -4918831451018810558
+    second: Armature|Armature|Armature|Move|Armature|Move
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -103,7 +82,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
@@ -115,7 +94,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

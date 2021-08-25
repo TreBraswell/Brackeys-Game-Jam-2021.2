@@ -1,38 +1,23 @@
 fileFormatVersion: 2
-guid: e677d437a4aca744aa88537540fdb714
+guid: c07bf70b7c8187f4fb42769664ff8dcd
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 2274594048136436940
-    second: Gorilla_Attack
+      74: 8577398997768850365
+    second: Armature|Lion_Attack
   - first:
-      74: -539133451983669568
-    second: Gorilla_Idle
+      74: -2571331865445247358
+    second: Armature|Lion_Idle
   - first:
-      74: 4568570717958566209
-    second: Gorilla_Run
+      74: -5902067217634523592
+    second: Armature|Lion_Jump
   - first:
-      74: 8198705412469196197
-    second: Gorilla_Walk
+      74: 79830684306915037
+    second: Armature|Lion_Run
   - first:
-      74: 1079665108409675491
-    second: Jump
-  - first:
-      74: -8731104193234675897
-    second: Gorilla_Scare
-  - first:
-      74: 4724887770959480615
-    second: Gorilla_Sit
-  - first:
-      74: -4032558703003846388
-    second: Gorilla_Stand
-  - first:
-      74: 9083654474561383684
-    second: Gorilla_Throw
-  - first:
-      74: 5416408218182723571
-    second: Gorilla_Jump
+      74: 4182037730853794252
+    second: Armature|Lion_Walk
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -64,7 +49,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 2
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -115,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
