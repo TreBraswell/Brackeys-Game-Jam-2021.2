@@ -218,7 +218,7 @@ namespace BGJ20212.Game.Naron
 
         private void Attack()
         {
-            print("here");
+            
             if ( canAttack && !isStanding)
             {
                 animator.SetTrigger("Attack");

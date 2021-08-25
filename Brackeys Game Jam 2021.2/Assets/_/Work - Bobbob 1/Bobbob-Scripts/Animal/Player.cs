@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player instance;
+    public GameObject attacker = null;
     void Start()
     {
         if (instance == null)
