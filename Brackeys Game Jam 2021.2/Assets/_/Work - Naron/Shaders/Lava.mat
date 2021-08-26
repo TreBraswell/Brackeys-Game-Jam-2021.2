@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: watermat
+  m_Name: Lava
   m_Shader: {fileID: -6465566751694194690, guid: 46fdbae898be14643bca0353bb2148ea,
     type: 3}
   m_ShaderKeywords: 
@@ -33,13 +33,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_006b7794c6284da8bf0df1d2a64081d0: 3.38
-    - Vector1_0c66531b71a540c5ba60f5aa6232e38e: 1563.8
-    - Vector1_15eee39d4230473dbc6305c2e7a1d65f: 15.5
-    - Vector1_4523c6878459490ebaeb2b8b0066b0ff: 1.07
-    - Vector1_6c01870ef6b84b96950137ed3e69541a: 3.7
-    - Vector1_d615b85081af4391b8005e31f025d4ef: 88.93
+    - Vector1_006b7794c6284da8bf0df1d2a64081d0: 5
+    - Vector1_0c66531b71a540c5ba60f5aa6232e38e: 2.4
+    - Vector1_15eee39d4230473dbc6305c2e7a1d65f: 23.4
+    - Vector1_4523c6878459490ebaeb2b8b0066b0ff: 0.02
+    - Vector1_6c01870ef6b84b96950137ed3e69541a: 1.5
+    - Vector1_d615b85081af4391b8005e31f025d4ef: 10.19
     m_Colors:
-    - Color_90c0783ba0254d5489253e4583823388: {r: 0, g: 0.3325129, b: 0.4622642, a: 0.6666667}
-    - Color_bd1c304c42554449b0bbdf1fd3ae9b6c: {r: 0, g: 0.2227154, b: 0.4056604, a: 0.23921569}
+    - Color_90c0783ba0254d5489253e4583823388: {r: 1, g: 0, b: 0.052129745, a: 1}
+    - Color_bd1c304c42554449b0bbdf1fd3ae9b6c: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
