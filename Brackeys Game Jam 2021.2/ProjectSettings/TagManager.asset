@@ -8,6 +8,7 @@ TagManager:
   - Rank1Manager
   - Rank2Manager
   - Rank3Manager
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Door
   - 
   - 
   - 

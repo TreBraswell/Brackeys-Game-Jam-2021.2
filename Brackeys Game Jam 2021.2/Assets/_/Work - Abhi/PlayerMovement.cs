@@ -16,7 +16,9 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         public float gravity = -9.81f;
 
-        Vector3 velocity;
+        private float verticalVelocity;
+        Vector3 moveDirection;
+
 
         private Transform cameraTransform;
 
@@ -29,16 +31,16 @@ namespace  BGJ20212.Game.AbhiTechGame
         public float speed;
         public float jumpHeight;
 
-        private bool isGrounded;
+  
         private bool isAttacking;
         private bool canAttack;
+        private bool isJumping;
 
-        private Vector3 direction;
 
         private float turnSmoothTime = 0.2f;
         private float turnSmoothVelocity;
 
-        Vector3 moveDirection;
+       
 
         void Start()
         {
@@ -53,57 +55,51 @@ namespace  BGJ20212.Game.AbhiTechGame
         private void Update()
         {
             CheckInput();
-        }
-
-        // Update is called once per frame
-        void FixedUpdate()
-        {
             Move();
-            GroundCheck();
         }
 
+    
         #region Movement
 
         private void Move()
         {
-            if (!isGrounded)
-            {
-                velocity.y += gravity * Time.deltaTime;
-                animator.SetBool("Move", false);
-            }
-            else
-            {
-                velocity.y = -2f;
-            }
+      
 
             Vector2 inputAxis = new Vector2(Input.GetAxis(Axis.HORIZONTAL), Mathf.Clamp(Input.GetAxis(Axis.VERTICAL), 0f, 1f));
 
-            direction = new Vector3(inputAxis.x, 0f, inputAxis.y).normalized;
+            moveDirection = new Vector3(inputAxis.x, 0f, inputAxis.y);
+            Vector3 direction = moveDirection.normalized;
+            moveDirection = transform.TransformDirection(moveDirection);
+            //Gravity
 
-            if (direction.magnitude >= 0.1f)
+            if (moveDirection.magnitude >= 0.1f)
             {
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                characterController.Move(new Vector3(moveDirection.x * speed, 0f, moveDirection.z * speed));
                 
-                animator.SetFloat("moveSpeed", 40f);
+                
+                animator.SetFloat("moveSpeed", 1f);
             }
             else
             {
                 animator.SetFloat("moveSpeed", 0f);
             }
-            
-            characterController.Move(velocity * Time.deltaTime);
+
+       
+            ApplyGravity();
+            if(verticalVelocity < gravity*2 || isJumping)
+            {
+                animator.SetFloat("moveSpeed", 0f);
+            }
+       
+            characterController.Move(moveDirection*speed * Time.deltaTime);
         }
         private void CheckInput()
         {
-            if (Input.GetButtonDown(Axis.JUMP))
-            {
-                Jumping();
-            }
+      
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -111,19 +107,40 @@ namespace  BGJ20212.Game.AbhiTechGame
             }
         }
 
-        void Jumping()
+        void ApplyGravity()
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            if (!characterController.isGrounded)
+            {
+                verticalVelocity += gravity * Time.deltaTime;
+                animator.SetBool("Move", false);
+            }
+            else
+            {
+                verticalVelocity = -0.1f;
+                isJumping = false;
+            }
+
+            PlayerJump();
+            moveDirection.y = verticalVelocity * Time.deltaTime;
+
         }
 
-        private void GroundCheck()
+
+        private void PlayerJump()
         {
-            isGrounded = Physics.CheckSphere(GroundCheckPos.position, radius, whatIsGround);
+            
+            if (characterController.isGrounded && Input.GetButton(Axis.JUMP))
+            {
+                verticalVelocity = jumpHeight;
+                isJumping = true;
+            }
+            
         }
+
         private void Attack()
         {
-            print("here");
-            if (isGrounded && canAttack)
+            
+            if (characterController.isGrounded && canAttack)
             {
                 animator.SetTrigger("Attack");
                 isAttacking = true;
