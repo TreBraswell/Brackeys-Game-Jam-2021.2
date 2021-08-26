@@ -16367,7 +16367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1587572097}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -32.675, z: 0}
 --- !u!64 &695279273
 MeshCollider:
@@ -34682,8 +34682,8 @@ Transform:
   - {fileID: 2123366606}
   - {fileID: 329709380}
   - {fileID: 1283844702}
-  - {fileID: 2118893759}
   - {fileID: 695279272}
+  - {fileID: 2118893759}
   - {fileID: 1983307216}
   - {fileID: 709853029}
   - {fileID: 1861153935}

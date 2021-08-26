@@ -248,5 +248,8 @@ namespace BGJ20212.Game.Naron
             isStanding = !isStanding;
             animator.SetBool("Stand", isStanding);
         }
+
+  
+   
     }
 }
