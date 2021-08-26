@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"managerCutScene","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerEnvironment","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerPlayer","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerHud","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerScore","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerTime","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"managerCutScene","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerEnvironment","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerPlayer","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerHud","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerScore","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerTime","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerCreature","value":{"$content":6,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 8260580845219660567}
     - {fileID: 2787356664748952789}
@@ -62,6 +62,7 @@ MonoBehaviour:
     - {fileID: 9041878014465544769}
     - {fileID: 5031492471057565192}
     - {fileID: 8349075288562935089}
+    - {fileID: 6167830745106743719}
 --- !u!114 &2157953238265584286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,8 +215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"collection":{"$content":[{"name":"spawnData","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: f5e19ae9cc7b4474bb913f510eb6f34b, type: 2}
 --- !u!114 &658996946061868436
 MonoBehaviour:
   m_ObjectHideFlags: 0

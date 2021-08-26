@@ -1,4 +1,4 @@
-﻿namespace BGJ20212.Game.ApprenticeGC.Dialogue.Template
+﻿namespace BGJ20212.Game.ApprenticeGC.Creature.Template
 {
     using System.Collections.Generic;
     using UnityEngine;
@@ -7,7 +7,8 @@
     public class SpawnLocation
     {
         public Vector3 position;
-        public GameObject creaturePrefab;
+        public GameObject spawnerPrefab;
+        public float maxSpawnDuration;
     }
 
     [CreateAssetMenu(fileName = "SpawnData", menuName = "BGJ20212/Creature/SpawnData")]
