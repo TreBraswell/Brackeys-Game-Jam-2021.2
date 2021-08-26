@@ -115,6 +115,9 @@ namespace AbhiTechGames
         {
             isGrounded = Physics.CheckSphere(GroundCheckPos.position, radius, whatIsGround);
         }
+        #endregion
+
+        #region Attack
         private void Attack()
         {
             print("here");
@@ -134,7 +137,8 @@ namespace AbhiTechGames
             canAttack = true;
             yield break;
         }
-
         #endregion
+
     }
+
 }

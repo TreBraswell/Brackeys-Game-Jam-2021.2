@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 1210543354747657401}
   m_Layer: 0
   m_Name: Lion Boss
-  m_TagString: Untagged
+  m_TagString: Shootable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

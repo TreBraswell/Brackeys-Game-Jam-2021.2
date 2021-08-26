@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 6115225161741786035}
   m_Layer: 0
   m_Name: Megaladon
-  m_TagString: Untagged
+  m_TagString: Shootable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

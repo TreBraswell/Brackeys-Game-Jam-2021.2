@@ -121,7 +121,7 @@ namespace  BGJ20212.Game.AbhiTechGame
             }
 
             PlayerJump();
-            moveDirection.y = verticalVelocity * Time.deltaTime;
+            moveDirection.y = verticalVelocity;
 
         }
 

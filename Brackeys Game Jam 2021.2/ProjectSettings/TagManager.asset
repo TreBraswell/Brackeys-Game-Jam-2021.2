@@ -9,6 +9,7 @@ TagManager:
   - Rank2Manager
   - Rank3Manager
   - Door
+  - Shootable
   layers:
   - Default
   - TransparentFX
