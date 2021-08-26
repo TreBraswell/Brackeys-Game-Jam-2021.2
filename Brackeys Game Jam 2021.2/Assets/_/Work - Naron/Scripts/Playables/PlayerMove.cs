@@ -177,15 +177,17 @@ namespace BGJ20212.Game.Naron
         private void GroundCheck()
         {
             isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight / 2f + 0.1f, groundLayer);
+          
         }
 
         private void TryJump()
         {
 
 
-
+           
             if (isGrounded && !isAttacking && !isStanding)
             {
+                print("kk");
                 if (isJumping)
                 {
                     isJumping = false;
@@ -193,7 +195,7 @@ namespace BGJ20212.Game.Naron
 
                 //Animation
                 animator.SetBool("Jump", true);
-
+                
                 Invoke("Jump", 0.3f);
                 //Add delay
 
@@ -207,7 +209,7 @@ namespace BGJ20212.Game.Naron
         private void Jump()
         {
 
-
+           
 
             rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
             isJumping = true;
@@ -219,7 +221,7 @@ namespace BGJ20212.Game.Naron
         private void Attack()
         {
             
-            if ( canAttack && !isStanding)
+            if ( canAttack && !isStanding )
             {
                 animator.SetTrigger("Attack");
                 isAttacking = true;
@@ -227,7 +229,7 @@ namespace BGJ20212.Game.Naron
                 StartCoroutine(RefreshAttack());
             }
         }
-
+    
         private IEnumerator RefreshAttack()
         {
             isAttacking = false;
