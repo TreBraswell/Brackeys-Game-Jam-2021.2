@@ -1616,7 +1616,7 @@ PrefabInstance:
     - target: {fileID: 2781334567971569236, guid: 0495ab3ccb4b7b743bf300ff0971115f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0495ab3ccb4b7b743bf300ff0971115f, type: 3}
@@ -24687,7 +24687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -41487,6 +41487,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ThirdPerson
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836476824628703715, guid: 9ece7805f2226eb40bcef2cc0a2da04c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5836476825702213648, guid: 9ece7805f2226eb40bcef2cc0a2da04c,
         type: 3}

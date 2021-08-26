@@ -53,13 +53,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"managerCutScene","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerEnvironment","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerPlayer","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerHud","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerScore","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"managerCutScene","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerEnvironment","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerPlayer","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerHud","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerScore","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerTime","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 8260580845219660567}
     - {fileID: 2787356664748952789}
     - {fileID: 8364902159942926694}
     - {fileID: 9041878014465544769}
     - {fileID: 5031492471057565192}
+    - {fileID: 8349075288562935089}
 --- !u!114 &2157953238265584286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"virtualCameraPrefab","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"playerPrefab","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"initialPosition","value":{"x":33.0,"y":8.0,"z":33.0,"$type":"UnityEngine.Vector3"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"virtualCameraPrefab","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"playerPrefab","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"initialPosition","value":{"x":214.0,"y":-123.0,"z":202.0,"$type":"UnityEngine.Vector3"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 5836476824628703715, guid: 9ece7805f2226eb40bcef2cc0a2da04c, type: 3}
     - {fileID: 2781334567971569236, guid: 0495ab3ccb4b7b743bf300ff0971115f, type: 3}

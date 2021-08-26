@@ -1,19 +1,24 @@
 {
   "dependencies": {
-    "com.unity.cinemachine": {
-      "version": "2.6.10",
+    "com.inklestudios.ink-unity-integration": {
+      "version": "1.0.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.com"
+      "url": "https://package.openupm.com"
     },
-    "com.unity.collab-proxy": {
-      "version": "1.7.1",
+    "com.laicasaane.texttyper": {
+      "version": "3.1.0",
       "depth": 0,
       "source": "registry",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "2.0.0"
-      },
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.unity.cinemachine": {
+      "version": "2.6.9",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
@@ -55,11 +60,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.nuget.newtonsoft-json": {
-      "version": "2.0.0",
-      "depth": 1,
+    "com.unity.probuilder": {
+      "version": "4.5.2",
+      "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.settings-manager": "1.0.3"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
@@ -89,6 +96,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.settings-manager": {
+      "version": "1.0.3",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.shadergraph": {
       "version": "10.5.1",
       "depth": 1,
@@ -97,6 +111,13 @@
         "com.unity.render-pipelines.core": "10.5.1",
         "com.unity.searcher": "4.3.2"
       },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.terrain-tools": {
+      "version": "3.0.2-preview.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
@@ -139,6 +160,13 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "jillejr.newtonsoft.json-for-unity": {
+      "version": "13.0.102",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

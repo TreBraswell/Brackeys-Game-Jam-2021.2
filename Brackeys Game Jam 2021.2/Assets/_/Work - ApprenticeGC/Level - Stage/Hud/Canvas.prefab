@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 598a13a2953c44748870de392947a9bf, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -250,8 +250,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 900
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 30c1377d9b13e8542ab45708bbe7ad86, type: 2}
+  m_sharedMaterial: {fileID: -6143490851394399063, guid: 30c1377d9b13e8542ab45708bbe7ad86,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -275,8 +276,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
-  m_fontSizeBase: 52
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1045,8 +1046,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10%
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 30c1377d9b13e8542ab45708bbe7ad86, type: 2}
+  m_sharedMaterial: {fileID: -6143490851394399063, guid: 30c1377d9b13e8542ab45708bbe7ad86,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1148,7 +1150,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 700, y: 60}
+  m_SizeDelta: {x: 800, y: 60}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &5866052474807403123
 GameObject:
@@ -1268,10 +1270,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"labelTime","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"labelCompleteness","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"labelTime","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"labelCompleteness","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"compassImage","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"owernGO","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 5033323851352348687}
     - {fileID: 5866052474549649267}
+    - {fileID: 332249616719639545}
+    - {fileID: 5866052473315707307}
 --- !u!114 &1605622846063407797
 MonoBehaviour:
   m_ObjectHideFlags: 0
