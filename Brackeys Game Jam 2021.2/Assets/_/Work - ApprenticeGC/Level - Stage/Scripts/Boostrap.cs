@@ -7,13 +7,14 @@ namespace BGJ20212.Game.ApprenticeGC.Stage
 
     public class Boostrap : MonoBehaviour
     {
-        public GameObject managerPrefab;
-
-        private GameObject _manager;
+        // public GameObject managerPrefab;
+        //
+        // private GameObject _manager;
 
         private void Start()
         {
-            _manager = GameObject.Instantiate(managerPrefab);
+            // _manager = GameObject.Instantiate(managerPrefab);
         }
     }
 }
+
