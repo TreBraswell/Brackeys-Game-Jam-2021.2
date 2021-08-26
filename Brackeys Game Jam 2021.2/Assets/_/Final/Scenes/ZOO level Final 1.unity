@@ -1613,11 +1613,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2781334567971569236, guid: 0495ab3ccb4b7b743bf300ff0971115f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0495ab3ccb4b7b743bf300ff0971115f, type: 3}
 --- !u!1 &57177038
@@ -8472,6 +8467,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 345907344}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &353242072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353242073}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &353242073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353242072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1636016662}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &353262906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24376,7 +24401,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 0
+  m_UpdateMethod: 1
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
@@ -37761,6 +37786,12 @@ Transform:
   m_Father: {fileID: 710772008}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1636016662 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2020855714537678975, guid: 34259cc0d5f68a143962a04b033a8f4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 424038546431704047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1638613532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49459,6 +49490,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 347191851344729949, guid: 34259cc0d5f68a143962a04b033a8f4a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: 424038546965974225, guid: 34259cc0d5f68a143962a04b033a8f4a,
         type: 3}
       propertyPath: m_RootOrder
@@ -49519,7 +49555,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lion Cage
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4580306642770100073, guid: 34259cc0d5f68a143962a04b033a8f4a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 34259cc0d5f68a143962a04b033a8f4a, type: 3}
 --- !u!4 &543450653535536228
 Transform:
@@ -50929,7 +50966,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2791289839850076321, guid: cf4d66aab77e0f9409603e07115eac46, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cf4d66aab77e0f9409603e07115eac46, type: 3}
 --- !u!33 &2689732560957575205
 MeshFilter:
@@ -52158,7 +52196,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giraffe Cage
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6369748852636669280, guid: bea3c47464976b44c9861e2474b0446b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bea3c47464976b44c9861e2474b0446b, type: 3}
 --- !u!23 &6367108239336257143
 MeshRenderer:

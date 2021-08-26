@@ -1655,7 +1655,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.45
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3522381860783835289, guid: 0495ab3ccb4b7b743bf300ff0971115f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0495ab3ccb4b7b743bf300ff0971115f, type: 3}
 --- !u!1 &57177038
 GameObject:
@@ -38940,6 +38941,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1827296817}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1819900704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2781334567971569236, guid: 0495ab3ccb4b7b743bf300ff0971115f,
+    type: 3}
+  m_PrefabInstance: {fileID: 53876950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1819900706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819900704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13fe58e39c5120b4ab5ff46df1bc8eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayLength: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  excluseLayeName: 
 --- !u!1001 &1822084405
 PrefabInstance:
   m_ObjectHideFlags: 0

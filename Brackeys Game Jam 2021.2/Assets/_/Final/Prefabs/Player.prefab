@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 2781334567971569232}
   - component: {fileID: 1754874693}
   - component: {fileID: 1754874692}
-  - component: {fileID: 3522381860783835289}
+  - component: {fileID: 1666267725}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -491,7 +491,7 @@ MonoBehaviour:
   move_Speed: 20
   speed: 0.4
   jumpHeight: 100
---- !u!114 &3522381860783835289
+--- !u!114 &1666267725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -500,15 +500,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2781334567971569236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80bb150821763fe42be0667fc845235e, type: 3}
+  m_Script: {fileID: 11500000, guid: 13fe58e39c5120b4ab5ff46df1bc8eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headPos: {fileID: 0}
-  openAmount: 0
-  doorOpenDIstance: 0
-  doorMask:
+  rayLength: 10
+  layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  excluseLayeName: 
 --- !u!1 &2781334568753562809
 GameObject:
   m_ObjectHideFlags: 0
