@@ -1154,3 +1154,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e571caaa8131a845995ca394534acca, type: 3}
+--- !u!1001 &8409478935416446550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2459420088723579404, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoo Keeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992406872227664793, guid: 4c759b34e96976a4897cc8efec4475a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c759b34e96976a4897cc8efec4475a1, type: 3}
