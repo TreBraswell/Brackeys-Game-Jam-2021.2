@@ -49,14 +49,23 @@ public class Animal : MonoBehaviour
         }
         if(gameObject.GetComponent<Gun>() && gameObject.GetComponent<Gun>().CheckForEnemy(isEnemy))
         {
-            
+            animator.SetTrigger("Attack");
+            StartCoroutine(RefreshAttack());
             gameObject.GetComponent<Gun>().Shoot();
+
         }
         if(follow == Player.instance.gameObject && Player.instance.attacker)
         {
             follow = Player.instance.attacker;
         }
 
+    }
+    private IEnumerator RefreshAttack()
+    {
+        isAttacking = false;
+        yield return new WaitForSeconds(1f);
+        canAttack = true;
+        yield break;
     }
     public virtual void Die()
     {
