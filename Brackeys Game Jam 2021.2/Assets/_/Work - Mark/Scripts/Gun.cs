@@ -17,8 +17,12 @@ namespace BGJ20212.Game.Mark
         private float minHealth = 0f; //minimum of life till an enemye dies
         public float health = 100f; //Enemyhealth
         public float hitIntensity = 500f; //how hard the enemy rigidbody gets hit
-        public Camera fCam; //direction of bullets
+        public GameObject fCam; //direction of bullets
+         void Start()
+        {
+            fCam = this.gameObject;
 
+        }
         //var clone : GameObject;
         void Update()
         {
@@ -35,24 +39,41 @@ namespace BGJ20212.Game.Mark
             }
             else
             {
-                muz.Pause();
-                ParticleOB = new Color(1, 1, 1, 0);
+                //muz.Pause();
+                //ParticleOB = new Color(1, 1, 1, 0);
             }
 
         }
-
-        void Shoot() //shooting and bullet behaviour
+        public GameObject CheckForEnemy(bool enemy)
         {
-            muz.Play(); // for Shoot animation
             RaycastHit hit; //marks the target if hit
             if (Physics.Raycast(fCam.transform.position, fCam.transform.forward, out hit, range))
             {
-                Debug.Log(hit.transform.name); //use for debugging
+                Rigidbody body = hit.collider.GetComponent<Rigidbody>();
+                if (body != null && body.gameObject.GetComponent<Animal>() && body.gameObject.GetComponent<Animal>().isEnemy == !enemy)
+                {
+                    return body.gameObject;
+                }
+            }
+            return null;
+        }
+        public void Shoot() //shooting and bullet behaviour
+        {
+            //muz.Play(); // for Shoot animation
+            RaycastHit hit; //marks the target if hit
+            if (Physics.Raycast(fCam.transform.position, fCam.transform.forward, out hit, range))
+            {
+               
                 Rigidbody body = hit.collider.GetComponent<Rigidbody>();
                 if (body != null)
                 {
+                    
                     body.AddExplosionForce(hitIntensity, fCam.transform.forward,
                         5); //Raycast hit explosion to add hit force to enemy
+                    if(body.gameObject.GetComponent<Animal>())
+                    {
+                        body.gameObject.GetComponent<Animal>().GetHit(damage,this.gameObject);
+                    }
                 }
             }
             //Instantiate(impact, hit.point, Quaternion.LookRotation(hit.normal)); //for object hit animation !!!
