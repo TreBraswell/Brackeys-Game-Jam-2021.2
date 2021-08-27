@@ -2,17 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class Cage : Animal
+public class Cage : MonoBehaviour
 {
-    public override void Start()
+    public GameObject animalHolder;
+    public double health;
+    public  void Start()
     {
-        myMesh = GetComponent<NavMeshAgent>();
-        animator = GetComponentInChildren<Animator>();
-        isEnemy = true;
+
     }
-    public override void Die()
+    public void Update()
     {
-        foreach (Transform child in transform)
+        if(health<=0)
+        {
+            Die();
+        }
+    }
+    public virtual void GetHit(double damage, GameObject attacker)
+    {
+
+        Debug.Log("this is the cage getting hit");
+        if (this.gameObject.GetComponent<Player>())
+        {
+            Player.instance.attacker = attacker;
+        }
+        health -= damage;
+    }
+    public void Die()
+    {
+        foreach (Transform child in animalHolder.transform)
         {
             if(child.gameObject.GetComponent<Animal>())
             {

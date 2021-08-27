@@ -50,7 +50,7 @@ namespace BGJ20212.Game.Mark
             if (Physics.Raycast(fCam.transform.position, fCam.transform.forward, out hit, range))
             {
                 Rigidbody body = hit.collider.GetComponent<Rigidbody>();
-                if (body != null && body.gameObject.GetComponent<Animal>() && body.gameObject.GetComponent<Animal>().isEnemy == !enemy)
+                if (body != null &&(( body.gameObject.GetComponent<Animal>() && body.gameObject.GetComponent<Animal>().isEnemy == !enemy)||(body.gameObject.GetComponent <Cage>())))
                 {
                     return body.gameObject;
                 }
@@ -73,6 +73,10 @@ namespace BGJ20212.Game.Mark
                     if(body.gameObject.GetComponent<Animal>())
                     {
                         body.gameObject.GetComponent<Animal>().GetHit(damage,this.gameObject);
+                    }
+                    else if(body.gameObject.GetComponent<Cage>())
+                    {
+                        body.gameObject.GetComponent<Cage>().GetHit(damage, this.gameObject);
                     }
                 }
             }
