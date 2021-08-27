@@ -492,7 +492,7 @@ MonoBehaviour:
     m_Bits: 8
   move_Speed: 20
   speed: 0.4
-  jumpHeight: 100
+  jumpHeight: 2
 --- !u!114 &1666267725
 MonoBehaviour:
   m_ObjectHideFlags: 0
