@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 3151132179924870965}
   - component: {fileID: 3151132179924870960}
   - component: {fileID: 3151132179924870963}
-  - component: {fileID: 3151132179924870962}
-  - component: {fileID: 3151132179924870961}
-  m_Layer: 0
+  - component: {fileID: 5597987735393384930}
+  m_Layer: 3
   m_Name: pain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3151132179924870964}
-  m_LocalRotation: {x: 0.7041799, y: -0.06426792, z: -0.064267986, w: 0.70418036}
+  m_LocalRotation: {x: 0.7041804, y: -0.06426511, z: -0.06426511, w: 0.7041804}
   m_LocalPosition: {x: -0.02506148, y: 0.011691423, z: 0.0005592467}
-  m_LocalScale: {x: 0.0048455996, y: 0.000016152007, z: 0.0048456006}
+  m_LocalScale: {x: 20, y: 20, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 79.571, y: -90, z: -90}
 --- !u!33 &3151132179924870960
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -83,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3151132179924870962
-MeshCollider:
+--- !u!65 &5597987735393384930
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,21 +92,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &3151132179924870961
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3151132179924870964}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: -0.00000023841858, z: -0.0000038146973}
