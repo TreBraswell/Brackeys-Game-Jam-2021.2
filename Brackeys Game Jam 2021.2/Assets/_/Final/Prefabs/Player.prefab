@@ -682,6 +682,7 @@ MonoBehaviour:
   characterController: {fileID: 1754874693}
   playerShoot: {fileID: 127989904}
   gravity: -9.8
+  HitCollider: {fileID: 0}
   cameraTransform: {fileID: 0}
   GroundCheckPos: {fileID: 825541450}
   radius: 0.2
