@@ -17,6 +17,9 @@ public class Animal : MonoBehaviour
     [HideInInspector] public NavMeshAgent myMesh;
     public bool isFollowing = false;
 
+    [SerializeField]
+    private float knockBackWhenDjes = 30f;
+
     private bool isAttacking;
     private bool canAttack;
 
@@ -27,14 +30,25 @@ public class Animal : MonoBehaviour
     private Vector2 velocity = Vector2.zero;
 
 
+    bool isDead;
+    GameObject player;
 
     [SerializeField] Rigidbody[] rbs;
     [SerializeField] Collider[] colliders;
+    private Collider collider;
+    private Rigidbody rb;
+    Vector3 LastBulletPos;
     public virtual void Start()
     {
         myMesh = GetComponent<NavMeshAgent>();
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponent<Animator>();
         //myMesh.updatePosition = false;
+
+        collider = GetComponent<Collider>();
+        rb = GetComponent<Rigidbody>();
+
+
+        ToggleRagdoll(false);
     }
     public virtual void Update()
     {
@@ -42,9 +56,10 @@ public class Animal : MonoBehaviour
         {
             follow = Player.instance.gameObject;
         }
-        if(health<=0)
+        if(health<=0 && !isDead)
         {
             Die();
+            isDead = true;
         }
         if(isFollowing && Player.instance)
         {
@@ -78,24 +93,65 @@ public class Animal : MonoBehaviour
         {
             Player.instance.attacker = null;
         }
-        for (int i = 0; i < rbs.Length; i++)
+        ToggleRagdoll(true);
+    }
+    void ToggleRagdoll(bool enable)
+    {
+        if (!enable)
         {
-            rbs[i].isKinematic = true;
+            for (int i = 0; i < rbs.Length; i++)
+            {
+                rbs[i].isKinematic = true;
+
+                colliders[i].enabled = false;
+            }
+         
+            collider.enabled = true;
+            animator.enabled = true;
+
+        }
+        else
+        {
+            for (int i = 0; i < rbs.Length; i++)
+            {
+                rbs[i].isKinematic = false;
+                if(LastBulletPos!= Vector3.zero)
+                {
+                    rbs[i].AddForce((transform.position - LastBulletPos).normalized * knockBackWhenDjes, ForceMode.Impulse);
+                }
+                colliders[i].enabled = true;
+            }
+            
+            collider.enabled = false;
+            animator.enabled = false;
         }
     }
+
+
     //this will be used for damage
     /*public virtual void OnCollisionEnter(Collision collision)
     {
         //probaly minus health
         Debug.Log("this happened");
     }*/
-    public virtual void GetHit(double damage,GameObject attacker)
+    public virtual void GetHit(double damage, GameObject attacker, Vector3 pos = new Vector3())
     {
         follow = attacker;
         Debug.Log(this.gameObject);
         if (this.gameObject.GetComponent<Player>())
         {
             Player.instance.attacker = attacker;
+        }
+    
+        if(pos != new Vector3())
+        {
+            
+            LastBulletPos =new Vector3(pos.x,pos.y,pos.z);
+          
+        }
+        else
+        {
+            LastBulletPos = Vector3.zero;
         }
         TakeDamage(damage);
     }
@@ -109,8 +165,7 @@ public class Animal : MonoBehaviour
     {
         
         health -= damage;
-
-        
+    
     }
 
 

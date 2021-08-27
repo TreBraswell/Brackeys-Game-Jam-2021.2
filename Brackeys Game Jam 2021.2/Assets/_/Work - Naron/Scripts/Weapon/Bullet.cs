@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public float damage;
 
     void Start()
     {
@@ -20,7 +21,10 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-   
+        if (other.transform.CompareTag("Shootable"))
+        {
+            GetComponent<Collider>().isTrigger = false;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -34,7 +38,9 @@ public class Bullet : MonoBehaviour
         if (other.transform.CompareTag("Shootable"))
         {
             //Damage Part
-            Destroy(other.transform.gameObject);
+            Animal anim = other.transform.GetComponent<Animal>() ;
+          
+            anim.GetHit(damage,Player.instance.attacker,transform.position);
             Destroy(this.gameObject);
 
         }

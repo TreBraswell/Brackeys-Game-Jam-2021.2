@@ -16,7 +16,8 @@ namespace  BGJ20212.Game.AbhiTechGame
         [SerializeField] private CharacterController characterController;
         [SerializeField] private PlayerShoot playerShoot;
         public float gravity = -9.81f;
-
+        [SerializeField]
+        private Collider HitCollider;
         private float verticalVelocity;
         Vector3 moveDirection;
 
@@ -64,6 +65,8 @@ namespace  BGJ20212.Game.AbhiTechGame
         {
             CheckInput();
             Move();
+
+            
         }
 
     

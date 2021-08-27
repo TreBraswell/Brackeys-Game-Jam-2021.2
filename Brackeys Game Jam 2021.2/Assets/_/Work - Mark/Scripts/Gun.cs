@@ -11,7 +11,7 @@ namespace BGJ20212.Game.Mark
         public float range = 10000f; //weapon Range
         public Color ParticleOB;
 
-        public ParticleSystem muz;
+       // public ParticleSystem muz;
         //public GameObject impact;
 
         private float minHealth = 0f; //minimum of life till an enemye dies
