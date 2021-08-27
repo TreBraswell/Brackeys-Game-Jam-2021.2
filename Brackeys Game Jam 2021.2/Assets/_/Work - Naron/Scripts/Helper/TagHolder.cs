@@ -6,6 +6,7 @@ namespace BGJ20212.Game.Naron
         public const string VERTICAL = "Vertical";
         public const string SUBMIT = "Submit";
         public const string JUMP = "Jump";
+        
     }
 
     public class MouseAxis
@@ -13,4 +14,6 @@ namespace BGJ20212.Game.Naron
         public const string MOUSE_Y = "Mouse Y";
         public const string MOUSE_X = "Mouse X";
     }
+
+    
 }

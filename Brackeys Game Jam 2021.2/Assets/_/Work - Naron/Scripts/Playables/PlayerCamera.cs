@@ -63,7 +63,7 @@ namespace BGJ20212.Game.Naron
 
 
 
-            player.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f);
+          //  Camera.main = Quaternion.Euler(0f, look_Angles.y, 0f);
 
         } //loo
     }

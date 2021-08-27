@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf413ba8d6542d3b9cfe9960f50336c, type: 3}
+  m_Name: SpawnData
+  m_EditorClassIdentifier: 
+  spawnLocations:
+  - position: {x: 215, y: -125, z: 160}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 196, y: -123, z: 245}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 175, y: -123, z: 270}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 126, y: -123, z: 270}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 70, y: -123, z: 270}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 11, y: -123, z: 270}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: -57, y: -123, z: 262}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
