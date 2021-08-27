@@ -9,6 +9,7 @@ namespace BGJ20212.Game.Naron
         
     }
 
+
     public class MouseAxis
     {
         public const string MOUSE_Y = "Mouse Y";

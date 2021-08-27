@@ -18,10 +18,20 @@ public class Bullet : MonoBehaviour
         Destroy(this.gameObject);
         yield break;
     }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Shootable"))
+   
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.CompareTag("Player"))
+        {
+            GetComponent<Collider>().isTrigger = false;
+        }
+        }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.CompareTag("Shootable"))
         {
             //Damage Part
             Destroy(other.transform.gameObject);
@@ -29,4 +39,5 @@ public class Bullet : MonoBehaviour
 
         }
     }
+
 }
