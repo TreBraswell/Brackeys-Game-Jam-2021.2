@@ -61,6 +61,10 @@ namespace BGJ20212.Game.Naron
         void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
+            if(camera == null)
+            {
+                camera = Camera.main;
+            }
         }
 
 
