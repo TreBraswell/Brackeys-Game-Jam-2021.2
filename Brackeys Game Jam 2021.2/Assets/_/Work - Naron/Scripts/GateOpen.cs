@@ -26,15 +26,7 @@ namespace BGJ20212.Game.Naron
 
 
         }
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
 
-                toggleGate();
-            }
-
-        }
 
         public void toggleGate()
         {

@@ -6,19 +6,15 @@ namespace BGJ20212.Game.Naron
 
     public class PlayerAnimator : MonoBehaviour
     {
-
+        [SerializeField]
         private Animator animator;
 
-
+        System.Action callbackFunc;
         //Animation priority - attack over jump
         private string[] animationPrioritiy = new string[] {"Walk", "Jump", "Attack"};
 
 
-        private void Start()
-        {
-            animator = GetComponent<Animator>();
-        }
-
+            
         public void SetFloat(string anim, float value)
         {
             animator.SetFloat(anim, value);
@@ -40,5 +36,19 @@ namespace BGJ20212.Game.Naron
         {
             animator.SetTrigger(anim);
         }
-   }
+        public void CallCallBack()
+        {
+            if(callbackFunc != null)
+            {
+                callbackFunc();
+                callbackFunc = null;
+            }
+        }
+        public void SetTrigger(string anim, System.Action callback)
+        {
+            animator.SetTrigger(anim);
+
+            callbackFunc = callback;
+        }
+    }
 }

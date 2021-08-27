@@ -380,9 +380,12 @@ GameObject:
   - component: {fileID: 4232683427906918667}
   - component: {fileID: 2900970776192193882}
   - component: {fileID: 1210543354747657401}
+  - component: {fileID: 280087812375178128}
+  - component: {fileID: 3776239897167554363}
+  - component: {fileID: 8357444317741738439}
   m_Layer: 0
   m_Name: Lion Boss
-  m_TagString: Untagged
+  m_TagString: Shootable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,6 +438,69 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.11, y: 3.6, z: 7.64}
   m_Center: {x: 0, y: 2.51, z: 0}
+--- !u!114 &280087812375178128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600156806407734193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969900f7c1bcf2c4192b490d77079692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  move_Speed: 250
+  run_Speed: 400
+  speed: 0
+  health: 100
+  damage: 10
+  follow: {fileID: 0}
+  isEnemy: 0
+  myMesh: {fileID: 0}
+  isFollowing: 1
+--- !u!114 &3776239897167554363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600156806407734193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440465084b0a7444da761ad64062afd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 10000
+  ParticleOB: {r: 0, g: 0, b: 0, a: 0}
+  muz: {fileID: 0}
+  health: 100
+  hitIntensity: 500
+  fCam: {fileID: 0}
+--- !u!195 &8357444317741738439
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600156806407734193}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4288835659644764873
 GameObject:
   m_ObjectHideFlags: 0
