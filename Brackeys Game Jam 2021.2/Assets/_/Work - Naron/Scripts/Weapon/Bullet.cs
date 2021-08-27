@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField]
-    float speed = 20f;
-    // Start is called before the first frame update
+
     void Start()
     {
-        GetComponent<Rigidbody>().velocity = Vector3.forward * 20f;
+       
         StartCoroutine(disapear());
         
     }
@@ -26,7 +24,7 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Shootable"))
         {
             //Damage Part
-
+            Destroy(other.transform.gameObject);
             Destroy(this.gameObject);
 
         }

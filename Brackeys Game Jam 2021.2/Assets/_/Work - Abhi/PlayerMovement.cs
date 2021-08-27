@@ -13,7 +13,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         [Header("Refrences")] [SerializeField] private PlayerAnimator animator;
 
         [SerializeField] private CharacterController characterController;
-
+        [SerializeField] private PlayerShoot playerShoot;
         public float gravity = -9.81f;
 
         private float verticalVelocity;
@@ -35,7 +35,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         private bool isAttacking;
         private bool canAttack;
         private bool isJumping;
-
+        private bool isShooting;
 
         private float turnSmoothTime = 0.2f;
         private float turnSmoothVelocity;
@@ -105,8 +105,22 @@ namespace  BGJ20212.Game.AbhiTechGame
             {
                 Attack();
             }
+            if (Input.GetMouseButton(1))
+            {
+                TryShoot();
+            }
         }
-
+        void TryShoot()
+        {
+        
+            if (!isAttacking && playerShoot.canShoot)
+            {
+                print("here");
+                playerShoot.canShoot = false;
+                animator.SetTrigger("Throw", playerShoot.Shoot);
+                
+            }
+        }
         void ApplyGravity()
         {
             if (!characterController.isGrounded)
@@ -140,7 +154,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         private void Attack()
         {
             
-            if (characterController.isGrounded && canAttack)
+            if (characterController.isGrounded && canAttack && !isShooting)
             {
                 animator.SetTrigger("Attack");
                 isAttacking = true;

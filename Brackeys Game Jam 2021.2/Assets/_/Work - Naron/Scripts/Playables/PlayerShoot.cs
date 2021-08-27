@@ -8,8 +8,9 @@ namespace BGJ20212.Game.Naron {
         [SerializeField] private GameObject projectile;
         [SerializeField] private Transform weaponPlace;
         [SerializeField] private float WeaponRefreshTime;
-        bool canShoot;
-
+        [SerializeField] private float bulletSpeed = 20f;
+       public bool canShoot;
+        Vector3 destination;
 
         [SerializeField] private AbhiTechGame.PlayerMovement player;
 
@@ -20,24 +21,32 @@ namespace BGJ20212.Game.Naron {
 
         private void Update()
         {
-            if (Input.GetMouseButton(1))
-            {
-                Shoot();
-            }
+       
     }
-        void Shoot()
+        public void Shoot()
         {
+           
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+                destination = hit.point;
+            else destination = ray.GetPoint(1000);
             //dontShoot
-            if (!canShoot) return;
 
-            //Initiate Bullet
-            GameObject bullet = (GameObject)Instantiate(projectile, weaponPlace.position, weaponPlace.rotation);
-            canShoot = false;
-            StartCoroutine(RefreshAttack());
-            
+            destination += transform.forward * 25f;
+            InstantiateBullet();
+
 
         }
-
+        void InstantiateBullet()
+        {
+            //Initiate Bullet
+            GameObject bullet = (GameObject)Instantiate(projectile, weaponPlace.position, Quaternion.identity);
+            bullet.GetComponent<Rigidbody>().velocity = (destination - weaponPlace.position).normalized * bulletSpeed;
+            
+            canShoot = false;
+            StartCoroutine(RefreshAttack());
+        }
         private IEnumerator RefreshAttack()
         {
             yield return new WaitForSeconds(WeaponRefreshTime);
