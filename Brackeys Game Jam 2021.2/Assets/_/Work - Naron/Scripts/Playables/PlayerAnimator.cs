@@ -13,8 +13,11 @@ namespace BGJ20212.Game.Naron
         //Animation priority - attack over jump
         private string[] animationPrioritiy = new string[] {"Walk", "Jump", "Attack"};
 
+        public void Start()
+        {
+            animator = this.GetComponentInChildren<Animator>();
+        }
 
-            
         public void SetFloat(string anim, float value)
         {
             animator.SetFloat(anim, value);

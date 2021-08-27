@@ -49,7 +49,9 @@ namespace BGJ20212.Game.Mark
             RaycastHit hit; //marks the target if hit
             if (Physics.Raycast(fCam.transform.position, fCam.transform.forward, out hit, range))
             {
+                
                 Rigidbody body = hit.collider.GetComponent<Rigidbody>();
+                
                 if (body != null &&(( body.gameObject.GetComponent<Animal>() && body.gameObject.GetComponent<Animal>().isEnemy == !enemy)||(body.gameObject.GetComponent <Cage>())))
                 {
                     return body.gameObject;

@@ -34,10 +34,11 @@ public class Cage : MonoBehaviour
             if(child.gameObject.GetComponent<Animal>())
             {
                 child.gameObject.GetComponent<Animal>().MoveToPlayer();
-                child.SetParent(this.transform.parent);
+                child.SetParent(animalHolder.transform.parent);
                 
             }
         }
         Destroy(this.gameObject);
+        Destroy(animalHolder.transform.gameObject);
     }
 }

@@ -41,20 +41,23 @@ public class Animal : MonoBehaviour
         {
             Die();
         }
-        if(isFollowing && Player.instance)
+        if(Player.instance && isFollowing && Player.instance)
         {
             
-            myMesh.SetDestination(follow.transform.position);
+                //myMesh.SetDestination(follow.transform.position);
+            
+
+
             AnimationCheck();
         }
-        if(gameObject.GetComponent<Gun>() && gameObject.GetComponent<Gun>().CheckForEnemy(isEnemy))
+        if(Player.instance && gameObject != Player.instance.gameObject && gameObject.GetComponent<Gun>() && gameObject.GetComponent<Gun>().CheckForEnemy(isEnemy))
         {
             animator.SetTrigger("Attack");
             StartCoroutine(RefreshAttack());
             gameObject.GetComponent<Gun>().Shoot();
 
         }
-        if(follow == Player.instance.gameObject && Player.instance.attacker)
+        if(Player.instance && follow == Player.instance.gameObject && Player.instance.attacker)
         {
             follow = Player.instance.attacker;
         }
@@ -69,7 +72,7 @@ public class Animal : MonoBehaviour
     }
     public virtual void Die()
     {
-        if(this.gameObject == Player.instance.attacker)
+        if(Player.instance && this.gameObject == Player.instance.attacker)
         {
             Player.instance.attacker = null;
         }
@@ -85,7 +88,7 @@ public class Animal : MonoBehaviour
     {
         follow = attacker;
         //Debug.Log(this.gameObject);
-        if (this.gameObject.GetComponent<Player>())
+        if (Player.instance && this.gameObject.GetComponent<Player>())
         {
             Player.instance.attacker = attacker;
         }
