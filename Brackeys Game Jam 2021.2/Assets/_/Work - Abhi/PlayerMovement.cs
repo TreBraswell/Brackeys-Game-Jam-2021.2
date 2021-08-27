@@ -227,17 +227,17 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         private void disableWeaponAndRig()
         {
-            // rig.weight = 0;
-            // weaponHolder.SetActive(false);
-            // playerShoot.weaponIndex = 0;
+            rig.weight = 0;
+            weaponHolder.SetActive(false);
+            playerShoot.weaponIndex = 0;
         }
 
         private void enableWeapon()
         {
 
-            // weaponHolder.SetActive(true);
-            // rig.weight = 1;
-            // playerShoot.weaponIndex = 1;
+            weaponHolder.SetActive(true);
+            rig.weight = 1;
+            playerShoot.weaponIndex = 1;
         }
     }
 

@@ -660,6 +660,8 @@ MonoBehaviour:
   move_Speed: 20
   speed: 0.4
   jumpHeight: 2
+  weaponHolder: {fileID: 91888644}
+  rig: {fileID: 1676362580050062210}
 --- !u!114 &1666267725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,10 +691,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d233177d56b7cf488869dbdfbf7868d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 6313245396405017686, guid: eb39b2891c72d404ba195d0a1ae2bc81,
-    type: 3}
-  weaponPlace: {fileID: 494381120240259030}
-  WeaponRefreshTime: 2
+  projectiles: []
+  weaponIndex: 0
+  weaponPlace:
+  - {fileID: 0}
+  WeaponRefreshTime: []
   bulletSpeed: 50
   canShoot: 0
   player: {fileID: 1754874692}
