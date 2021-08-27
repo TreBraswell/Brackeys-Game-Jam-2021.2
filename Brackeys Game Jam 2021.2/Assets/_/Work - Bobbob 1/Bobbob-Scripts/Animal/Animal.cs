@@ -22,7 +22,7 @@ public class Animal : MonoBehaviour
 
     private bool isStanding;
     private bool isSpriting;
-    
+
     private Vector2 smoothDeltaPosition = Vector2.zero;
     private Vector2 velocity = Vector2.zero;
     public virtual void Start()
@@ -35,7 +35,10 @@ public class Animal : MonoBehaviour
     {
         if(isFollowing && follow == null)
         {
-            follow = Player.instance.gameObject;
+            if (Player.instance != null)
+            {
+                follow = Player.instance.gameObject;
+            }
         }
         if(health<=0)
         {
@@ -43,7 +46,7 @@ public class Animal : MonoBehaviour
         }
         if(isFollowing && Player.instance)
         {
-            
+
             myMesh.SetDestination(follow.transform.position);
             AnimationCheck();
         }
@@ -54,11 +57,14 @@ public class Animal : MonoBehaviour
             gameObject.GetComponent<Gun>().Shoot();
 
         }
-        if(follow == Player.instance.gameObject && Player.instance.attacker)
-        {
-            follow = Player.instance.attacker;
-        }
 
+        if (Player.instance != null)
+        {
+            if(follow == Player.instance.gameObject && Player.instance.attacker)
+            {
+                follow = Player.instance.attacker;
+            }
+        }
     }
     private IEnumerator RefreshAttack()
     {
@@ -99,16 +105,16 @@ public class Animal : MonoBehaviour
     }
     public virtual void TakeDamage(double damage )
     {
-        
+
         health -= damage;
 
-        
+
     }
 
 
 
         //this will be used to follow the player after being freed
-       
+
 
 
     public virtual void DealDamage(GameObject enemy)
@@ -117,7 +123,7 @@ public class Animal : MonoBehaviour
     }
     public virtual void AnimationCheck()
     {
-        
+
         /*if (myMesh.velocity.x==0 && myMesh.velocity.z == 0 )
         {
             animator.SetBool("Move", false);
@@ -129,8 +135,8 @@ public class Animal : MonoBehaviour
             animator.SetFloat("moveSpeed", 1);
         }*/
 
-        
-        
+
+
 
     }
 }
