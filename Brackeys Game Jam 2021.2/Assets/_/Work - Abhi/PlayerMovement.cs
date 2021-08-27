@@ -5,6 +5,7 @@ namespace  BGJ20212.Game.AbhiTechGame
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
+    using UnityEngine.Animations.Rigging;
 
     public class PlayerMovement : MonoBehaviour
     {
@@ -38,10 +39,15 @@ namespace  BGJ20212.Game.AbhiTechGame
         private bool isShooting;
         private bool isStanding;
 
-        private float turnSmoothTime = 0.2f;
-        private float turnSmoothVelocity;
 
-       
+
+        //Weapon stuff
+
+        [Header("Weapons")]
+        [SerializeField] GameObject weaponHolder;
+        [SerializeField] TwoBoneIKConstraint rig;
+
+
 
         void Start()
         {
@@ -51,6 +57,7 @@ namespace  BGJ20212.Game.AbhiTechGame
             speed = move_Speed;
 
             canAttack = true;
+            disableWeaponAndRig();
         }
 
         private void Update()
@@ -65,8 +72,8 @@ namespace  BGJ20212.Game.AbhiTechGame
         private void Move()
         {
       
-
-            Vector2 inputAxis = new Vector2(Input.GetAxis(Axis.HORIZONTAL), Input.GetAxis(Axis.VERTICAL));
+            
+            Vector2 inputAxis = new Vector2(Input.GetAxis(Naron.Axis.HORIZONTAL), Input.GetAxis(Naron.Axis.VERTICAL));
 
             moveDirection = new Vector3(inputAxis.x, 0f, inputAxis.y);
             Vector3 direction = moveDirection.normalized;
@@ -128,9 +135,16 @@ namespace  BGJ20212.Game.AbhiTechGame
             
             if (!isAttacking && playerShoot.canShoot)
             {
-                print("here");
-                playerShoot.canShoot = false;
-                animator.SetTrigger("Throw", playerShoot.Shoot);
+                if (!isStanding)
+                {
+                    
+                    playerShoot.canShoot = false;
+                    animator.SetTrigger("Throw", playerShoot.Shoot);
+                }
+                else
+                {
+                    playerShoot.Shoot();
+                }
                 
             }
         }
@@ -157,7 +171,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         private void PlayerJump()
         {
             
-            if (characterController.isGrounded && Input.GetButton(Axis.JUMP))
+            if (characterController.isGrounded && Input.GetButton(Naron.Axis.JUMP))
             {
                 verticalVelocity = jumpHeight;
                 isJumping = true;
@@ -198,7 +212,35 @@ namespace  BGJ20212.Game.AbhiTechGame
                 isStanding = !isStanding;
             animator.SetBool("Stand", isStanding);
 
+            if (isStanding)
+            {
+                Invoke("enableWeapon", 0.5f);
+            }
+            else
+            {
+                Invoke("disableWeaponAndRig", 0.5f);
+                playerShoot.weaponIndex = 0;
+            }
+
             
+        }
+
+        private void disableWeaponAndRig()
+        {
+            rig.weight = 0;
+            weaponHolder.SetActive(false);
+            playerShoot.weaponIndex = 1;
+        }
+
+        private void enableWeapon()
+        {
+            
+            weaponHolder.SetActive(true);
+
+
+            rig.weight = 1;
+            
+            playerShoot.weaponIndex = 1;
         }
     }
 

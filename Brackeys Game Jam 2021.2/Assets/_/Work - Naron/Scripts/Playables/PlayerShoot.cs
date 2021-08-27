@@ -5,8 +5,13 @@ using UnityEngine;
 namespace BGJ20212.Game.Naron {
     public class PlayerShoot : MonoBehaviour
     {
-        [SerializeField] private GameObject projectile;
-        [SerializeField] private Transform weaponPlace;
+        [SerializeField] private GameObject[] projectiles;
+
+
+        public int weaponIndex;
+
+        //weapons
+        [SerializeField] private Transform[] weaponPlace;
         [SerializeField] private float WeaponRefreshTime;
         [SerializeField] private float bulletSpeed = 20f;
        public bool canShoot;
@@ -41,8 +46,8 @@ namespace BGJ20212.Game.Naron {
         void InstantiateBullet()
         {
             //Initiate Bullet
-            GameObject bullet = (GameObject)Instantiate(projectile, weaponPlace.position, Quaternion.identity);
-            bullet.GetComponent<Rigidbody>().velocity = (destination - weaponPlace.position).normalized * bulletSpeed;
+            GameObject bullet = (GameObject)Instantiate(projectile[i], weaponPlace[weaponIndex].position, Quaternion.identity);
+            bullet.GetComponent<Rigidbody>().velocity = (destination - weaponPlace[weaponIndex].position).normalized * bulletSpeed;
             
             canShoot = false;
             StartCoroutine(RefreshAttack());
