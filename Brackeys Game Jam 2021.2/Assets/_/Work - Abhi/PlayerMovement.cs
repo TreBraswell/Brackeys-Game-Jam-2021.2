@@ -20,7 +20,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         Vector3 moveDirection;
 
 
-        private Transform cameraTransform;
+        public Transform cameraTransform;
 
         public Transform GroundCheckPos;
         public float radius;
@@ -45,7 +45,7 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         void Start()
         {
-            cameraTransform = Camera.main.transform;
+            //cameraTransform = Camera.main.transform;
             characterController = GetComponent<CharacterController>();
 
             speed = move_Speed;

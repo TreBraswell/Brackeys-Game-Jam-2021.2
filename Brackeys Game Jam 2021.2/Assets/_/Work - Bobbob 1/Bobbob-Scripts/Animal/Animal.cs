@@ -84,7 +84,7 @@ public class Animal : MonoBehaviour
     public virtual void GetHit(double damage,GameObject attacker)
     {
         follow = attacker;
-        Debug.Log(attacker);
+        Debug.Log(this.gameObject);
         if (this.gameObject.GetComponent<Player>())
         {
             Player.instance.attacker = attacker;
@@ -118,7 +118,7 @@ public class Animal : MonoBehaviour
     public virtual void AnimationCheck()
     {
         
-        if (myMesh.velocity.x==0 && myMesh.velocity.z == 0 )
+        /*if (myMesh.velocity.x==0 && myMesh.velocity.z == 0 )
         {
             animator.SetBool("Move", false);
             animator.SetFloat("moveSpeed", 0);
@@ -127,7 +127,7 @@ public class Animal : MonoBehaviour
         {
             animator.SetBool("Move", true);
             animator.SetFloat("moveSpeed", 1);
-        }
+        }*/
 
         
         
