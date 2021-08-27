@@ -18,8 +18,9 @@ public class Cage : Animal
             {
                 child.gameObject.GetComponent<Animal>().MoveToPlayer();
                 child.SetParent(this.transform.parent);
-                Destroy(this.gameObject);
+                
             }
         }
+        Destroy(this.gameObject);
     }
 }
