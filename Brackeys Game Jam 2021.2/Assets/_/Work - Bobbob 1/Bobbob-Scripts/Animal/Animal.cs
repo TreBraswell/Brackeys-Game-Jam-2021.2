@@ -25,6 +25,11 @@ public class Animal : MonoBehaviour
     
     private Vector2 smoothDeltaPosition = Vector2.zero;
     private Vector2 velocity = Vector2.zero;
+
+
+
+    [SerializeField] Rigidbody[] rbs;
+    [SerializeField] Collider[] colliders;
     public virtual void Start()
     {
         myMesh = GetComponent<NavMeshAgent>();
@@ -41,23 +46,20 @@ public class Animal : MonoBehaviour
         {
             Die();
         }
-        if(Player.instance && isFollowing && Player.instance)
+        if(isFollowing && Player.instance)
         {
             
-                //myMesh.SetDestination(follow.transform.position);
-            
-
-
+            myMesh.SetDestination(follow.transform.position);
             AnimationCheck();
         }
-        if(Player.instance && gameObject != Player.instance.gameObject && gameObject.GetComponent<Gun>() && gameObject.GetComponent<Gun>().CheckForEnemy(isEnemy))
+        if(gameObject.GetComponent<Gun>() && gameObject.GetComponent<Gun>().CheckForEnemy(isEnemy))
         {
             animator.SetTrigger("Attack");
             StartCoroutine(RefreshAttack());
             gameObject.GetComponent<Gun>().Shoot();
 
         }
-        if(Player.instance && follow == Player.instance.gameObject && Player.instance.attacker)
+        if(follow == Player.instance.gameObject && Player.instance.attacker)
         {
             follow = Player.instance.attacker;
         }
@@ -72,11 +74,14 @@ public class Animal : MonoBehaviour
     }
     public virtual void Die()
     {
-        if(Player.instance && this.gameObject == Player.instance.attacker)
+        if(this.gameObject == Player.instance.attacker)
         {
             Player.instance.attacker = null;
         }
-        Destroy(this.gameObject);
+        for (int i = 0; i < rbs.Length; i++)
+        {
+            rbs[i].isKinematic = true;
+        }
     }
     //this will be used for damage
     /*public virtual void OnCollisionEnter(Collision collision)
@@ -87,8 +92,8 @@ public class Animal : MonoBehaviour
     public virtual void GetHit(double damage,GameObject attacker)
     {
         follow = attacker;
-        //Debug.Log(this.gameObject);
-        if (Player.instance && this.gameObject.GetComponent<Player>())
+        Debug.Log(this.gameObject);
+        if (this.gameObject.GetComponent<Player>())
         {
             Player.instance.attacker = attacker;
         }

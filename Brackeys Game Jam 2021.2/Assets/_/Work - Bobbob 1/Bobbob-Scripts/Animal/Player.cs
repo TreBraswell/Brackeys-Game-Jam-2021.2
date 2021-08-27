@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
     public GameObject attacker = null;
-    void Start()
+    void Awake()
     {
         if (instance == null)
         {

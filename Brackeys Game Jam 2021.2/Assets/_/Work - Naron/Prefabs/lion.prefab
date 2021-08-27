@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5018498934517616810}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 969900f7c1bcf2c4192b490d77079692, type: 3}
   m_Name: 
@@ -1117,6 +1117,20 @@ MonoBehaviour:
   isEnemy: 0
   myMesh: {fileID: 0}
   isFollowing: 0
+  rbs:
+  - {fileID: 1253889262}
+  - {fileID: 1253889261}
+  - {fileID: 7006950777184882656}
+  - {fileID: 1833938342}
+  - {fileID: 828024895}
+  - {fileID: 1340720527}
+  colliders:
+  - {fileID: 1253889258}
+  - {fileID: 1253889263}
+  - {fileID: 3483344592409680300}
+  - {fileID: 1833938340}
+  - {fileID: 1340720525}
+  - {fileID: 828024896}
 --- !u!114 &1943513781320180280
 MonoBehaviour:
   m_ObjectHideFlags: 0
