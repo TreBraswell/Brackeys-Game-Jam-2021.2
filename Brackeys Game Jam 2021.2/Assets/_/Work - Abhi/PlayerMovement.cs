@@ -229,7 +229,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         {
             rig.weight = 0;
             weaponHolder.SetActive(false);
-            playerShoot.weaponIndex = 1;
+            playerShoot.weaponIndex = 0;
         }
 
         private void enableWeapon()
