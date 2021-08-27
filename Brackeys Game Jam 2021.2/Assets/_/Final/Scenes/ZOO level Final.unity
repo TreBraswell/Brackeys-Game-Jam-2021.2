@@ -5705,6 +5705,53 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.17500001, z: 0.010000001}
   m_TimeToStationary: 0.5
+--- !u!1 &227878678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1010382540438185297, guid: 9100e1dc416e45e4899ae8bf72076d2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 352818266642189338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &227878679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227878678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440465084b0a7444da761ad64062afd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 10000
+  ParticleOB: {r: 0, g: 0, b: 0, a: 0}
+  muz: {fileID: 0}
+  health: 100
+  hitIntensity: 500
+  fCam: {fileID: 0}
+--- !u!195 &227878680
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227878678}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &229663702
 GameObject:
   m_ObjectHideFlags: 0
@@ -55550,6 +55597,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709588409767148634, guid: 9100e1dc416e45e4899ae8bf72076d2d,
+        type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709588409767148634, guid: 9100e1dc416e45e4899ae8bf72076d2d,
+        type: 3}
+      propertyPath: isFollowing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3743579488464940328, guid: 9100e1dc416e45e4899ae8bf72076d2d,
         type: 3}
