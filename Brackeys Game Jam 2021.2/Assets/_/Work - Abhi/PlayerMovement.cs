@@ -36,6 +36,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         private bool canAttack;
         private bool isJumping;
         private bool isShooting;
+        private bool isStanding;
 
         private float turnSmoothTime = 0.2f;
         private float turnSmoothVelocity;
@@ -65,7 +66,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         {
       
 
-            Vector2 inputAxis = new Vector2(Input.GetAxis(Axis.HORIZONTAL), Mathf.Clamp(Input.GetAxis(Axis.VERTICAL), 0f, 1f));
+            Vector2 inputAxis = new Vector2(Input.GetAxis(Axis.HORIZONTAL), Input.GetAxis(Axis.VERTICAL));
 
             moveDirection = new Vector3(inputAxis.x, 0f, inputAxis.y);
             Vector3 direction = moveDirection.normalized;
@@ -74,13 +75,14 @@ namespace  BGJ20212.Game.AbhiTechGame
 
             if (moveDirection.magnitude >= 0.1f)
             {
+                /*
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 
-                
+                */
                 animator.SetFloat("moveSpeed", 1f);
             }
             else
@@ -97,6 +99,9 @@ namespace  BGJ20212.Game.AbhiTechGame
        
             characterController.Move(moveDirection*speed * Time.deltaTime);
         }
+        #endregion
+
+
         private void CheckInput()
         {
       
@@ -109,10 +114,18 @@ namespace  BGJ20212.Game.AbhiTechGame
             {
                 TryShoot();
             }
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                ToggleStand();
+            }
         }
         void TryShoot()
         {
-        
+            if (isStanding)
+            {
+
+            }
+            
             if (!isAttacking && playerShoot.canShoot)
             {
                 print("here");
@@ -121,6 +134,7 @@ namespace  BGJ20212.Game.AbhiTechGame
                 
             }
         }
+#region Jump
         void ApplyGravity()
         {
             if (!characterController.isGrounded)
@@ -150,11 +164,12 @@ namespace  BGJ20212.Game.AbhiTechGame
             }
             
         }
-
+        #endregion
+        #region Attack
         private void Attack()
         {
             
-            if (characterController.isGrounded && canAttack && !isShooting)
+            if (characterController.isGrounded && canAttack && !isShooting && !isStanding)
             {
                 animator.SetTrigger("Attack");
                 isAttacking = true;
@@ -172,6 +187,22 @@ namespace  BGJ20212.Game.AbhiTechGame
         }
 
         #endregion
+
+
+
+
+        private void ToggleStand()
+        {
+            if (!characterController.isGrounded || isAttacking || isShooting) return;
+          
+                isStanding = !isStanding;
+            animator.SetBool("Stand", isStanding);
+
+            
+        }
     }
+
+
+
     
 }

@@ -33,7 +33,7 @@ namespace BGJ20212.Game.Naron {
             else destination = ray.GetPoint(1000);
             //dontShoot
 
-            destination += transform.forward * 25f;
+            destination += transform.forward * 20f;
             InstantiateBullet();
 
 
