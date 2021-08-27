@@ -15,6 +15,7 @@ namespace BGJ20212.Game.Naron {
         [SerializeField] private float[] WeaponRefreshTime;
         
         [SerializeField] private float bulletSpeed = 20f;
+        [SerializeField] private float heightCalibrate = 40f;
        public bool canShoot;
         Vector3 destination;
 
@@ -39,7 +40,7 @@ namespace BGJ20212.Game.Naron {
             else destination = ray.GetPoint(1000);
             //dontShoot
 
-            destination += transform.forward * 20f;
+            destination += transform.forward * heightCalibrate;
             InstantiateBullet();
 
 
