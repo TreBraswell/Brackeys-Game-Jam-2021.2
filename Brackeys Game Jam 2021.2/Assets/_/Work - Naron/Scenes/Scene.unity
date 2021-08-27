@@ -129,12 +129,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1015849372}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &732025663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4086694098315086329, guid: cd41fce0f7e4a8049939959469479739,
-    type: 3}
-  m_PrefabInstance: {fileID: 1015849372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1015849372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,36 +196,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4086694097952364217, guid: cd41fce0f7e4a8049939959469479739,
+    - target: {fileID: 4086694098270645613, guid: cd41fce0f7e4a8049939959469479739,
         type: 3}
-      propertyPath: rig
-      value: 
-      objectReference: {fileID: 1884867621}
-    - target: {fileID: 4086694097952364217, guid: cd41fce0f7e4a8049939959469479739,
-        type: 3}
-      propertyPath: IKRig
-      value: 
-      objectReference: {fileID: 1884867620}
-    - target: {fileID: 4086694097952364217, guid: cd41fce0f7e4a8049939959469479739,
-        type: 3}
-      propertyPath: weaponHolder
-      value: 
-      objectReference: {fileID: 732025663}
-    - target: {fileID: 4086694097952364217, guid: cd41fce0f7e4a8049939959469479739,
-        type: 3}
-      propertyPath: IKRig.Array.size
-      value: 3
+      propertyPath: WeaponRefreshTime.Array.data[1]
+      value: 0.3
       objectReference: {fileID: 0}
-    - target: {fileID: 4086694097952364217, guid: cd41fce0f7e4a8049939959469479739,
-        type: 3}
-      propertyPath: IKRig.Array.data[0]
-      value: 
-      objectReference: {fileID: 1884867620}
-    - target: {fileID: 4086694097952364217, guid: cd41fce0f7e4a8049939959469479739,
-        type: 3}
-      propertyPath: IKRig.Array.data[1]
-      value: 
-      objectReference: {fileID: 1884867620}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd41fce0f7e4a8049939959469479739, type: 3}
 --- !u!43 &1549993102
@@ -795,24 +764,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1884867620 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5923718559610315108, guid: cd41fce0f7e4a8049939959469479739,
-    type: 3}
-  m_PrefabInstance: {fileID: 1015849372}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1884867621 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3455800521793715839, guid: cd41fce0f7e4a8049939959469479739,
-    type: 3}
-  m_PrefabInstance: {fileID: 1015849372}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2081378702
 GameObject:
   m_ObjectHideFlags: 0

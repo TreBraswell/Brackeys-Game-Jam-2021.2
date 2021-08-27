@@ -930,13 +930,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d233177d56b7cf488869dbdfbf7868d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 6313245396405017686, guid: eb39b2891c72d404ba195d0a1ae2bc81,
-    type: 3}
+  projectiles:
+  - {fileID: 6313245396405017686, guid: eb39b2891c72d404ba195d0a1ae2bc81, type: 3}
+  - {fileID: 3807192659957402662, guid: ba1f2346324b1974eb830f27d0deb835, type: 3}
   weaponIndex: 0
   weaponPlace:
   - {fileID: 4497617885642824235}
   - {fileID: 4491609155002384334}
-  WeaponRefreshTime: 2
+  WeaponRefreshTime:
+  - 2
+  - 0.3
   bulletSpeed: 50
   canShoot: 0
   player: {fileID: 4086694097952364217}

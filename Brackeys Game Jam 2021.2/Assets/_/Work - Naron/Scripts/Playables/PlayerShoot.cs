@@ -12,7 +12,8 @@ namespace BGJ20212.Game.Naron {
 
         //weapons
         [SerializeField] private Transform[] weaponPlace;
-        [SerializeField] private float WeaponRefreshTime;
+        [SerializeField] private float[] WeaponRefreshTime;
+        
         [SerializeField] private float bulletSpeed = 20f;
        public bool canShoot;
         Vector3 destination;
@@ -46,7 +47,7 @@ namespace BGJ20212.Game.Naron {
         void InstantiateBullet()
         {
             //Initiate Bullet
-            GameObject bullet = (GameObject)Instantiate(projectile[i], weaponPlace[weaponIndex].position, Quaternion.identity);
+            GameObject bullet = (GameObject)Instantiate(projectiles[weaponIndex], weaponPlace[weaponIndex].position, Quaternion.identity);
             bullet.GetComponent<Rigidbody>().velocity = (destination - weaponPlace[weaponIndex].position).normalized * bulletSpeed;
             
             canShoot = false;
@@ -54,7 +55,7 @@ namespace BGJ20212.Game.Naron {
         }
         private IEnumerator RefreshAttack()
         {
-            yield return new WaitForSeconds(WeaponRefreshTime);
+            yield return new WaitForSeconds(WeaponRefreshTime[weaponIndex]);
             canShoot = true;
         }
 
