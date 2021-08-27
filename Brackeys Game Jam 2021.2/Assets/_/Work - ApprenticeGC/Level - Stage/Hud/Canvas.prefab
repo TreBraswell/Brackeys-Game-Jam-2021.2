@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 6226354681096151166}
   - component: {fileID: 4112068643733707088}
   - component: {fileID: 332249616719639545}
+  - component: {fileID: 6521288720012923548}
   m_Layer: 5
   m_Name: Compass
   m_TagString: Untagged
@@ -207,6 +208,22 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &6521288720012923548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326281238986447525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f50bd6d4fbd64a4ca41c13a55ce19d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconPrefab: {fileID: 1816444403416162016, guid: a362d23579406684b86c4826a5cb1e5b,
+    type: 3}
+  compassImage: {fileID: 332249616719639545}
+  maxDistance: 200
 --- !u!1 &1057560547099254955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,13 +1779,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"labelTime","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"labelCompleteness","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"compassImage","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"owernGO","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"sliderHp","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"labelTime","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"labelCompleteness","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"compassImage","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"owernGO","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"sliderHp","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"compoassGO","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 5033323851352348687}
     - {fileID: 5866052474549649267}
     - {fileID: 332249616719639545}
     - {fileID: 5866052473315707307}
     - {fileID: 1356831224120194813}
+    - {fileID: 326281238986447525}
 --- !u!114 &1605622846063407797
 MonoBehaviour:
   m_ObjectHideFlags: 0
