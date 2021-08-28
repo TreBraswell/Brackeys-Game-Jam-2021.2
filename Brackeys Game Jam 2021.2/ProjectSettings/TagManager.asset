@@ -10,6 +10,7 @@ TagManager:
   - Rank3Manager
   - Door
   - Shootable
+  - CageGate
   layers:
   - Default
   - TransparentFX

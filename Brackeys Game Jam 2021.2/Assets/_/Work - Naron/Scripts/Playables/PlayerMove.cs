@@ -182,9 +182,6 @@ namespace BGJ20212.Game.Naron
 
         private void TryJump()
         {
-
-
-           
             if (isGrounded && !isAttacking && !isStanding)
             {
                 print("kk");
@@ -198,9 +195,6 @@ namespace BGJ20212.Game.Naron
                 
                 Invoke("Jump", 0.3f);
                 //Add delay
-
-
-
             }
 
 
@@ -208,12 +202,8 @@ namespace BGJ20212.Game.Naron
 
         private void Jump()
         {
-
-           
-
             rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
             isJumping = true;
-
         }
 
         #region attack

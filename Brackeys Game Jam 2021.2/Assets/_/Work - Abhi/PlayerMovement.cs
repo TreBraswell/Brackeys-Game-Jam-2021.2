@@ -9,7 +9,6 @@ namespace  BGJ20212.Game.AbhiTechGame
 
     public class PlayerMovement : MonoBehaviour
     {
-
         //Refs
         [Header("Refrences")] [SerializeField] private PlayerAnimator animator;
 
@@ -44,6 +43,8 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         AudioManager audioManager;
 
+        PlayerDoorOpen playerDoorOpen;
+
         //Weapon stuff
 
         [Header("Weapons")]
@@ -58,10 +59,14 @@ namespace  BGJ20212.Game.AbhiTechGame
             cameraTransform = Camera.main.transform;
             characterController = GetComponent<CharacterController>();
 
+            playerDoorOpen = FindObjectOfType<PlayerDoorOpen>();
+
             speed = move_Speed;
 
             canAttack = true;
             disableWeaponAndRig();
+
+            Cursor.visible = false;
         }
 
         private void Update()
@@ -182,6 +187,7 @@ namespace  BGJ20212.Game.AbhiTechGame
                 animator.SetTrigger("Attack");
                 isAttacking = true;
                 canAttack = false;
+                playerDoorOpen.CheckGate();
                 StartCoroutine(RefreshAttack());
             }
         }
