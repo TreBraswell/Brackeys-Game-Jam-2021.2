@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
+
 public class Animal : MonoBehaviour
 {
-    [HideInInspector] public Animator animator;
+    //[HideInInspector]
+    public Animator animator;
     [Header("Stats")] public float move_Speed = 250f;
     public float run_Speed = 400f;
     public float speed;
@@ -16,6 +19,8 @@ public class Animal : MonoBehaviour
     [HideInInspector] public NavMeshAgent myMesh;
     public bool isFollowing = false;
 
+    public bool destrotyRbsLengthZero = true;
+
     [SerializeField]
     private float knockBackWhenDjes = 30f;
 
@@ -24,7 +29,7 @@ public class Animal : MonoBehaviour
 
     private bool isStanding;
     private bool isSpriting;
-    
+
     private Vector2 smoothDeltaPosition = Vector2.zero;
     private Vector2 velocity = Vector2.zero;
 
@@ -38,11 +43,14 @@ public class Animal : MonoBehaviour
     private Rigidbody rb;
     Vector3 LastBulletPos;
     Gun gun;
-   
+
     public virtual void Start()
     {
         myMesh = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
         //myMesh.updatePosition = false;
 
         collider = GetComponent<Collider>();
@@ -51,7 +59,7 @@ public class Animal : MonoBehaviour
         gun = GetComponent<Gun>();
        ToggleRagdoll(false);
     }
-   
+
    public virtual void Update()
    {
        if(isFollowing && follow == null)
@@ -101,7 +109,10 @@ public class Animal : MonoBehaviour
    {
        if(rbs.Length == 0)
        {
-           Destroy(this.gameObject);
+           if (destrotyRbsLengthZero)
+           {
+               Destroy(this.gameObject);
+           }
        }
        if (!enable)
        {
@@ -113,8 +124,12 @@ public class Animal : MonoBehaviour
            }
 
            collider.enabled = true;
-           animator.enabled = true;
 
+
+           if (animator != null)
+           {
+               animator.enabled = true;
+           }
        }
        else
        {
@@ -129,7 +144,10 @@ public class Animal : MonoBehaviour
            }
 
            collider.enabled = false;
-           animator.enabled = false;
+           if (animator != null)
+           {
+               animator.enabled = false;
+           }
        }
    }
 
@@ -140,22 +158,23 @@ public class Animal : MonoBehaviour
        //probaly minus health
        Debug.Log("this happened");
    }*/
-   
+
     public virtual void GetHit(double damage, GameObject attacker, Vector3 pos = new Vector3())
     {
+        Debug.Log($"{this.gameObject} GetHit {damage} attacker: {attacker}");
         follow = attacker;
         // Debug.Log(this.gameObject);
-        
+
         if (this.gameObject.GetComponent<Player>())
         {
             Player.instance.attacker = attacker;
         }
-    
+
         if(pos != new Vector3())
         {
-            
+
             LastBulletPos =new Vector3(pos.x,pos.y,pos.z);
-          
+
         }
         else
         {
@@ -163,17 +182,25 @@ public class Animal : MonoBehaviour
         }
         TakeDamage(damage);
     }
-   
+
    //this will be used to follow the player after being freed
 
    public virtual void MoveToPlayer()
    {
        isFollowing = true;
    }
+
+   public UnityEvent getKilled;
+
    public virtual void TakeDamage(double damage )
    {
 
        health -= damage;
+
+       if (health <= 0)
+       {
+           getKilled?.Invoke();
+       }
 
    }
 

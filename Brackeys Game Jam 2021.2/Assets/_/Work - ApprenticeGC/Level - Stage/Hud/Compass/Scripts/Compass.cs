@@ -3,6 +3,7 @@ namespace BGJ20212.Game.ApprenticeGC.Hud
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Linq;
     using Bolt;
     using UnityEngine;
     using UnityEngine.Timeline;
@@ -59,17 +60,20 @@ namespace BGJ20212.Game.ApprenticeGC.Hud
 
             foreach (var keyValuePair in _keyedIndications)
             {
-                keyValuePair.Key.image.rectTransform.anchoredPosition = GetPosOnCompass(keyValuePair.Key);
+                // if (keyValuePair.Key != null)
+                // {
+                    keyValuePair.Key.image.rectTransform.anchoredPosition = GetPosOnCompass(keyValuePair.Key);
 
-                var distance = Vector2.Distance(new Vector2(_player.transform.position.x, _player.transform.position.z),
-                    keyValuePair.Key.MappedPos);
-                var scale = 0.0f;
+                    var distance = Vector2.Distance(new Vector2(_player.transform.position.x, _player.transform.position.z),
+                        keyValuePair.Key.MappedPos);
+                    var scale = 0.0f;
 
-                if (distance < maxDistance)
-                {
-                    scale = 1.0f - (distance / maxDistance);
-                }
-                keyValuePair.Key.image.rectTransform.localScale = Vector3.one * scale;
+                    if (distance < maxDistance)
+                    {
+                        scale = 1.0f - (distance / maxDistance);
+                    }
+                    keyValuePair.Key.image.rectTransform.localScale = Vector3.one * scale;
+                // }
             }
         }
 
