@@ -144,7 +144,7 @@ public class Animal : MonoBehaviour
     public virtual void GetHit(double damage, GameObject attacker, Vector3 pos = new Vector3())
     {
         follow = attacker;
-        Debug.Log(this.gameObject);
+        // Debug.Log(this.gameObject);
         
         if (this.gameObject.GetComponent<Player>())
         {
