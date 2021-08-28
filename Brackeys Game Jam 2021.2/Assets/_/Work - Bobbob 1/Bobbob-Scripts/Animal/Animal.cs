@@ -92,7 +92,7 @@ public class Animal : MonoBehaviour
     public virtual void GetHit(double damage,GameObject attacker)
     {
         follow = attacker;
-        Debug.Log(this.gameObject);
+        
         if (this.gameObject.GetComponent<Player>())
         {
             Player.instance.attacker = attacker;
