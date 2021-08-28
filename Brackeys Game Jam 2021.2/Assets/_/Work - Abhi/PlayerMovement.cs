@@ -21,6 +21,8 @@ namespace  BGJ20212.Game.AbhiTechGame
         private float verticalVelocity;
         Vector3 moveDirection;
 
+        [SerializeField] private AudioSource gorillaMove;
+
 
         public Transform cameraTransform;
 
@@ -40,7 +42,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         private bool isShooting;
         private bool isStanding;
 
-
+        AudioManager audioManager;
 
         //Weapon stuff
 
@@ -53,6 +55,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         void Start()
         {
             //cameraTransform = Camera.main.transform;
+            audioManager = FindObjectOfType<AudioManager>();
             cameraTransform = Camera.main.transform;
             characterController = GetComponent<CharacterController>();
 
@@ -66,6 +69,8 @@ namespace  BGJ20212.Game.AbhiTechGame
         {
             CheckInput();
             Move();
+
+
         }
 
 
@@ -82,19 +87,13 @@ namespace  BGJ20212.Game.AbhiTechGame
 
             if (moveDirection.magnitude >= 0.1f)
             {
-                /*
-                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
-                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-                transform.rotation = Quaternion.Euler(0f, angle, 0f);
-
-                moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-
-                */
                 animator.SetFloat("moveSpeed", 1f);
+                gorillaMove.volume = 1f;
             }
             else
             {
                 animator.SetFloat("moveSpeed", 0f);
+                gorillaMove.volume = 0f;
             }
 
 
@@ -116,28 +115,24 @@ namespace  BGJ20212.Game.AbhiTechGame
             if (Input.GetMouseButtonDown(0))
             {
                 Attack();
+                audioManager.Play("Player Growl");
+                audioManager.Play("Player Attack");
             }
             if (Input.GetMouseButton(1))
             {
-                TryShoot();
+                Shoot();
             }
             if (Input.GetKeyDown(KeyCode.O))
             {
                 ToggleStand();
             }
         }
-        void TryShoot()
+        void Shoot()
         {
-            if (isStanding)
-            {
-
-            }
-
             if (!isAttacking && playerShoot.canShoot)
             {
                 if (!isStanding)
                 {
-
                     playerShoot.canShoot = false;
                     animator.SetTrigger("Throw", playerShoot.Shoot);
                 }
@@ -175,6 +170,7 @@ namespace  BGJ20212.Game.AbhiTechGame
             if (characterController.isGrounded && Input.GetButton(Naron.Axis.JUMP))
             {
                 verticalVelocity = jumpHeight;
+                audioManager.Play("Player Jump");
                 isJumping = true;
             }
 
@@ -222,8 +218,6 @@ namespace  BGJ20212.Game.AbhiTechGame
                 Invoke("disableWeaponAndRig", 0.5f);
                 playerShoot.weaponIndex = 0;
             }
-
-
         }
 
         private void disableWeaponAndRig()
@@ -235,12 +229,8 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         private void enableWeapon()
         {
-
             weaponHolder.SetActive(true);
-
-
             rig.weight = 1;
-
             playerShoot.weaponIndex = 1;
         }
     }

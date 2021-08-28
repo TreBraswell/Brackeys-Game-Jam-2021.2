@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6827237179564078740}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left.fin_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5178772922992085522}
   - component: {fileID: 9023341425333869577}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shark_metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5184780281499191381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body.front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ Transform:
   - {fileID: 2098076743145710680}
   m_Father: {fileID: 8866194305540598683}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.1180737, y: -0.0000094698335, z: -179.99998}
 --- !u!1 &2368453580336565875
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8388365575724891572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tail.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,11 +200,7 @@ GameObject:
   - component: {fileID: 3692481036116324947}
   - component: {fileID: 7627284874292234854}
   - component: {fileID: 6115225161741786035}
-  - component: {fileID: 8072124195609295077}
-  - component: {fileID: 1260426898590332977}
-  - component: {fileID: 2365846817017810449}
-  - component: {fileID: 5702592562033580842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Megaladon
   m_TagString: Shootable
   m_Icon: {fileID: 0}
@@ -218,9 +214,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4068302272967485673}
-  m_LocalRotation: {x: -0, y: 0.92374957, z: -0, w: 0.3829971}
+  m_LocalRotation: {x: 0, y: 0.9237492, z: 0, w: 0.38299796}
   m_LocalPosition: {x: -38.94879, y: -39.9, z: 40.6}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0.1, y: 0.5, z: 0.1}
   m_Children:
   - {fileID: 5732667408838009549}
   - {fileID: 5178772922992085522}
@@ -238,8 +234,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.12, y: 1, z: 4.16}
-  m_Center: {x: 0, y: 0, z: -0.46}
+  m_Size: {x: 1.154079, y: 1, z: 2.8867102}
+  m_Center: {x: -0.08558273, y: 0, z: -0.030817365}
 --- !u!95 &6115225161741786035
 Animator:
   serializedVersion: 3
@@ -259,85 +255,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!195 &8072124195609295077
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4068302272967485673}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1260426898590332977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4068302272967485673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 969900f7c1bcf2c4192b490d77079692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  move_Speed: 250
-  run_Speed: 400
-  speed: 10
-  health: 100
-  damage: 10
-  follow: {fileID: 0}
-  isEnemy: 1
-  myMesh: {fileID: 0}
-  isFollowing: 1
---- !u!114 &2365846817017810449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4068302272967485673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 440465084b0a7444da761ad64062afd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 10000
-  ParticleOB: {r: 0, g: 0, b: 0, a: 0}
-  muz: {fileID: 0}
-  health: 100
-  hitIntensity: 500
-  fCam: {fileID: 0}
---- !u!54 &5702592562033580842
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4068302272967485673}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &5644756934262069902
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4433542562410993125}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right.fin_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732667408838009549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7623154443812154381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +346,7 @@ Transform:
   - {fileID: 858863814429241189}
   m_Father: {fileID: 5024083625351259508}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -9.55429, y: -0.000035163634, z: 0.0000048926404}
 --- !u!1 &6442296957413703296
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 858863814429241189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mouth_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964400377633337496}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tail.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1903447566337762346}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: base.tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9002988737307919129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left.fin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3637983685659593937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tail.1_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4360773366935159031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tail.3_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8866194305540598683}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +562,7 @@ Transform:
   - {fileID: 5184780281499191381}
   m_Father: {fileID: 5732667408838009549}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.1180906, y: 0, z: 0}
 --- !u!1 &8667905835379299832
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5024083625351259508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2098076743145710680}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right.fin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

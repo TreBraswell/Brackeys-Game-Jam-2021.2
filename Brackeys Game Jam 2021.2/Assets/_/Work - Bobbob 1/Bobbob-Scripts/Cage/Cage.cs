@@ -21,7 +21,6 @@ public class Cage : MonoBehaviour
     public virtual void GetHit(double damage, GameObject attacker)
     {
 
-        Debug.Log("this is the cage getting hit");
         if (this.gameObject.GetComponent<Player>())
         {
             Player.instance.attacker = attacker;

@@ -38,8 +38,7 @@ namespace BGJ20212.Game.AbhiTechGame
 
         private void Start()
         {
-            Play("Wind Blow");
-            Play("STM Back");
+            Play("Forest Background");
         }
 
         public void Play(string AudioName)
