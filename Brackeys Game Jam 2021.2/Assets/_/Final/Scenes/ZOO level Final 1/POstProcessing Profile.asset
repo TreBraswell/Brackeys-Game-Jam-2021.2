@@ -33,7 +33,7 @@ MonoBehaviour:
     min: 0
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.764151, g: 0.5433528, b: 0.10453011, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -68,13 +68,13 @@ MonoBehaviour:
   m_AdvancedMode: 0
   lift:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.99810684, z: 0.9388264, w: 0}
+    m_Value: {x: 1, y: 0.93508846, z: 0.5936167, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.99810016, z: 0.99761426, w: -0.13332553}
+    m_Value: {x: 0.37512687, y: 0.16885549, z: 1, w: -0.13332553}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9758075, z: 0.94592243, w: 0.14121802}
+    m_Value: {x: 0.78434813, y: 0.71897864, z: 1, w: 0.14121802}
 --- !u!114 &-2796508245110577139
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -111,6 +111,44 @@ MonoBehaviour:
   rounded:
     m_OverrideState: 1
     m_Value: 1
+--- !u!114 &-2114108908135508610
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  postExposure:
+    m_OverrideState: 1
+    m_Value: 1.41
+  contrast:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -100
+    max: 100
+  colorFilter:
+    m_OverrideState: 1
+    m_Value: {r: 0.1462264, g: 0.055274952, b: 0, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  hueShift:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -180
+    max: 180
+  saturation:
+    m_OverrideState: 1
+    m_Value: -14
+    min: -100
+    max: 100
 --- !u!114 &-405289965454158319
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -190,3 +228,4 @@ MonoBehaviour:
   - {fileID: -9137524344235495177}
   - {fileID: -2796508245110577139}
   - {fileID: -405289965454158319}
+  - {fileID: -2114108908135508610}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-
+using UnityEngine.UI;
 public class Animal : MonoBehaviour
 {
     //[HideInInspector]
@@ -12,6 +12,11 @@ public class Animal : MonoBehaviour
     [Header("Stats")] public float move_Speed = 250f;
     public float run_Speed = 400f;
     public float speed;
+    private double maxHealth;
+    [SerializeField] Image healthBar;
+    private GameObject healthCanvas;
+
+
     public double health;
     public double damage;
     public GameObject follow;
@@ -52,7 +57,14 @@ public class Animal : MonoBehaviour
             animator = GetComponent<Animator>();
         }
         //myMesh.updatePosition = false;
+        maxHealth = health;
+        healthCanvas = healthBar.transform.parent.parent.gameObject;
 
+        if (healthBar != null)
+        {
+            healthBar.fillAmount = (float)(health / maxHealth);
+            healthCanvas.SetActive(false);
+        }
         collider = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
 
@@ -194,8 +206,15 @@ public class Animal : MonoBehaviour
 
    public virtual void TakeDamage(double damage )
    {
-
+        
        health -= damage;
+        if (healthBar != null)
+        {
+            healthBar.fillAmount = Mathf.Clamp01((float)(health / maxHealth));
+            if (healthBar.fillAmount != 0 && !healthCanvas.activeSelf) healthCanvas.SetActive(true);
+        
+        }
+
 
        if (health <= 0)
        {
