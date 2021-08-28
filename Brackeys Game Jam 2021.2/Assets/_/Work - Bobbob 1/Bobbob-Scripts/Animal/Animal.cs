@@ -55,13 +55,15 @@ public class Animal : MonoBehaviour
         if (animator == null)
         {
             animator = GetComponent<Animator>();
+           
         }
         //myMesh.updatePosition = false;
         maxHealth = health;
-        healthCanvas = healthBar.transform.parent.parent.gameObject;
+   
 
         if (healthBar != null)
         {
+            healthCanvas = healthBar.transform.parent.parent.gameObject;
             healthBar.fillAmount = (float)(health / maxHealth);
             healthCanvas.SetActive(false);
         }
@@ -212,6 +214,11 @@ public class Animal : MonoBehaviour
         {
             healthBar.fillAmount = Mathf.Clamp01((float)(health / maxHealth));
             if (healthBar.fillAmount != 0 && !healthCanvas.activeSelf) healthCanvas.SetActive(true);
+
+            if(healthBar.fillAmount == 0)
+            {
+                healthCanvas.SetActive(false);
+            }
         
         }
 
