@@ -724,6 +724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectiles:
+<<<<<<< HEAD
   - {fileID: 6313245396405017686, guid: eb39b2891c72d404ba195d0a1ae2bc81, type: 3}
   - {fileID: 3807192659957402662, guid: ba1f2346324b1974eb830f27d0deb835, type: 3}
   weaponIndex: 0
@@ -733,6 +734,17 @@ MonoBehaviour:
   WeaponRefreshTime:
   - 1.2
   - 0.5
+=======
+  - {fileID: 3807192659957402662, guid: ba1f2346324b1974eb830f27d0deb835, type: 3}
+  - {fileID: 3807192659957402662, guid: ba1f2346324b1974eb830f27d0deb835, type: 3}
+  weaponIndex: 0
+  weaponPlace:
+  - {fileID: 496447211571554867}
+  - {fileID: 496447211571554867}
+  WeaponRefreshTime:
+  - 3
+  - 3
+>>>>>>> parent of ebb4ca8 (Revert "Create compass script for showing indication")
   bulletSpeed: 50
   heightCalibrate: 100
   canShoot: 0
