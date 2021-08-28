@@ -6,6 +6,7 @@ public class Cage : MonoBehaviour
 {
     public GameObject animalHolder;
     public double health;
+    public GameObject spawner;
     public  void Start()
     {
 
@@ -40,5 +41,6 @@ public class Cage : MonoBehaviour
         }
         Destroy(this.gameObject);
         Destroy(animalHolder.transform.gameObject);
+        spawner.SetActive(true);
     }
 }
