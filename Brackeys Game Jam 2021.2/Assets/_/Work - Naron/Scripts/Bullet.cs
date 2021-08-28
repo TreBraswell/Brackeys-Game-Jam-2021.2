@@ -11,15 +11,21 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
-        audioManager.Play("Bullet Throw");
+        if (audioManager != null)
+        {
+            audioManager.Play("Bullet Throw");
+        }
         StartCoroutine(disapear());
     }
-    
+
    IEnumerator disapear()
     {
         yield return new WaitForSeconds(3f);
         audioManager.Play("Bullet Break");
-        Instantiate(sphereBulletDestroyEffect, transform.position, transform.rotation);
+        if (sphereBulletDestroyEffect != null)
+        {
+            Instantiate(sphereBulletDestroyEffect, transform.position, transform.rotation);
+        }
         Destroy(this.gameObject);
         yield break;
     }
@@ -43,7 +49,7 @@ public class Bullet : MonoBehaviour
         {
             //Damage Part
             Animal anim = other.transform.GetComponent<Animal>() ;
-          
+
             anim.GetHit(damage,Player.instance.attacker,transform.position);
             Destroy(this.gameObject);
 

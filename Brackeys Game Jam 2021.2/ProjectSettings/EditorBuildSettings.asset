@@ -9,7 +9,13 @@ EditorBuildSettings:
     path: Assets/_/Final/Scenes/TitleScreen - Entry.unity
     guid: 17f07b32438b4bf41a2787c15f9f1874
   - enabled: 1
+    path: Assets/_/Final/Scenes/Stage - Entry.unity
+    guid: 055e3c48f2f83834191c9f83a5820fb3
+  - enabled: 1
     path: Assets/_/Final/Scenes/ZOO_level_Final_1_Light.unity
+    guid: 2e75a63a2838b564aa8bb174c8bb8989
+  - enabled: 1
+    path: Assets/_/Final/Scenes/ZOO_level_Final_1_Light - Naron Old.unity
     guid: 2a0de60678c7ac74cb4242ef33db0213
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 075b9b9d2bc8729498b8965dfa165f7a,
