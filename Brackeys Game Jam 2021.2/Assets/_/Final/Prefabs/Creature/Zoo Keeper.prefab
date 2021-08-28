@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6453710707823116466}
   - component: {fileID: 7598944387137089269}
   - component: {fileID: 4335589157340420206}
+  - component: {fileID: 4666657746408852145}
+  - component: {fileID: 2897834685458090965}
   m_Layer: 0
   m_Name: Zoo Keeper
   m_TagString: Untagged
@@ -96,6 +98,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 72cdd1b1bb49d5f47bd5d2b3ecd3e851, type: 3}
+  image: {fileID: 0}
+--- !u!114 &4666657746408852145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2459420088723579404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969900f7c1bcf2c4192b490d77079692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  move_Speed: 250
+  run_Speed: 400
+  speed: 0
+  health: 0
+  damage: 0
+  follow: {fileID: 0}
+  isEnemy: 1
+  myMesh: {fileID: 0}
+  isFollowing: 0
+  knockBackWhenDjes: 30
+  rbs: []
+  colliders: []
+--- !u!195 &2897834685458090965
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2459420088723579404}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!135 &9132326964600055633
 SphereCollider:
   m_ObjectHideFlags: 0

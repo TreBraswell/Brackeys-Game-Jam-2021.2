@@ -41,3 +41,43 @@ MonoBehaviour:
     spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
       type: 3}
     maxSpawnDuration: 10
+  - position: {x: 100, y: -124, z: 358}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 100, y: -124, z: 395}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: -152, y: -124, z: 395}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 202, y: -124, z: 395}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 215, y: -124, z: 352}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 67, y: -124, z: 437}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 67, y: -124, z: 517}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: 139, y: -124, z: 476}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: -13, y: -124, z: 243}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10
+  - position: {x: -81, y: -124, z: 226}
+    spawnerPrefab: {fileID: 6621168589391197863, guid: d0be4153b20864744b910961387568dd,
+      type: 3}
+    maxSpawnDuration: 10

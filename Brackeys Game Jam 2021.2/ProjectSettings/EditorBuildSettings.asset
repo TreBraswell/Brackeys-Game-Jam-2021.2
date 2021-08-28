@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/_/Work - Naron/Scenes/ZOO level Final.unity
     guid: f9f58c54e55c76c4ca56c6df7c561737
   - enabled: 1
+    path: Assets/_/Final/Scenes/ZOO level Final 1.unity
+    guid: 94bbf44e32cdc974096f30b1a5b4fe24
+  - enabled: 1
     path: Assets/_/Final/Scenes/Final - Entry.unity
     guid: e5dc508b153c3ac42a98e30ab10d634b
   m_configObjects:

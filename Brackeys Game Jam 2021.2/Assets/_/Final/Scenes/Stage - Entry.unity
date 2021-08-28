@@ -677,8 +677,8 @@ PrefabInstance:
     - target: {fileID: 1717730237419781350, guid: cf33939fc8f06d84f8c6883090bbb65b,
         type: 3}
       propertyPath: _data._json
-      value: '{"declarations":{"collection":{"$content":[{"name":"sceneName","value":{"$content":"Stage
-        - Environment 1","$type":"System.String"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      value: '{"declarations":{"collection":{"$content":[{"name":"sceneName","value":{"$content":"ZOO
+        level Final 1","$type":"System.String"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 2157953238265584280, guid: cf33939fc8f06d84f8c6883090bbb65b,
         type: 3}

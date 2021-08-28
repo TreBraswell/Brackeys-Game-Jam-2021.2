@@ -363,7 +363,7 @@ MonoBehaviour:
     _json: '{"declarations":{"collection":{"$content":[{"name":"virtualCameraPrefab","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"playerPrefab","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"initialPosition","value":{"x":214.0,"y":-123.0,"z":202.0,"$type":"UnityEngine.Vector3"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 5836476824628703715, guid: 9ece7805f2226eb40bcef2cc0a2da04c, type: 3}
-    - {fileID: 2781334567971569236, guid: 0495ab3ccb4b7b743bf300ff0971115f, type: 3}
+    - {fileID: 7036450707676010470, guid: 0495ab3ccb4b7b743bf300ff0971115f, type: 3}
 --- !u!114 &8952385949647275223
 MonoBehaviour:
   m_ObjectHideFlags: 0
