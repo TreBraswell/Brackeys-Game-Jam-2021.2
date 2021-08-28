@@ -33,7 +33,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         public float speed;
         public float jumpHeight;
 
-
+  
         private bool isAttacking;
         private bool canAttack;
         private bool isJumping;
@@ -52,6 +52,7 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         void Start()
         {
+            //cameraTransform = Camera.main.transform;
             cameraTransform = Camera.main.transform;
             characterController = GetComponent<CharacterController>();
 
@@ -69,13 +70,13 @@ namespace  BGJ20212.Game.AbhiTechGame
             
         }
 
-
+    
         #region Movement
 
         private void Move()
         {
-
-
+      
+            
             Vector2 inputAxis = new Vector2(Input.GetAxis(Naron.Axis.HORIZONTAL), Input.GetAxis(Naron.Axis.VERTICAL));
 
             moveDirection = new Vector3(inputAxis.x, 0f, inputAxis.y);
@@ -91,7 +92,7 @@ namespace  BGJ20212.Game.AbhiTechGame
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-
+                
                 */
                 animator.SetFloat("moveSpeed", 1f);
             }
@@ -100,13 +101,13 @@ namespace  BGJ20212.Game.AbhiTechGame
                 animator.SetFloat("moveSpeed", 0f);
             }
 
-
+       
             ApplyGravity();
             if(verticalVelocity < gravity*2 || isJumping)
             {
                 animator.SetFloat("moveSpeed", 0f);
             }
-
+       
             characterController.Move(moveDirection*speed * Time.deltaTime);
         }
         #endregion
@@ -114,7 +115,7 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         private void CheckInput()
         {
-
+      
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -135,12 +136,12 @@ namespace  BGJ20212.Game.AbhiTechGame
             {
 
             }
-
+            
             if (!isAttacking && playerShoot.canShoot)
             {
                 if (!isStanding)
                 {
-
+                    
                     playerShoot.canShoot = false;
                     animator.SetTrigger("Throw", playerShoot.Shoot);
                 }
@@ -148,7 +149,7 @@ namespace  BGJ20212.Game.AbhiTechGame
                 {
                     playerShoot.Shoot();
                 }
-
+                
             }
         }
 #region Jump
@@ -174,19 +175,19 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         private void PlayerJump()
         {
-
+            
             if (characterController.isGrounded && Input.GetButton(Naron.Axis.JUMP))
             {
                 verticalVelocity = jumpHeight;
                 isJumping = true;
             }
-
+            
         }
         #endregion
         #region Attack
         private void Attack()
         {
-
+            
             if (characterController.isGrounded && canAttack && !isShooting && !isStanding)
             {
                 animator.SetTrigger("Attack");
@@ -212,7 +213,7 @@ namespace  BGJ20212.Game.AbhiTechGame
         private void ToggleStand()
         {
             if (!characterController.isGrounded || isAttacking || isShooting) return;
-
+          
                 isStanding = !isStanding;
             animator.SetBool("Stand", isStanding);
 
@@ -226,32 +227,29 @@ namespace  BGJ20212.Game.AbhiTechGame
                 playerShoot.weaponIndex = 0;
             }
 
-
+            
         }
 
         private void disableWeaponAndRig()
         {
-            // rig.weight = 0;
-            // weaponHolder.SetActive(false);
-            // playerShoot.weaponIndex = 0;
+            rig.weight = 0;
+            weaponHolder.SetActive(false);
+            playerShoot.weaponIndex = 0;
         }
 
         private void enableWeapon()
         {
-
-<<<<<<< HEAD
+            
             weaponHolder.SetActive(true);
+
+
             rig.weight = 1;
+            
             playerShoot.weaponIndex = 1;
-=======
-            // weaponHolder.SetActive(true);
-            // rig.weight = 1;
-            // playerShoot.weaponIndex = 1;
->>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
         }
     }
 
 
 
-
+    
 }
