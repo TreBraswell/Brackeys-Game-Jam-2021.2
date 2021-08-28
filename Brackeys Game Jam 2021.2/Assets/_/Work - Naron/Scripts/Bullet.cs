@@ -23,6 +23,7 @@ public class Bullet : MonoBehaviour
         Destroy(this.gameObject);
         yield break;
     }
+  
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.CompareTag("Shootable"))
@@ -45,8 +46,16 @@ public class Bullet : MonoBehaviour
             Animal anim = other.transform.GetComponent<Animal>() ;
           
             anim.GetHit(damage,Player.instance.attacker,transform.position);
-            Destroy(this.gameObject);
+            DisapearNow();
 
         }
+    }
+    private void  DisapearNow()
+    {
+
+        audioManager.Play("Bullet Break");
+        Instantiate(sphereBulletDestroyEffect, transform.position, transform.rotation);
+        Destroy(this.gameObject);
+       
     }
 }
