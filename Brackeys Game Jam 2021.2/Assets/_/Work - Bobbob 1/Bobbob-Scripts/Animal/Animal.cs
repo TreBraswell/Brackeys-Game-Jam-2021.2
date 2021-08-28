@@ -25,7 +25,7 @@ public class Animal : MonoBehaviour
 
     private bool isStanding;
     private bool isSpriting;
-    
+
     private Vector2 smoothDeltaPosition = Vector2.zero;
     private Vector2 velocity = Vector2.zero;
 
@@ -45,12 +45,50 @@ public class Animal : MonoBehaviour
         myMesh = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         //myMesh.updatePosition = false;
+<<<<<<< HEAD
 
         collider = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
 
         gun = GetComponent<Gun>();
       ToggleRagdoll(false);
+=======
+    }
+    public virtual void Update()
+    {
+        if(isFollowing && follow == null)
+        {
+            if (Player.instance != null)
+            {
+                follow = Player.instance.gameObject;
+            }
+        }
+        if(health<=0)
+        {
+            Die();
+        }
+        if(isFollowing && Player.instance)
+        {
+
+            myMesh.SetDestination(follow.transform.position);
+            AnimationCheck();
+        }
+        if(gameObject.GetComponent<Gun>() && gameObject.GetComponent<Gun>().CheckForEnemy(isEnemy))
+        {
+            animator.SetTrigger("Attack");
+            StartCoroutine(RefreshAttack());
+            gameObject.GetComponent<Gun>().Shoot();
+
+        }
+
+        if (Player.instance != null)
+        {
+            if(follow == Player.instance.gameObject && Player.instance.attacker)
+            {
+                follow = Player.instance.attacker;
+            }
+        }
+>>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
     }
   
    public virtual void Update()
@@ -171,6 +209,7 @@ public class Animal : MonoBehaviour
  
    //this will be used to follow the player after being freed
 
+<<<<<<< HEAD
    public virtual void MoveToPlayer()
    {
        isFollowing = true;
@@ -179,14 +218,55 @@ public class Animal : MonoBehaviour
    {
 
        health -= damage;
+=======
+    public virtual void MoveToPlayer()
+    {
+        isFollowing = true;
+    }
+    public virtual void TakeDamage(double damage )
+    {
+
+        health -= damage;
+
+
+    }
+>>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
 
    }
 
 
+<<<<<<< HEAD
+=======
+        //this will be used to follow the player after being freed
+
+>>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
 
        //this will be used to follow the player after being freed
 
+<<<<<<< HEAD
 
+=======
+    public virtual void DealDamage(GameObject enemy)
+    {
+        health -= damage;
+    }
+    public virtual void AnimationCheck()
+    {
+
+        /*if (myMesh.velocity.x==0 && myMesh.velocity.z == 0 )
+        {
+            animator.SetBool("Move", false);
+            animator.SetFloat("moveSpeed", 0);
+        }
+        else
+        {
+            animator.SetBool("Move", true);
+            animator.SetFloat("moveSpeed", 1);
+        }*/
+
+
+
+>>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
 
    public virtual void DealDamage(GameObject enemy)
    {
