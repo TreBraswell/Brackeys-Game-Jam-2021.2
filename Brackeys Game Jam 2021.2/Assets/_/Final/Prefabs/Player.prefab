@@ -726,6 +726,7 @@ MonoBehaviour:
   projectiles:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 6313245396405017686, guid: eb39b2891c72d404ba195d0a1ae2bc81, type: 3}
   - {fileID: 3807192659957402662, guid: ba1f2346324b1974eb830f27d0deb835, type: 3}
   weaponIndex: 0
@@ -736,15 +737,20 @@ MonoBehaviour:
   - 1.2
   - 0.5
 =======
+=======
+>>>>>>> parent of ebb4ca8 (Revert "Create compass script for showing indication")
   - {fileID: 3807192659957402662, guid: ba1f2346324b1974eb830f27d0deb835, type: 3}
   - {fileID: 3807192659957402662, guid: ba1f2346324b1974eb830f27d0deb835, type: 3}
   weaponIndex: 0
   weaponPlace:
+<<<<<<< HEAD
 =======
   - {fileID: 3807192659957402662, guid: ba1f2346324b1974eb830f27d0deb835, type: 3}
   - {fileID: 3807192659957402662, guid: ba1f2346324b1974eb830f27d0deb835, type: 3}
   weaponIndex: 0
   weaponPlace:
+>>>>>>> parent of ebb4ca8 (Revert "Create compass script for showing indication")
+=======
 >>>>>>> parent of ebb4ca8 (Revert "Create compass script for showing indication")
   - {fileID: 496447211571554867}
   - {fileID: 496447211571554867}
@@ -752,6 +758,9 @@ MonoBehaviour:
   - 3
   - 3
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ebb4ca8 (Revert "Create compass script for showing indication")
+=======
 >>>>>>> parent of ebb4ca8 (Revert "Create compass script for showing indication")
 =======
 >>>>>>> parent of ebb4ca8 (Revert "Create compass script for showing indication")
