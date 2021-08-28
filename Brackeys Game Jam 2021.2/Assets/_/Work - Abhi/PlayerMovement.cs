@@ -52,6 +52,7 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         void Start()
         {
+            //cameraTransform = Camera.main.transform;
             cameraTransform = Camera.main.transform;
             characterController = GetComponent<CharacterController>();
 

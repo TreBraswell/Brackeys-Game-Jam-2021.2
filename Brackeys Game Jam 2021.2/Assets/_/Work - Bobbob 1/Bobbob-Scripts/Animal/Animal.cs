@@ -1,4 +1,3 @@
-
 using BGJ20212.Game.Mark;
 using System.Collections;
 using System.Collections.Generic;
@@ -50,9 +49,9 @@ public class Animal : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         gun = GetComponent<Gun>();
-      ToggleRagdoll(false);
+      //  ToggleRagdoll(false);
     }
-  
+    /*
    public virtual void Update()
    {
        if(isFollowing && follow == null)
@@ -97,7 +96,6 @@ public class Animal : MonoBehaviour
            Player.instance.attacker = null;
        }
        ToggleRagdoll(true);
-        Destroy(this.gameObject, 5);
    }
    void ToggleRagdoll(bool enable)
    {
@@ -133,11 +131,7 @@ public class Animal : MonoBehaviour
            collider.enabled = false;
            animator.enabled = false;
        }
-
-
    }
-
- 
 
 
    //this will be used for damage
@@ -150,6 +144,7 @@ public class Animal : MonoBehaviour
     public virtual void GetHit(double damage, GameObject attacker, Vector3 pos = new Vector3())
     {
         follow = attacker;
+        Debug.Log(this.gameObject);
         
         if (this.gameObject.GetComponent<Player>())
         {
@@ -166,9 +161,9 @@ public class Animal : MonoBehaviour
         {
             LastBulletPos = Vector3.zero;
         }
-       TakeDamage(damage);
+       // TakeDamage(damage);
     }
- 
+    /*
    //this will be used to follow the player after being freed
 
    public virtual void MoveToPlayer()
@@ -209,6 +204,6 @@ public class Animal : MonoBehaviour
 
 
 
-     }
+    // }
 
 }
