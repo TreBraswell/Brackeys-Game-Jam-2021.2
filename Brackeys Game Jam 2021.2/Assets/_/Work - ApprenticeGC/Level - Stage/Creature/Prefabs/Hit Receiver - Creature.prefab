@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2383891814048993278}
   - component: {fileID: 9132326964600055633}
   - component: {fileID: 3463141238432971871}
+  - component: {fileID: 7450879285187734038}
   m_Layer: 13
   m_Name: Hit Receiver - Creature
   m_TagString: Untagged
@@ -61,3 +62,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7450879285187734038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905832560835870039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"collection":{"$content":[{"name":"ownerGO","value":null,"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []

@@ -16620,7 +16620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &737753247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17921,6 +17921,7 @@ MonoBehaviour:
     Pitch: 1
     loop: 0
     source: {fileID: 0}
+  bgMusicName: 
 --- !u!1001 &807540519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18660,11 +18661,11 @@ Transform:
   - {fileID: 1208670650}
   - {fileID: 1861153935}
   - {fileID: 932577905}
+  - {fileID: 1192188708}
   - {fileID: 1573057868}
   - {fileID: 1465620804}
   - {fileID: 1651108026}
   - {fileID: 967483743}
-  - {fileID: 1192188708}
   m_Father: {fileID: 654581127}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
