@@ -54,7 +54,6 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         void Start()
         {
-            //cameraTransform = Camera.main.transform;
             audioManager = FindObjectOfType<AudioManager>();
             cameraTransform = Camera.main.transform;
             characterController = GetComponent<CharacterController>();
@@ -69,8 +68,6 @@ namespace  BGJ20212.Game.AbhiTechGame
         {
             CheckInput();
             Move();
-
-
         }
 
 
