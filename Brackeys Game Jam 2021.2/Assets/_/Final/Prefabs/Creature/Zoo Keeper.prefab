@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4335589157340420206}
   - component: {fileID: 4666657746408852145}
   - component: {fileID: 2897834685458090965}
+  - component: {fileID: 5659356739924376401}
   m_Layer: 0
   m_Name: Zoo Keeper
   m_TagString: Untagged
@@ -35,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 434024414986909439}
   - {fileID: 899545206669060532}
+  - {fileID: 4926582698981479032}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"kind","value":{"$content":1,"$type":"System.Int32"},"$version":"A"},{"name":"score","value":{"$content":10,"$type":"System.Int32"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"kind","value":{"$content":1,"$type":"System.Int32"},"$version":"A"},{"name":"score","value":{"$content":10,"$type":"System.Int32"},"$version":"A"},{"name":"hp","value":{"$content":5,"$type":"System.Int32"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!114 &6453710707823116466
 MonoBehaviour:
@@ -111,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969900f7c1bcf2c4192b490d77079692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 434024414996256953}
   move_Speed: 250
   run_Speed: 400
   speed: 0
@@ -120,10 +122,26 @@ MonoBehaviour:
   follow: {fileID: 0}
   isEnemy: 1
   myMesh: {fileID: 0}
-  isFollowing: 0
+  isFollowing: 1
+  destrotyRbsLengthZero: 0
   knockBackWhenDjes: 30
   rbs: []
   colliders: []
+  getKilled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7598944387137089269}
+        m_TargetAssemblyTypeName: Bolt.EventMachine`2[[Bolt.StateGraph, Bolt.State.Runtime
+        m_MethodName: TriggerUnityEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Get Killed
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!195 &2897834685458090965
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -143,9 +161,22 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &5659356739924376401
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2459420088723579404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 5, z: 2}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!135 &9132326964600055633
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -159,6 +190,84 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 8
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5574576055479124225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4926582698981479032}
+  - component: {fileID: 6102377887828759344}
+  - component: {fileID: 5636921422717227266}
+  - component: {fileID: 4313226092297361014}
+  m_Layer: 17
+  m_Name: Hit Receiver - Projectile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4926582698981479032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5574576055479124225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2992406872227664793}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6102377887828759344
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5574576055479124225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 5, z: 2}
+  m_Center: {x: 0, y: 2.5, z: 0}
+--- !u!114 &5636921422717227266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5574576055479124225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"collection":{"$content":[{"name":"ownerGO","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 2459420088723579404}
+--- !u!114 &4313226092297361014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5574576055479124225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 3fa17e314a314eb4186852984971f8b5, type: 2}
 --- !u!1001 &3273724815792416330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254,6 +363,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -270,7 +394,7 @@ PrefabInstance:
     - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
         type: 3}
@@ -280,7 +404,7 @@ PrefabInstance:
     - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
         type: 3}
@@ -295,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
         type: 3}
@@ -312,6 +436,12 @@ PrefabInstance:
 --- !u!4 &434024414986909439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6450159469055874965, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
+    type: 3}
+  m_PrefabInstance: {fileID: 6883302584633172330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &434024414996256953 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6450159469046561235, guid: 77d08bc83ca370645ad80f3c0ea6cc95,
     type: 3}
   m_PrefabInstance: {fileID: 6883302584633172330}
   m_PrefabAsset: {fileID: 0}
