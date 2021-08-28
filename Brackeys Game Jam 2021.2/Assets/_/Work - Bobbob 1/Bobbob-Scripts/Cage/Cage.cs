@@ -33,7 +33,7 @@ public class Cage : MonoBehaviour
         {
             if(child.gameObject.GetComponent<Animal>())
             {
-                child.gameObject.GetComponent<Animal>().MoveToPlayer();
+                //child.gameObject.GetComponent<Animal>().MoveToPlayer();
                 child.SetParent(animalHolder.transform.parent);
                 
             }
