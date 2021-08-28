@@ -1,21 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using BGJ20212.Game.AbhiTechGame;
 public class Bullet : MonoBehaviour
 {
     public float damage;
+    private AudioManager audioManager;
+    public GameObject sphereBulletDestroyEffect;
 
     void Start()
     {
-       
+        audioManager = FindObjectOfType<AudioManager>();
+        audioManager.Play("Bullet Throw");
         StartCoroutine(disapear());
-        
     }
     
    IEnumerator disapear()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3f);
+        audioManager.Play("Bullet Break");
+        Instantiate(sphereBulletDestroyEffect, transform.position, transform.rotation);
         Destroy(this.gameObject);
         yield break;
     }
@@ -45,5 +49,4 @@ public class Bullet : MonoBehaviour
 
         }
     }
-
 }

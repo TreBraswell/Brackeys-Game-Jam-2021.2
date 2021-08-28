@@ -33,8 +33,7 @@ namespace BGJ20212.Game.Naron
         [SerializeField]
         private float speed = 1f;
 
-        [SerializeField]
-        private Camera camera;
+        private Camera cam;
 
         CharacterController controller;
         //New input system stuff IDK
@@ -61,9 +60,9 @@ namespace BGJ20212.Game.Naron
         void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
-            if(camera == null)
+            if(cam == null)
             {
-                camera = Camera.main;
+                cam = Camera.main;
             }
         }
 
