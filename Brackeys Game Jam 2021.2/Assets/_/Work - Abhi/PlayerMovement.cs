@@ -231,17 +231,23 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         private void disableWeaponAndRig()
         {
-            rig.weight = 0;
-            weaponHolder.SetActive(false);
-            playerShoot.weaponIndex = 0;
+            // rig.weight = 0;
+            // weaponHolder.SetActive(false);
+            // playerShoot.weaponIndex = 0;
         }
 
         private void enableWeapon()
         {
 
+<<<<<<< HEAD
             weaponHolder.SetActive(true);
             rig.weight = 1;
             playerShoot.weaponIndex = 1;
+=======
+            // weaponHolder.SetActive(true);
+            // rig.weight = 1;
+            // playerShoot.weaponIndex = 1;
+>>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
         }
     }
 

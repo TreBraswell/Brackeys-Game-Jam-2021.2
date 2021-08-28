@@ -82,6 +82,26 @@ public class Animal : MonoBehaviour
         }
 
         if (Player.instance != null)
+<<<<<<< HEAD
+=======
+        {
+            if(follow == Player.instance.gameObject && Player.instance.attacker)
+            {
+                follow = Player.instance.attacker;
+            }
+        }
+    }
+    private IEnumerator RefreshAttack()
+    {
+        isAttacking = false;
+        yield return new WaitForSeconds(1f);
+        canAttack = true;
+        yield break;
+    }
+    public virtual void Die()
+    {
+        if(this.gameObject == Player.instance.attacker)
+>>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
         {
             if(follow == Player.instance.gameObject && Player.instance.attacker)
             {
@@ -238,6 +258,10 @@ public class Animal : MonoBehaviour
 <<<<<<< HEAD
 =======
         //this will be used to follow the player after being freed
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
 
 >>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
 
@@ -264,6 +288,11 @@ public class Animal : MonoBehaviour
             animator.SetFloat("moveSpeed", 1);
         }*/
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
 
 
 >>>>>>> parent of 16aa470 (Revert "Code modified to bypass excpetion")
