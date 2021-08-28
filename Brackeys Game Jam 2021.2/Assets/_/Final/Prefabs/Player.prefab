@@ -723,6 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d233177d56b7cf488869dbdfbf7868d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   projectiles:
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -764,6 +765,13 @@ MonoBehaviour:
 >>>>>>> parent of ebb4ca8 (Revert "Create compass script for showing indication")
 =======
 >>>>>>> parent of ebb4ca8 (Revert "Create compass script for showing indication")
+=======
+  projectiles: []
+  weaponIndex: 0
+  weaponPlace:
+  - {fileID: 0}
+  WeaponRefreshTime: []
+>>>>>>> parent of 8085725 (Revert "Add player controller necessary field in")
   bulletSpeed: 50
   heightCalibrate: 100
   canShoot: 0
