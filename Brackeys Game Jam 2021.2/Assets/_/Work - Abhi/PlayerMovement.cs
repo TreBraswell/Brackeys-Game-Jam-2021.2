@@ -52,7 +52,7 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         void Start()
         {
-            //cameraTransform = Camera.main.transform;
+            cameraTransform = Camera.main.transform;
             characterController = GetComponent<CharacterController>();
 
             speed = move_Speed;
@@ -154,6 +154,7 @@ namespace  BGJ20212.Game.AbhiTechGame
 #region Jump
         void ApplyGravity()
         {
+            print(characterController.isGrounded);
             if (!characterController.isGrounded)
             {
                 verticalVelocity += gravity * Time.deltaTime;

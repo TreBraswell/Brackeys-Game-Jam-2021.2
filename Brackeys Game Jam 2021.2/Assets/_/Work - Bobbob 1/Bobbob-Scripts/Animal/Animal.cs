@@ -50,9 +50,9 @@ public class Animal : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         gun = GetComponent<Gun>();
-      //  ToggleRagdoll(false);
+      ToggleRagdoll(false);
     }
-    /*
+  
    public virtual void Update()
    {
        if(isFollowing && follow == null)
@@ -163,7 +163,7 @@ public class Animal : MonoBehaviour
         }
        // TakeDamage(damage);
     }
-    /*
+ 
    //this will be used to follow the player after being freed
 
    public virtual void MoveToPlayer()
@@ -204,6 +204,6 @@ public class Animal : MonoBehaviour
 
 
 
-    // }
+     }
 
 }
