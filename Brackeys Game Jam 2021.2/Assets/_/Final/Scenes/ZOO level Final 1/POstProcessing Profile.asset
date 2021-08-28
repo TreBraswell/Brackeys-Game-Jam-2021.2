@@ -16,15 +16,15 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.96
+    m_Value: 1.77
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.72
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.604
     min: 0
     max: 1
   clamp:
@@ -68,13 +68,13 @@ MonoBehaviour:
   m_AdvancedMode: 0
   lift:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9749992, z: 0.929214, w: 0}
+    m_Value: {x: 0.8234289, y: 0.8393998, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.99196935, z: 0.8695334, w: -0.13332553}
+    m_Value: {x: 1, y: 0.85881746, z: 0.85053825, w: -0.13332553}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 0.9649888, y: 1, z: 0.98105085, w: 0.14121802}
+    m_Value: {x: 0.8152976, y: 0.9775353, z: 1, w: 0.14121802}
 --- !u!114 &-2796508245110577139
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -208,10 +208,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.64
+    m_Value: 0.48
   contrast:
     m_OverrideState: 1
-    m_Value: 12
+    m_Value: 4
     min: -100
     max: 100
   colorFilter:
