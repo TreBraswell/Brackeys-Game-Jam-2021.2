@@ -66,8 +66,6 @@ namespace  BGJ20212.Game.AbhiTechGame
         {
             CheckInput();
             Move();
-
-
         }
 
 
@@ -75,8 +73,6 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         private void Move()
         {
-
-
             Vector2 inputAxis = new Vector2(Input.GetAxis(Naron.Axis.HORIZONTAL), Input.GetAxis(Naron.Axis.VERTICAL));
 
             moveDirection = new Vector3(inputAxis.x, 0f, inputAxis.y);
