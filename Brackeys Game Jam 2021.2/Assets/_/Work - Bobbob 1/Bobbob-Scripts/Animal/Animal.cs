@@ -97,6 +97,7 @@ public class Animal : MonoBehaviour
            Player.instance.attacker = null;
        }
        ToggleRagdoll(true);
+        Destroy(this.gameObject, 5);
    }
    void ToggleRagdoll(bool enable)
    {
@@ -132,7 +133,11 @@ public class Animal : MonoBehaviour
            collider.enabled = false;
            animator.enabled = false;
        }
+
+
    }
+
+ 
 
 
    //this will be used for damage
@@ -161,7 +166,7 @@ public class Animal : MonoBehaviour
         {
             LastBulletPos = Vector3.zero;
         }
-       // TakeDamage(damage);
+       TakeDamage(damage);
     }
  
    //this will be used to follow the player after being freed
