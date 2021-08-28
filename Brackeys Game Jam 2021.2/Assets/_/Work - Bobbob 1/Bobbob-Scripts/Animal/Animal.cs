@@ -49,9 +49,9 @@ public class Animal : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         gun = GetComponent<Gun>();
-      //  ToggleRagdoll(false);
+       ToggleRagdoll(false);
     }
-    /*
+   
    public virtual void Update()
    {
        if(isFollowing && follow == null)
@@ -67,7 +67,7 @@ public class Animal : MonoBehaviour
        {
 
            myMesh.SetDestination(follow.transform.position);
-           AnimationCheck();
+          // AnimationCheck();
        }
        if(gun && gun.CheckForEnemy(isEnemy))
        {
@@ -161,9 +161,9 @@ public class Animal : MonoBehaviour
         {
             LastBulletPos = Vector3.zero;
         }
-       // TakeDamage(damage);
+        TakeDamage(damage);
     }
-    /*
+   
    //this will be used to follow the player after being freed
 
    public virtual void MoveToPlayer()
@@ -177,29 +177,29 @@ public class Animal : MonoBehaviour
 
    }
 
+    /*
+
+      //this will be used to follow the player after being freed
 
 
-       //this will be used to follow the player after being freed
 
+  public virtual void DealDamage(GameObject enemy)
+  {
+      health -= damage;
+  }
+  public virtual void AnimationCheck()
+  {
 
-
-   public virtual void DealDamage(GameObject enemy)
-   {
-       health -= damage;
-   }
-   public virtual void AnimationCheck()
-   {
-
-       /*if (myMesh.velocity.x==0 && myMesh.velocity.z == 0 )
-       {
-           animator.SetBool("Move", false);
-           animator.SetFloat("moveSpeed", 0);
-       }
-       else
-       {
-           animator.SetBool("Move", true);
-           animator.SetFloat("moveSpeed", 1);
-       }*/
+      /*if (myMesh.velocity.x==0 && myMesh.velocity.z == 0 )
+      {
+          animator.SetBool("Move", false);
+          animator.SetFloat("moveSpeed", 0);
+      }
+      else
+      {
+          animator.SetBool("Move", true);
+          animator.SetFloat("moveSpeed", 1);
+      }*/
 
 
 
