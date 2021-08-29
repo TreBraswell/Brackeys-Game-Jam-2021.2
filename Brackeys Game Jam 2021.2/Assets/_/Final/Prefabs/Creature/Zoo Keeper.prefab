@@ -124,11 +124,16 @@ MonoBehaviour:
   damage: 0
   follow: {fileID: 0}
   isEnemy: 0
-  myMesh: {fileID: 0}
-  isFollowing: 0
+  agent: {fileID: 0}
   destrotyRbsLengthZero: 0
   playAnimationUntoggledRbs: 1
   knockBackWhenDjes: 30
+  isFollowing: 0
+  baseChaseDistance: 60
+  atkDistance: 9
+  AtkTimer: 1
+  WaitBeforeAttack: 1
+  door: {fileID: 0}
   rbs: []
   colliders: []
   getKilled:

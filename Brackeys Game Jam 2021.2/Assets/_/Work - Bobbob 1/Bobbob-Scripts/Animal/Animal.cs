@@ -124,7 +124,7 @@ public class Animal : MonoBehaviour
        {
            if (destrotyRbsLengthZero)
            {
-               Destroy(this.gameObject);
+               //Destroy(this.gameObject);
            }
        }
        if (!enable)
