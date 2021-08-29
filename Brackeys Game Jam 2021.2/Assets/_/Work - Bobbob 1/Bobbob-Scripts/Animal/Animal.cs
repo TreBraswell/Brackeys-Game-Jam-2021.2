@@ -92,8 +92,9 @@ public class Animal : MonoBehaviour
 
    public virtual void Update()
    {
+        if(!isDead)
         Check_States();
-        print(enemy_State);
+      
    }
 
    private IEnumerator RefreshAttack()
@@ -109,6 +110,8 @@ public class Animal : MonoBehaviour
        {
            Player.instance.attacker = null;
        }
+
+        agent.enabled = false;
        ToggleRagdoll(true);
    }
    void ToggleRagdoll(bool enable)
@@ -218,7 +221,9 @@ public class Animal : MonoBehaviour
 
        if (health <= 0)
        {
-           getKilled?.Invoke();
+            isDead = true;
+            Die();
+          // getKilled?.Invoke();
        }
 
    }
