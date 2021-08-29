@@ -98,7 +98,7 @@ public class Animal : MonoBehaviour
    {
         if(!isDead)
         Check_States();
-      
+
    }
 
    private IEnumerator RefreshAttack()
@@ -177,7 +177,7 @@ public class Animal : MonoBehaviour
 
     public virtual void GetHit(double damage, GameObject attacker, Vector3 pos = new Vector3())
     {
-      
+
         follow = attacker;
         // Debug.Log(this.gameObject);
 
@@ -203,12 +203,16 @@ public class Animal : MonoBehaviour
 
 
 
+   public UnityEvent<float> hpChanged;
    public UnityEvent getKilled;
+
 
    public virtual void TakeDamage(double damage )
    {
 
        health -= damage;
+       hpChanged?.Invoke((float)health);
+
         if (healthBar != null)
         {
             healthBar.fillAmount = Mathf.Clamp01((float)(health / maxHealth));
@@ -255,6 +259,8 @@ public class Animal : MonoBehaviour
 
 
         //Notice player
+        if (player == null) return;
+
         if (Vector3.Distance(transform.position, player.transform.position) <= chaseDistance )
 
 
@@ -270,7 +276,7 @@ public class Animal : MonoBehaviour
     }
     protected virtual void Chase()
     {
-       
+
         agent.isStopped = false;
         agent.speed = run_Speed;
 
@@ -305,7 +311,7 @@ public class Animal : MonoBehaviour
 
     void Attack()
     {
-   
+
         agent.velocity = Vector3.zero;// stop for hit
         agent.isStopped = true;
         AtkTimer += Time.deltaTime;
@@ -355,7 +361,7 @@ public class Animal : MonoBehaviour
 
         //HitPlayer
 
-        
+
 
     }
 
