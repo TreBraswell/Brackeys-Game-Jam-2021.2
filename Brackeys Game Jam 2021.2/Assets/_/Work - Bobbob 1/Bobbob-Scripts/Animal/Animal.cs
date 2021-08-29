@@ -88,6 +88,10 @@ public class Animal : MonoBehaviour
 
         gun = GetComponent<Gun>();
        ToggleRagdoll(false);
+        if (door != null)
+        {
+            
+        }
     }
 
    public virtual void Update()
@@ -223,7 +227,7 @@ public class Animal : MonoBehaviour
        {
             isDead = true;
             Die();
-          // getKilled?.Invoke();
+          getKilled?.Invoke();
        }
 
    }

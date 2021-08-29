@@ -1,9 +1,18 @@
 using UnityEngine;
-
+using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     public static Player instance;
     public GameObject attacker = null;
+
+
+    public float health;
+    public float maxHealth;
+
+
+    UnityEvent DieEvent;
+
+
     void Awake()
     {
         if (instance == null)
@@ -14,5 +23,31 @@ public class Player : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    private void Start()
+    {
+        health = maxHealth;
+
+    
+    }
+
+
+    void GetHit(float dmg)
+    {
+        health -= dmg;
+        if(health <= 0) {
+
+
+            Die();
+        
+        }
+    }
+
+
+    void Die()
+    {
+        Destroy(this.gameObject);
+        //Death action;
+        DieEvent?.Invoke();
     }
 }
