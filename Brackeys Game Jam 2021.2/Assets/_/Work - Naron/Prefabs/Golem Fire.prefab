@@ -1018,14 +1018,14 @@ MonoBehaviour:
   health: 500
   damage: 30
   follow: {fileID: 0}
-  isEnemy: 0
+  isEnemy: 1
   agent: {fileID: 0}
   destrotyRbsLengthZero: 0
   playAnimationUntoggledRbs: 0
   knockBackWhenDjes: 30
   isFollowing: 0
   baseChaseDistance: 40
-  atkDistance: 10
+  atkDistance: 15
   AtkTimer: 0
   WaitBeforeAttack: 5
   door: {fileID: 0}

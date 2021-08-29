@@ -114,7 +114,7 @@ public class Animal : MonoBehaviour
        {
            Player.instance.attacker = null;
        }
-
+        Destroy(gameObject, 5f);
         agent.enabled = false;
        ToggleRagdoll(true);
    }
