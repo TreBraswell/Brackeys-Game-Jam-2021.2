@@ -122,13 +122,13 @@ public class Animal : MonoBehaviour
    }
    void ToggleRagdoll(bool enable)
    {
-       if(rbs.Length == 0)
-       {
-           if (destrotyRbsLengthZero)
-           {
-               Destroy(this.gameObject);
-           }
-       }
+    //    if(rbs.Length == 0)
+    //    {
+    //        if (destrotyRbsLengthZero)
+    //        {
+    //            Destroy(this.gameObject);
+    //        }
+    //    }
        if (!enable)
        {
            for (int i = 0; i < rbs.Length; i++)
@@ -179,7 +179,7 @@ public class Animal : MonoBehaviour
 
     public virtual void GetHit(double damage, GameObject attacker, Vector3 pos = new Vector3())
     {
-        Debug.Log($"{this.gameObject} GetHit {damage} attacker: {attacker}");
+        // Debug.Log($"{this.gameObject} GetHit {damage} attacker: {attacker}");
         follow = attacker;
         // Debug.Log(this.gameObject);
 

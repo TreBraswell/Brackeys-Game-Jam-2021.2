@@ -1,23 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Water : MonoBehaviour
 {
     public GameObject Shark;
+    public Animal animal;
+
     // Start is called before the first frame update
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (Player.instance && collision.gameObject == Player.instance.gameObject)
+        if (collider.CompareTag("Player"))
         {
-            Shark.GetComponent<Animal>().isFollowing = true;
+            animal.isFollowing = true;
         }
     }
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collider)
     {
-        if (Player.instance && collision.gameObject == Player.instance.gameObject)
+        if (collider.CompareTag("Player"))
         {
-            Shark.GetComponent<Animal>().isFollowing = false;
+            animal.isFollowing = false;
         }
     }
 }
