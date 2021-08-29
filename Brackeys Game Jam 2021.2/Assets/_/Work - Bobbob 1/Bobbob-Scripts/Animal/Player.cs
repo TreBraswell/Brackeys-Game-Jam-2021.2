@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     {
         health -= dmg;
         var percentage = health / maxHealth;
-        Debug.Log("sending hp percentage changed event");
+        // Debug.Log("sending hp percentage changed event");
         hpPercentageChangedEvent?.Invoke(percentage);
         if(health <= 0) {
             Die();
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
             //Dying Part
          //   Die();
         }
-        print(maxHealth+" " + health);
+        // print(maxHealth+" " + health);
     }
 
 

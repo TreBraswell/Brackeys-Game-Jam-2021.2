@@ -141,8 +141,8 @@ namespace  BGJ20212.Game.AbhiTechGame
             if (Input.GetMouseButtonDown(0))
             {
                 Attack();
-                audioManager.Play("Player Growl");
                 audioManager.Play("Player Attack");
+                Invoke("GrowlSound", .2f);
             }
             if (Input.GetMouseButton(1))
             {
@@ -156,10 +156,14 @@ namespace  BGJ20212.Game.AbhiTechGame
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ExtraAnimation();
+                audioManager.Play("Player Growl");
             }
         }
 
-
+        void GrowlSound()
+        {
+            audioManager.Play("Player Growl 2");
+        }
         
         void Shoot()
         {
