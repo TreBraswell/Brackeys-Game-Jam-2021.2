@@ -8,7 +8,7 @@ public class Enemy : Animal
     // Start is called before the first frame update
     public  override void Start()
     {
-        myMesh = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
         isEnemy = true;
     }
