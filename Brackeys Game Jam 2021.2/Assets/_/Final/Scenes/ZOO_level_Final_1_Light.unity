@@ -18869,6 +18869,13 @@ MonoBehaviour:
     Pitch: 1
     loop: 0
     source: {fileID: 0}
+  - Name: Player Growl 2
+    Output: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 36ef36abd5589f8489cdf0f3f3b1e4a4, type: 3}
+    Volume: 1
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}
   bgMusicName: 
 --- !u!1001 &807540519
 PrefabInstance:
