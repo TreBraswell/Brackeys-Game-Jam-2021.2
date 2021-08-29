@@ -250,12 +250,14 @@ public class Animal : MonoBehaviour
         //  agent.speed = speed;
 
 
-        print(Vector3.Distance(transform.position, player.transform.position));
         //Notice player
-        if (Vector3.Distance(transform.position, player.transform.position) <= chaseDistance && door.Open)
-        {
-            enemy_State = EnemyState.Chase;
+        if (Vector3.Distance(transform.position, player.transform.position) <= chaseDistance )
 
+
+        {
+            if(door == null)
+            enemy_State = EnemyState.Chase;
+            else if(door.Open) enemy_State = EnemyState.Chase;
             //Notice sound
         }
 

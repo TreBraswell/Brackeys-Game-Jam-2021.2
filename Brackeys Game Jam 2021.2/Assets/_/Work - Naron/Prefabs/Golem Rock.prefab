@@ -917,19 +917,19 @@ MonoBehaviour:
   run_Speed: 400
   speed: 0
   healthBar: {fileID: 3504661347545404297}
-  health: 0
-  damage: 0
+  health: 3000
+  damage: 150
   follow: {fileID: 0}
-  isEnemy: 0
+  isEnemy: 1
   agent: {fileID: 0}
-  destrotyRbsLengthZero: 1
+  destrotyRbsLengthZero: 0
   playAnimationUntoggledRbs: 0
   knockBackWhenDjes: 30
   isFollowing: 0
-  baseChaseDistance: 0
-  atkDistance: 0
+  baseChaseDistance: 60
+  atkDistance: 20
   AtkTimer: 0
-  WaitBeforeAttack: 0
+  WaitBeforeAttack: 7
   door: {fileID: 0}
   rbs: []
   colliders: []
@@ -945,7 +945,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8051667937697617624}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 14.64
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -954,7 +954,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 25.74
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
