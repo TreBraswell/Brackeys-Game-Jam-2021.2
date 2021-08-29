@@ -33903,6 +33903,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4086694098270645613, guid: cd41fce0f7e4a8049939959469479739,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4086694098315086329, guid: cd41fce0f7e4a8049939959469479739,
         type: 3}
       propertyPath: m_TagString
@@ -46792,6 +46797,9 @@ MonoBehaviour:
   animalHolder: {fileID: 0}
   health: 10
   spawner: {fileID: 0}
+  gateOpened:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1187514422535116225
 Transform:
   m_ObjectHideFlags: 0
@@ -49650,6 +49658,9 @@ MonoBehaviour:
   animalHolder: {fileID: 0}
   health: 100
   spawner: {fileID: 0}
+  gateOpened:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &4411688543659462933
 Transform:
   m_ObjectHideFlags: 0
@@ -52686,6 +52697,9 @@ MonoBehaviour:
   animalHolder: {fileID: 959395070112572314}
   health: 1
   spawner: {fileID: 0}
+  gateOpened:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &5809869014214151593
 Transform:
   m_ObjectHideFlags: 0
@@ -56437,6 +56451,9 @@ MonoBehaviour:
   animalHolder: {fileID: 6295715324156458586}
   health: 1
   spawner: {fileID: 0}
+  gateOpened:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8681029613498546009
 GameObject:
   m_ObjectHideFlags: 0
