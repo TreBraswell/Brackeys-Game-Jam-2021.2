@@ -870,7 +870,7 @@ MonoBehaviour:
   knockBackWhenDjes: 30
   isFollowing: 0
   baseChaseDistance: 40
-  atkDistance: 10
+  atkDistance: 20
   AtkTimer: 0
   WaitBeforeAttack: 5
   door: {fileID: 0}

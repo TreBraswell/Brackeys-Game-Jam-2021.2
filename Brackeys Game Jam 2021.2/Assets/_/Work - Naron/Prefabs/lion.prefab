@@ -1125,10 +1125,10 @@ MonoBehaviour:
   playAnimationUntoggledRbs: 0
   knockBackWhenDjes: 30
   isFollowing: 0
-  baseChaseDistance: 50
-  atkDistance: 5
+  baseChaseDistance: 90
+  atkDistance: 10
   AtkTimer: 0
-  WaitBeforeAttack: 1
+  WaitBeforeAttack: 2
   door: {fileID: 0}
   rbs:
   - {fileID: 1253889262}
