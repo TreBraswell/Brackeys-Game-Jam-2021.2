@@ -49,9 +49,9 @@ namespace BGJ20212.Game.Mark
             RaycastHit hit; //marks the target if hit
             if (Physics.Raycast(fCam.transform.position, fCam.transform.forward, out hit, range))
             {
-                
+
                 Rigidbody body = hit.collider.GetComponent<Rigidbody>();
-                
+
                 if (body != null &&(( body.gameObject.GetComponent<Animal>() && body.gameObject.GetComponent<Animal>().isEnemy == !enemy)||(body.gameObject.GetComponent <Cage>())))
                 {
                     return body.gameObject;
@@ -65,11 +65,11 @@ namespace BGJ20212.Game.Mark
             RaycastHit hit; //marks the target if hit
             if (Physics.Raycast(fCam.transform.position, fCam.transform.forward, out hit, range))
             {
-               
+
                 Rigidbody body = hit.collider.GetComponent<Rigidbody>();
                 if (body != null)
                 {
-                    
+
                     body.AddExplosionForce(hitIntensity, fCam.transform.forward,
                         5); //Raycast hit explosion to add hit force to enemy
                     if(body.gameObject.GetComponent<Animal>())
@@ -78,6 +78,7 @@ namespace BGJ20212.Game.Mark
                     }
                     else if(body.gameObject.GetComponent<Cage>())
                     {
+                        Debug.Log("Shoot on Cage");
                         body.gameObject.GetComponent<Cage>().GetHit(damage, this.gameObject);
                     }
                 }

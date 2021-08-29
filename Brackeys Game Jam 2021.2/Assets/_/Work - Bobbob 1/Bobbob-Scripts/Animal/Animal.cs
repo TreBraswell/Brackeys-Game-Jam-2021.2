@@ -276,6 +276,7 @@ public class Animal : MonoBehaviour
     }
     protected virtual void Chase()
     {
+        if (player == null) return;
 
         agent.isStopped = false;
         agent.speed = run_Speed;
@@ -337,6 +338,7 @@ public class Animal : MonoBehaviour
 
     void LookToPlayer()
     {
+        if (player == null) return;
 
         Vector3 direction = (player.transform.position - transform.position).normalized;
         direction.y = 0;
