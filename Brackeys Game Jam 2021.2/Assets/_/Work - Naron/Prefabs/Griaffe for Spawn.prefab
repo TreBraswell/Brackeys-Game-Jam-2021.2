@@ -1150,8 +1150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  move_Speed: 250
-  run_Speed: 400
+  move_Speed: 100
+  run_Speed: 250
   speed: 30
   healthBar: {fileID: 6784394826702059868}
   health: 50
@@ -1167,7 +1167,6 @@ MonoBehaviour:
   atkDistance: 9
   AtkTimer: 0
   WaitBeforeAttack: 2
-  HitPlace: {fileID: 0}
   door: {fileID: 0}
   rbs:
   - {fileID: 6718710990116426860}
@@ -1183,6 +1182,9 @@ MonoBehaviour:
   - {fileID: 6718710990116426861}
   - {fileID: 6718710988701911477}
   - {fileID: 6718710990054437462}
+  hpChanged:
+    m_PersistentCalls:
+      m_Calls: []
   getKilled:
     m_PersistentCalls:
       m_Calls: []

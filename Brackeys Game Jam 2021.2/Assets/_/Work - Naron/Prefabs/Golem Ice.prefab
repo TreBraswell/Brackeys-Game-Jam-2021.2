@@ -856,12 +856,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  move_Speed: 250
-  run_Speed: 400
+  move_Speed: 40
+  run_Speed: 80
   speed: 10
   healthBar: {fileID: 7917068534117528690}
   health: 500
-  damage: 30
+  damage: 25
   follow: {fileID: 0}
   isEnemy: 1
   agent: {fileID: 0}

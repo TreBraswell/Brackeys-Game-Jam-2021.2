@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 6
+  m_Time: 4.483333333333333
   actionId: 21004200
   paramOrder: 0000
   stringParams: []
@@ -32,6 +32,18 @@ MonoBehaviour:
   m_Name: ActivationPlayableAsset
   m_EditorClassIdentifier: 
 --- !u!114 &-8563073156981636882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde0d25a170598d46a0b9dc16b4527a5, type: 3}
+  m_Name: ActivationPlayableAsset
+  m_EditorClassIdentifier: 
+--- !u!114 &-8455160169612480713
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,6 +75,99 @@ MonoBehaviour:
   intParams: e8030000
   floatParams: []
   goParams: []
+--- !u!114 &-6438001950033054343
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bf7f712d84d26478ebe6a299f21738, type: 3}
+  m_Name: Activation Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 0.5000000000005009
+    m_ClipIn: 0
+    m_Asset: {fileID: -8455160169612480713}
+    m_Duration: 20.33333333333283
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -6438001950033054343}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Active
+  m_Markers:
+    m_Objects: []
+  m_PostPlaybackState: 3
 --- !u!114 &-3702348529664146676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,16 +190,16 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 12
+    m_Start: 8.866666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -8563073156981636882}
-    m_Duration: 4
+    m_Duration: 2.083333333333332
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3702348529664146676}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -154,16 +259,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
   - m_Version: 1
-    m_Start: 17
+    m_Start: 12.616666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 7028173765792324938}
-    m_Duration: 4
+    m_Duration: 2.416666666666668
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3702348529664146676}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -223,16 +328,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
   - m_Version: 1
-    m_Start: 22
+    m_Start: 16.416666666666668
     m_ClipIn: 0
     m_Asset: {fileID: 7101831992718991457}
-    m_Duration: 4
+    m_Duration: 1.6333333333333329
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3702348529664146676}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -292,16 +397,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
   - m_Version: 1
-    m_Start: 27
+    m_Start: 18.983333333333334
     m_ClipIn: 0
     m_Asset: {fileID: -9083609142653122813}
-    m_Duration: 4
+    m_Duration: 1.8499999999999979
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3702348529664146676}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -375,7 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 7
+  m_Time: 5.783333333333333
   actionId: 21004100
   paramOrder: 1100
   stringParams:
@@ -408,13 +513,13 @@ MonoBehaviour:
     m_Start: 2
     m_ClipIn: 0
     m_Asset: {fileID: 3560510343043571293}
-    m_Duration: 4
+    m_Duration: 2.4833333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: -2548506213964926929}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -474,16 +579,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
   - m_Version: 1
-    m_Start: 7
+    m_Start: 5.783333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 5814205866816942622}
-    m_Duration: 4
+    m_Duration: 2.05
     m_TimeScale: 1
     m_ParentTrack: {fileID: -2548506213964926929}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -557,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 17
+  m_Time: 12.616666666666667
   actionId: 21004100
   paramOrder: 1100
   stringParams:
@@ -577,7 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 22
+  m_Time: 16.416666666666668
   actionId: 21004100
   paramOrder: 1100
   stringParams:
@@ -602,6 +707,7 @@ MonoBehaviour:
   - {fileID: -2548506213964926929}
   - {fileID: -3702348529664146676}
   - {fileID: 3161556506862677896}
+  - {fileID: -6438001950033054343}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -620,7 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 12
+  m_Time: 8.866666666666667
   actionId: 21004100
   paramOrder: 1100
   stringParams:
@@ -640,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 27
+  m_Time: 18.983333333333334
   actionId: 21004100
   paramOrder: 1100
   stringParams:
@@ -660,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 31
+  m_Time: 20.833333333333332
   actionId: 21004200
   paramOrder: 0000
   stringParams: []
@@ -679,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 26
+  m_Time: 18.05
   actionId: 21004200
   paramOrder: 0000
   stringParams: []
@@ -745,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 11
+  m_Time: 7.833333333333333
   actionId: 21004200
   paramOrder: 0000
   stringParams: []
@@ -776,7 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 21
+  m_Time: 15.033333333333335
   actionId: 21004200
   paramOrder: 0000
   stringParams: []
@@ -819,7 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a474690ee74394b3a229bc066f70f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Time: 16
+  m_Time: 10.95
   actionId: 21004200
   paramOrder: 0000
   stringParams: []
