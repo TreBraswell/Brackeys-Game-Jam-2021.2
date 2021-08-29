@@ -7,6 +7,8 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 public class Animal : MonoBehaviour
 {
+    enum EnemyState  {Idle,Chase,Attack};
+    private EnemyState enemy_State;
     //[HideInInspector]
     public Animator animator;
     [Header("Stats")] public float move_Speed = 250f;
@@ -21,8 +23,8 @@ public class Animal : MonoBehaviour
     public double damage;
     public GameObject follow;
     public bool isEnemy; // kind of got a bit lazy here
-    [HideInInspector] public NavMeshAgent myMesh;
-    public bool isFollowing = false;
+    [HideInInspector] public NavMeshAgent agent;
+
 
     public bool destrotyRbsLengthZero = true;
     public bool playAnimationUntoggledRbs = false;
@@ -38,6 +40,16 @@ public class Animal : MonoBehaviour
 
     private Vector2 smoothDeltaPosition = Vector2.zero;
     private Vector2 velocity = Vector2.zero;
+    public bool isFollowing;
+    [Space(15)]
+    [Header("AI")]
+    [SerializeField] private float  baseChaseDistance;
+    [SerializeField] private float atkDistance;
+    float chaseDistance;
+    [SerializeField]
+    float AtkTimer, WaitBeforeAttack;
+
+    [SerializeField] private BGJ20212.Game.Naron.GateOpen door;
 
 
     bool isDead;
@@ -48,11 +60,14 @@ public class Animal : MonoBehaviour
     private Collider collider;
     private Rigidbody rb;
     Vector3 LastBulletPos;
+
     Gun gun;
 
     public virtual void Start()
     {
-        myMesh = GetComponent<NavMeshAgent>();
+        chaseDistance = baseChaseDistance;
+        player = GameObject.FindGameObjectWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
         if (animator == null)
         {
             animator = GetComponent<Animator>();
@@ -61,7 +76,7 @@ public class Animal : MonoBehaviour
         //myMesh.updatePosition = false;
         maxHealth = health;
 
-
+        enemy_State = EnemyState.Idle;
         if (healthBar != null)
         {
             healthCanvas = healthBar.transform.parent.parent.gameObject;
@@ -77,34 +92,11 @@ public class Animal : MonoBehaviour
 
    public virtual void Update()
    {
-       if(isFollowing && follow == null)
-       {
-           follow = Player.instance.gameObject;
-       }
-       if(health<=0 && !isDead)
-       {
-           Die();
-           isDead = true;
-       }
-       if(isFollowing && Player.instance)
-       {
-
-           myMesh.SetDestination(follow.transform.position);
-          // AnimationCheck();
-       }
-       if(gun && gun.CheckForEnemy(isEnemy))
-       {
-           animator.SetTrigger("Attack");
-           StartCoroutine(RefreshAttack());
-           gun.Shoot();
-
-       }
-       if(follow == Player.instance.gameObject && Player.instance.attacker)
-       {
-           follow = Player.instance.attacker;
-       }
-
+        if(!isDead)
+        Check_States();
+      
    }
+
    private IEnumerator RefreshAttack()
    {
        isAttacking = false;
@@ -118,6 +110,8 @@ public class Animal : MonoBehaviour
        {
            Player.instance.attacker = null;
        }
+
+        agent.enabled = false;
        ToggleRagdoll(true);
    }
    void ToggleRagdoll(bool enable)
@@ -179,7 +173,7 @@ public class Animal : MonoBehaviour
 
     public virtual void GetHit(double damage, GameObject attacker, Vector3 pos = new Vector3())
     {
-        Debug.Log($"{this.gameObject} GetHit {damage} attacker: {attacker}");
+      
         follow = attacker;
         // Debug.Log(this.gameObject);
 
@@ -203,10 +197,7 @@ public class Animal : MonoBehaviour
 
    //this will be used to follow the player after being freed
 
-   public virtual void MoveToPlayer()
-   {
-       isFollowing = true;
-   }
+
 
    public UnityEvent getKilled;
 
@@ -226,41 +217,143 @@ public class Animal : MonoBehaviour
 
         }
 
+        chaseDistance = 10000f;
 
        if (health <= 0)
        {
-           getKilled?.Invoke();
+            isDead = true;
+            Die();
+          // getKilled?.Invoke();
        }
 
    }
 
-    /*
-
-      //this will be used to follow the player after being freed
-
-
-
-  public virtual void DealDamage(GameObject enemy)
-  {
-      health -= damage;
-  }
-  public virtual void AnimationCheck()
-  {
-
-      /*if (myMesh.velocity.x==0 && myMesh.velocity.z == 0 )
-      {
-          animator.SetBool("Move", false);
-          animator.SetFloat("moveSpeed", 0);
-      }
-      else
-      {
-          animator.SetBool("Move", true);
-          animator.SetFloat("moveSpeed", 1);
-      }*/
+    void Check_States()
+    {
+        if (enemy_State == EnemyState.Idle)
+        {
+            Idle();
+        }
+        if (enemy_State == EnemyState.Chase)
+        {
+            Chase();
+        }
+        if (enemy_State == EnemyState.Attack)
+        {
+            Attack();
+        }
+    }
+    protected virtual void Idle()
+    {
+        //  if(agent.isStopped)
+        // agent.isStopped = false;
+        //  agent.speed = speed;
 
 
+        //Notice player
+        if (Vector3.Distance(transform.position, player.transform.position) <= chaseDistance )
 
 
-    // }
+        {
+            if(door == null)
+            enemy_State = EnemyState.Chase;
+            else if(door.Open) enemy_State = EnemyState.Chase;
+            //Notice sound
+        }
+
+
+
+    }
+    protected virtual void Chase()
+    {
+       
+        agent.isStopped = false;
+        agent.speed = run_Speed;
+
+        //move to player
+        agent.SetDestination(player.transform.position);
+
+        //walk if moving
+        if (agent.velocity.sqrMagnitude > 0) ChaseAnim();
+        else StopAnims();
+
+
+        //Attack Distance
+        if (Vector3.Distance(transform.position, player.transform.position) <= atkDistance)
+        {
+            StopAnims();
+            enemy_State = EnemyState.Attack;
+            AtkTimer = WaitBeforeAttack;
+            //reset chase distance
+            if (chaseDistance != baseChaseDistance) chaseDistance = baseChaseDistance;
+
+        }
+        //if Gone out of range
+        else if (Vector3.Distance(transform.position, player.transform.position) >= 2 * chaseDistance)
+        {
+            StopAnims();//if runs stop
+            enemy_State = EnemyState.Idle;
+            //reset timer
+            if (chaseDistance != baseChaseDistance) chaseDistance = baseChaseDistance;
+        }
+
+    }
+
+    void Attack()
+    {
+   
+        agent.velocity = Vector3.zero;// stop for hit
+        agent.isStopped = true;
+        AtkTimer += Time.deltaTime;
+        //look at player
+        LookToPlayer();
+        if (AtkTimer > WaitBeforeAttack)
+        {
+            Hit();
+            AtkTimer = 0;
+
+            //play Sound
+
+
+        }
+        if (Vector3.Distance(transform.position, player.transform.position) >= atkDistance)
+        {
+            enemy_State = EnemyState.Chase;
+        }
+    }
+
+    //set new Random patrol destination
+
+
+    void LookToPlayer()
+    {
+
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+        direction.y = 0;
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 1);
+
+    }
+    protected virtual void StopAnims()
+    {
+        animator.SetFloat("moveSpeed",0);
+    }
+    protected virtual void ChaseAnim()
+    {
+        animator.SetFloat("moveSpeed", 1);
+    }
+
+
+    protected virtual void Hit()
+    {
+
+        animator.SetTrigger("Attack");
+
+        //HitPlayer
+
+
+    }
+
+
 
 }

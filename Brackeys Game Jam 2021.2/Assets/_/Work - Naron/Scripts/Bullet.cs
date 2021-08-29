@@ -5,6 +5,7 @@ using BGJ20212.Game.AbhiTechGame;
 public class Bullet : MonoBehaviour
 {
     public float damage;
+    [SerializeField] bool hasAudio;
     private AudioManager audioManager;
     public GameObject sphereBulletDestroyEffect;
 
@@ -21,10 +22,12 @@ public class Bullet : MonoBehaviour
    IEnumerator disapear()
     {
         yield return new WaitForSeconds(3f);
+        if(hasAudio)
         audioManager.Play("Bullet Break");
         if (sphereBulletDestroyEffect != null)
         {
-            Instantiate(sphereBulletDestroyEffect, transform.position, transform.rotation);
+           var obj =  Instantiate(sphereBulletDestroyEffect, transform.position, transform.rotation);
+            Destroy(obj, 1);
         }
         Destroy(this.gameObject);
         yield break;

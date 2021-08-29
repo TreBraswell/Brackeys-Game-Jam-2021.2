@@ -6,11 +6,11 @@ namespace BGJ20212.Game.Naron
     public class GateOpen : MonoBehaviour
     {
         [SerializeField] private Animator animator;
-
+        public bool Open;
         public void GateHittedByGorilla()
         {
             animator.SetTrigger("Open");
-
+            Open = true;
             //Animals Run Away
         }
 

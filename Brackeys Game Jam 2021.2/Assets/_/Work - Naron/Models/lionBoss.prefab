@@ -1182,11 +1182,15 @@ MonoBehaviour:
   damage: 50
   follow: {fileID: 0}
   isEnemy: 1
-  myMesh: {fileID: 0}
-  isFollowing: 0
+  agent: {fileID: 0}
   destrotyRbsLengthZero: 1
   playAnimationUntoggledRbs: 0
   knockBackWhenDjes: 30
+  isFollowing: 0
+  baseChaseDistance: 10
+  atkDistance: 5
+  AtkTimer: 0
+  WaitBeforeAttack: 1.2
   rbs:
   - {fileID: 1574820349815259316}
   - {fileID: 1574820349815259319}
