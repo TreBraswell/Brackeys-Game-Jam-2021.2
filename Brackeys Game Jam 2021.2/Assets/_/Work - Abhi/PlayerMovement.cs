@@ -40,6 +40,8 @@ namespace  BGJ20212.Game.AbhiTechGame
         private bool isJumping;
         private bool isShooting;
         private bool isStanding;
+        private bool Extra;
+
 
         AudioManager audioManager;
 
@@ -71,15 +73,37 @@ namespace  BGJ20212.Game.AbhiTechGame
 
         private void Update()
         {
-            CheckInput();
-            Move();
+            if (!Extra)
+            {
+                CheckInput();
+                Move();
+            }
         }
+
+        void DoneExtra()
+        {
+            Extra = false;
+        }
+
+        void ExtraAnimation()
+        {
+
+            if (!isStanding && !isAttacking && canAttack && characterController.isGrounded && !isJumping)
+            {
+                Extra = true;
+                System.Action callback = DoneExtra;
+                animator.SetTrigger("Extra", callback);
+            }
+
+        }
+
 
 
         #region Movement
 
         private void Move()
         {
+            if (Extra) return;
             Vector2 inputAxis = new Vector2(Input.GetAxis(Naron.Axis.HORIZONTAL), Input.GetAxis(Naron.Axis.VERTICAL));
 
             moveDirection = new Vector3(inputAxis.x, 0f, inputAxis.y);
@@ -128,7 +152,15 @@ namespace  BGJ20212.Game.AbhiTechGame
             {
                 ToggleStand();
             }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                ExtraAnimation();
+            }
         }
+
+
+        
         void Shoot()
         {
             if (!isAttacking && playerShoot.canShoot)

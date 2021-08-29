@@ -33,8 +33,14 @@ namespace BGJ20212.Game.Naron
         public void OnAnimationDone(string anim)
         {
             animator.SetBool(anim, false);
-        }
 
+            if(callbackFunc!= null)
+            {
+                callbackFunc.Invoke();
+                callbackFunc = null;
+            }
+        }
+ 
         public void SetTrigger(string anim)
         {
             animator.SetTrigger(anim);
