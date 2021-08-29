@@ -1007,8 +1007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacker: {fileID: 2175119514313265476}
-  health: 40
-  maxHealth: 40
+  health: 200
+  maxHealth: 200
   hpPercentageChangedEvent:
     m_PersistentCalls:
       m_Calls:

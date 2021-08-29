@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     }
 
 
-    void GetHit(float dmg)
+    public void GetHit(float dmg)
     {
         health -= dmg;
         var percentage = health / maxHealth;
@@ -41,7 +41,11 @@ public class Player : MonoBehaviour
         hpPercentageChangedEvent?.Invoke(percentage);
         if(health <= 0) {
             Die();
+
+            //Dying Part
+         //   Die();
         }
+        print(maxHealth+" " + health);
     }
 
 
