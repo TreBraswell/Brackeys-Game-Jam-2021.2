@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour
 {
+    private void Start() {
+        Cursor.visible = true;
+    }
+
     public string PlayScene;
 
     public GameObject CreditsPannel;
