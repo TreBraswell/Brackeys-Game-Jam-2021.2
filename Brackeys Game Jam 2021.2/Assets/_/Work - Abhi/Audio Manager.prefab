@@ -98,6 +98,6 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: a53a3136e6105144b9dc8f5ae6b7261a, type: 3}
     Volume: 1
     Pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   bgMusicName: Zoo Gameplay

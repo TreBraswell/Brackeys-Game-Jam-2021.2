@@ -1007,6 +1007,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacker: {fileID: 2175119514313265476}
+  health: 40
+  maxHealth: 40
+  hpPercentageChangedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 188264231485078344}
+        m_TargetAssemblyTypeName: BGJ20212.Game.ApprenticeGC.Player.DelegateToBolt,
+          Assembly-CSharp
+        m_MethodName: HandleHpPercentageChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dieEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 188264231485078344}
+        m_TargetAssemblyTypeName: BGJ20212.Game.ApprenticeGC.Player.DelegateToBolt,
+          Assembly-CSharp
+        m_MethodName: HandleDie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &646627468
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2665,3 +2699,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8721619204019987985}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &188264231485078344 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8905220817344945497, guid: 65e3ca1aa605d044e8ddc13027eb3262,
+    type: 3}
+  m_PrefabInstance: {fileID: 8721619204019987985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915544213472171034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5869d64f64c795d4aaac53cc2a5f58e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

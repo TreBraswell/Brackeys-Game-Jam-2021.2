@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     public float maxHealth;
 
 
-    UnityEvent DieEvent;
+    public UnityEvent<float> hpPercentageChangedEvent;
+    public UnityEvent dieEvent;
 
 
     void Awake()
@@ -28,26 +29,27 @@ public class Player : MonoBehaviour
     {
         health = maxHealth;
 
-    
+
     }
 
 
     void GetHit(float dmg)
     {
         health -= dmg;
+        var percentage = health / maxHealth;
+        Debug.Log("sending hp percentage changed event");
+        hpPercentageChangedEvent?.Invoke(percentage);
         if(health <= 0) {
-
-
             Die();
-        
         }
     }
 
 
     void Die()
     {
-        Destroy(this.gameObject);
+        // Destroy(this.gameObject);
         //Death action;
-        DieEvent?.Invoke();
+        // Will handle destroy in subscriber side
+        dieEvent?.Invoke();
     }
 }
