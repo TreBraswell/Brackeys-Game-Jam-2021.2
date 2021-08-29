@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public static Player instance;
@@ -54,6 +55,8 @@ public class Player : MonoBehaviour
         // Destroy(this.gameObject);
         //Death action;
         // Will handle destroy in subscriber side
+
+        
         dieEvent?.Invoke();
     }
 }
