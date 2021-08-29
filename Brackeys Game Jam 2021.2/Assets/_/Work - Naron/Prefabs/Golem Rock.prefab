@@ -916,7 +916,7 @@ MonoBehaviour:
   move_Speed: 250
   run_Speed: 400
   speed: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 3504661347545404297}
   health: 0
   damage: 0
   follow: {fileID: 0}
@@ -924,6 +924,7 @@ MonoBehaviour:
   myMesh: {fileID: 0}
   isFollowing: 0
   destrotyRbsLengthZero: 1
+  playAnimationUntoggledRbs: 0
   knockBackWhenDjes: 30
   rbs: []
   colliders: []
@@ -1252,3 +1253,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7064158788286725069}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3504661347545404297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5957101295121000516, guid: 08425772ca967b84b9da55df9900d7cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 7064158788286725069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
