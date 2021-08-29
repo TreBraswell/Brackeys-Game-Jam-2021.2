@@ -1752,10 +1752,16 @@ MonoBehaviour:
   damage: 0
   follow: {fileID: 0}
   isEnemy: 0
-  myMesh: {fileID: 4154464885699399383}
-  isFollowing: 0
+  agent: {fileID: 0}
   destrotyRbsLengthZero: 1
+  playAnimationUntoggledRbs: 0
   knockBackWhenDjes: 30
+  isFollowing: 0
+  baseChaseDistance: 90
+  atkDistance: 10
+  AtkTimer: 0
+  WaitBeforeAttack: 2
+  door: {fileID: 0}
   rbs:
   - {fileID: 4253805653429652576}
   - {fileID: 4253805653429652579}
