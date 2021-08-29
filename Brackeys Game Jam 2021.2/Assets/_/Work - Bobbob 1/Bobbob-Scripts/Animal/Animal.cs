@@ -18,6 +18,7 @@ public class Animal : MonoBehaviour
     [SerializeField] Image healthBar;
     private GameObject healthCanvas;
 
+    Player playerStats;
 
     public double health;
     public double damage;
@@ -48,6 +49,8 @@ public class Animal : MonoBehaviour
     float chaseDistance;
     [SerializeField]
     float AtkTimer, WaitBeforeAttack;
+
+
 
     [SerializeField] private BGJ20212.Game.Naron.GateOpen door;
 
@@ -88,10 +91,7 @@ public class Animal : MonoBehaviour
 
         gun = GetComponent<Gun>();
        ToggleRagdoll(false);
-        if (door != null)
-        {
-            
-        }
+        playerStats = player.GetComponent<Player>();
     }
 
    public virtual void Update()
@@ -355,8 +355,22 @@ public class Animal : MonoBehaviour
 
         //HitPlayer
 
+        
 
     }
+
+
+    void DealDMG()
+    {
+        if (Vector3.Distance(transform.position, player.transform.position) <= atkDistance)
+        {
+            playerStats.GetHit((float)damage);
+
+        }
+    }
+
+
+
 
 
 

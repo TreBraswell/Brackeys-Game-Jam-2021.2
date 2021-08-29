@@ -32,15 +32,16 @@ public class Player : MonoBehaviour
     }
 
 
-    void GetHit(float dmg)
+    public void GetHit(float dmg)
     {
         health -= dmg;
         if(health <= 0) {
 
-
-            Die();
+            //Dying Part
+         //   Die();
         
         }
+        print(maxHealth+" " + health);
     }
 
 
