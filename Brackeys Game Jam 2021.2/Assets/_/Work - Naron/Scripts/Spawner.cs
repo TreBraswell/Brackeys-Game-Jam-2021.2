@@ -10,14 +10,10 @@ namespace BGJ20212.Game.Naron
         private int enemySpawnAmount = 0;
         public int enemyKilled = 0;
 
-        /*
+       
         private void Start()
         {
-            spawners = new GameObject[spawnPoints];
-            for (int i = 0; i < spawnPoints; i++)
-            {
-                spawners[i] = transform.GetChild(i).gameObject;
-            }
+        
             StartWave();
         }
         private void Update()
@@ -26,8 +22,9 @@ namespace BGJ20212.Game.Naron
         }
         private void SpawnEnemy()
         {
-            int randSpawnPlace = Random.Range(0, spawnPoints);
-            Instantiate(enemyPrefab, spawners[randSpawnPlace].transform.position, Quaternion.identity);
+            int randSpawnPlace = Random.Range(0, spawnPoint.Length);
+            
+          
         }
         private void StartWave()
         {
@@ -46,13 +43,14 @@ namespace BGJ20212.Game.Naron
             enemyKilled = 0;
         }
     }
-        */
+        
         [System.Serializable]
         struct enemyOptions
         {
             [SerializeField] private int spawnPoints;
 
             [SerializeField] private GameObject enemyPrefab;
+
         }
     }
-}
+

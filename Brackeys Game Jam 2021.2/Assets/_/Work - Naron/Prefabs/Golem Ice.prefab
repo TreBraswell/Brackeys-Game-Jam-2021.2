@@ -859,7 +859,7 @@ MonoBehaviour:
   move_Speed: 250
   run_Speed: 400
   speed: 10
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 7917068534117528690}
   health: 500
   damage: 30
   follow: {fileID: 0}
@@ -868,7 +868,7 @@ MonoBehaviour:
   destrotyRbsLengthZero: 0
   playAnimationUntoggledRbs: 0
   knockBackWhenDjes: 30
-  isFollowing: 0
+  isFollowing: 1
   baseChaseDistance: 40
   atkDistance: 20
   AtkTimer: 0
@@ -876,6 +876,9 @@ MonoBehaviour:
   door: {fileID: 0}
   rbs: []
   colliders: []
+  hpChanged:
+    m_PersistentCalls:
+      m_Calls: []
   getKilled:
     m_PersistentCalls:
       m_Calls: []
@@ -952,6 +955,9 @@ MonoBehaviour:
   door: {fileID: 0}
   rbs: []
   colliders: []
+  hpChanged:
+    m_PersistentCalls:
+      m_Calls: []
   getKilled:
     m_PersistentCalls:
       m_Calls: []
@@ -1266,3 +1272,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4572547744489249846}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7917068534117528690 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5957101295121000516, guid: 08425772ca967b84b9da55df9900d7cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 4572547744489249846}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
