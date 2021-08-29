@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"managerCutScene","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerEnvironment","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerPlayer","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerHud","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerScore","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerTime","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerCreature","value":{"$content":6,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerAudio","value":{"$content":7,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"managerCutScene","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerEnvironment","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerPlayer","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerHud","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerScore","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerTime","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerCreature","value":{"$content":6,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"managerAudio","value":{"$content":7,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"firstTimeInPlayState","value":{"$content":true,"$type":"System.Boolean"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 8260580845219660567}
     - {fileID: 2787356664748952789}
@@ -94,8 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
-    _objectReferences: []
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: f649180d9bf724845a87d8d259bd5655, type: 2}
 --- !u!114 &8739326593335080239
 MonoBehaviour:
   m_ObjectHideFlags: 0
