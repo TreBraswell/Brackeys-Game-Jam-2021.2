@@ -312,6 +312,7 @@ public class Animal : MonoBehaviour
 
     void Attack()
     {
+        if (player == null) return;
 
         agent.velocity = Vector3.zero;// stop for hit
         agent.isStopped = true;

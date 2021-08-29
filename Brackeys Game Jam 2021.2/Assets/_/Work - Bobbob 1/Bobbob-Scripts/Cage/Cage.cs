@@ -38,6 +38,7 @@ public class Cage : MonoBehaviour
 
     public void Die()
     {
+        Debug.Log("Cage die");
 
         if (_rank1Manager != null)
         {

@@ -3,12 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace BGJ20212.Game.Naron
 {
+    using Bolt;
+
     public class GateOpen : MonoBehaviour
     {
         [SerializeField] private Animator animator;
         public bool Open;
+
+        private GameObject _rank1Manager;
+        public  void Start()
+        {
+            _rank1Manager = GameObject.FindGameObjectWithTag("Rank1Manager");
+        }
+
         public void GateHittedByGorilla()
         {
+            if (_rank1Manager != null)
+            {
+                CustomEvent.Trigger(_rank1Manager, "Cage Opened");
+            }
+
             animator.SetTrigger("Open");
             Open = true;
             //Animals Run Away
@@ -87,16 +101,16 @@ namespace BGJ20212.Game.Naron
 
         // private void OnTriggerEnter(Collider collision)
         // {
-           
+
         //     if (collision.transform.CompareTag("Player") && Input.GetKeyDown(KeyCode.T ))
         //     {
-                
+
         //         toggleGate();
         //     }
         // }
 
     }
-    
+
 
 
 
