@@ -4,12 +4,9 @@ using UnityEngine;
 namespace BGJ20212.Game.Naron
 {
     public class Spawner : MonoBehaviour
-    {
+    {[SerializeField]
         enemyOptions[] spawnPoint;
-        private int waveNumber = 0;
-        private int enemySpawnAmount = 0;
-        public int enemyKilled = 0;
-
+        
        
         private void Start()
         {
@@ -20,36 +17,33 @@ namespace BGJ20212.Game.Naron
         {
     
         }
-        private void SpawnEnemy()
+     
+
+        IEnumerator Spawn()
         {
+            int time = Random.Range(5, 10);
             int randSpawnPlace = Random.Range(0, spawnPoint.Length);
-            
-          
+            yield return new WaitForSeconds(time);
+            Instantiate(spawnPoint[randSpawnPlace].enemyPrefab, spawnPoint[randSpawnPlace].spawnPoints.position, Quaternion.identity);
+            StartWave();
+            yield break;
+
         }
         private void StartWave()
         {
-            waveNumber = 1;
-            enemySpawnAmount = 2;
-            enemyKilled = 0;
-            for (int i = 0; i < enemySpawnAmount; i++)
-            {
-                SpawnEnemy();
-            }
+            StopAllCoroutines();
+                StartCoroutine(Spawn());
+           
         }
-        private void NextWave()
-        {
-            waveNumber++;
-            enemySpawnAmount += 2;
-            enemyKilled = 0;
-        }
+   
     }
         
         [System.Serializable]
         struct enemyOptions
         {
-            [SerializeField] private int spawnPoints;
+             public Transform spawnPoints;
 
-            [SerializeField] private GameObject enemyPrefab;
+            public GameObject enemyPrefab;
 
         }
     }

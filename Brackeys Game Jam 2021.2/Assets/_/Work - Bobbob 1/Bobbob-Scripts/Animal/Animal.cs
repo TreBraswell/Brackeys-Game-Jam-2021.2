@@ -368,7 +368,7 @@ public class Animal : MonoBehaviour
 
     void DealDMG()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) <= atkDistance)
+        if (Vector3.Distance(transform.position, player.transform.position) <= atkDistance*1.3f)
         {
             playerStats.GetHit((float)damage);
 
