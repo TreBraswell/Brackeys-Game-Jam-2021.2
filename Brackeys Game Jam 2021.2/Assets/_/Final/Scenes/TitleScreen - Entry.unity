@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1862000339}
-  m_IndirectSpecularColor: {r: 0.42653087, g: 0.9085966, b: 1.424929, a: 1}
+  m_IndirectSpecularColor: {r: 0.42660707, g: 0.9085761, b: 1.4249337, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8413,7 +8413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9e23b500f751c45b08a99e27db9066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayScene: ZOO_level_Final_1_Light
+  PlayScene: Stage - Entry
   CreditsPannel: {fileID: 981686625}
 --- !u!1 &1408518146
 GameObject:
@@ -16905,6 +16905,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5323346423982658956, guid: 85558099242b88d4b824dba05d222075,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[0]
+      value: 
+      objectReference: {fileID: 1403921063}
     - target: {fileID: 5323346423982658957, guid: 85558099242b88d4b824dba05d222075,
         type: 3}
       propertyPath: m_RootOrder

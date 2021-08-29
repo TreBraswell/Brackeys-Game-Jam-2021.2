@@ -7,18 +7,20 @@ namespace BGJ20212.Game.AbhiTechGame
     public class AudioManager : MonoBehaviour
     {
         public Sound[] Sound;
-        public static AudioManager instance;
+        // public static AudioManager instance;
+
+        public string bgMusicName;
 
         private void Awake()
         {
-            if (instance == null)
-                instance = this;
-            else
-            {
-                Destroy(gameObject);
-                return;
-            }
-            DontDestroyOnLoad(gameObject);
+            // if (instance == null)
+            //     instance = this;
+            // else
+            // {
+            //     Destroy(gameObject);
+            //     return;
+            // }
+            // DontDestroyOnLoad(gameObject);
 
             foreach (Sound s in Sound)
             {
@@ -38,7 +40,8 @@ namespace BGJ20212.Game.AbhiTechGame
 
         private void Start()
         {
-            Play("Forest Background");
+            // Play("Forest Background");
+            Play(bgMusicName);
         }
 
         public void Play(string AudioName)

@@ -25,6 +25,7 @@ public class Animal : MonoBehaviour
     public bool isFollowing = false;
 
     public bool destrotyRbsLengthZero = true;
+    public bool playAnimationUntoggledRbs = false;
 
     [SerializeField]
     private float knockBackWhenDjes = 30f;
@@ -55,11 +56,11 @@ public class Animal : MonoBehaviour
         if (animator == null)
         {
             animator = GetComponent<Animator>();
-           
+
         }
         //myMesh.updatePosition = false;
         maxHealth = health;
-   
+
 
         if (healthBar != null)
         {
@@ -160,7 +161,10 @@ public class Animal : MonoBehaviour
            collider.enabled = false;
            if (animator != null)
            {
-               animator.enabled = false;
+               if (!playAnimationUntoggledRbs)
+               {
+                   animator.enabled = false;
+               }
            }
        }
    }
@@ -208,7 +212,7 @@ public class Animal : MonoBehaviour
 
    public virtual void TakeDamage(double damage )
    {
-        
+
        health -= damage;
         if (healthBar != null)
         {
@@ -219,7 +223,7 @@ public class Animal : MonoBehaviour
             {
                 healthCanvas.SetActive(false);
             }
-        
+
         }
 
 
